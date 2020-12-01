@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: center;
+    .left, .cart {
+        width: 20%;
+    }
+    .searchFilter {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+    .cart {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
