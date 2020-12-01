@@ -25,8 +25,10 @@ const Restaurants = () => {
     )
 
     useEffect(() => {
-        dispatch(addRestaurants(restaurantsData))
-    },[dispatch, restaurantsData])
+        if(!restaurants.length) {
+            dispatch(addRestaurants(restaurantsData))
+        }
+    },[dispatch, restaurantsData, restaurants])
 
     return (
         <div className='restaurants'>
