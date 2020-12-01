@@ -1,0 +1,15 @@
+.menuItem {
+    width: 33.33333%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 100%;
+    }
+    h2 {
+        width: 100%;
+    }
+    p {
+        font-size: 15px;
+    }
+}
