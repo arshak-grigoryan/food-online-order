@@ -6,7 +6,8 @@ import {
     INCREASE_ITEM,
     DECREASE_ITEM,
     ADD_RESTAURANTS,
-    ADD_SEARCH_NAME
+    ADD_SEARCH_NAME,
+    SELECT_KITCHEN_TYPE
 } from '../constants';
 
 const shopReducer = produce((state = defaultState, actions) => {
@@ -30,6 +31,9 @@ const shopReducer = produce((state = defaultState, actions) => {
             return state
         case ADD_SEARCH_NAME:
             state.searchedName = payload.name.toLowerCase()
+            return state
+        case SELECT_KITCHEN_TYPE:
+            state.selectedKitchenType = payload.kitchenType
             return state
         default:
             return state

@@ -3,6 +3,7 @@ const defaultState = {
     restaurants: [],
     basket: [],
     searchedName: '',
+    selectedKitchenType: 'all',
 }
 
 export default defaultState

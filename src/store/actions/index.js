@@ -4,7 +4,8 @@ import {
     INCREASE_ITEM,
     DECREASE_ITEM,
     ADD_RESTAURANTS,
-    ADD_SEARCH_NAME
+    ADD_SEARCH_NAME,
+    SELECT_KITCHEN_TYPE,
 } from '../constants';
 
 export const addItemBasket = () => {
@@ -42,5 +43,12 @@ export const addSearchName = (name) => {
     return {
         type: ADD_SEARCH_NAME,
         payload: { name }
+    }
+}
+
+export const selectKitchenType = (kitchenType) => {
+    return {
+        type: SELECT_KITCHEN_TYPE,
+        payload: { kitchenType }
     }
 }
