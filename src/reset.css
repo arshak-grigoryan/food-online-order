@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6, blockquote, figure{
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+h1, h2, h3, h4, h5, h6, blockquote, figure, dl, hr, p, ol, ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+dd {
+    margin-block-start: 0;
+}
+ol, ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+pre {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+}
+input, textarea, button {
+    outline: none;
+    padding: 0;
+}
