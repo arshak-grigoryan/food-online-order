@@ -1,19 +1,23 @@
-import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useFetch } from "../../hooks";
 import { KITCHEN_TYPES_URL } from "../../urls";
+import { selectKitchenType } from '../../store/actions';
+
 import './selectOptions.scss';
 
 const SelectOptions = () => {
-    const kitchenTypes = useFetch(KITCHEN_TYPES_URL)
+    const dispatch = useDispatch()
     
-    useEffect(() => {
-        console.log(kitchenTypes)
-    },[kitchenTypes])
+    const kitchenTypes = useFetch(KITCHEN_TYPES_URL)
+
+    const onSelectChange = (e) => {
+        dispatch(selectKitchenType(e.target.value))
+    }
 
     return (
         <div className='selectOptions'>
-            <select name="" id="kitchens" >
-                <option value="all">All</option>
+            <select id="kitchens" onChange={(e) => onSelectChange(e)} >
+                <option value='all'>All</option>
                 {
                     kitchenTypes && kitchenTypes.map((kitchen, i) => {
                         return <option value={kitchen.abbr} key={i}>{kitchen.name}</option>
