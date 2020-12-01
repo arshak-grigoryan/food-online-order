@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Restaurant 1",
+    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "kitchenTypes": ["arm", "rus", "eng"]
+  },{
+    "id": 2,
+    "name": "Restaurant 2",
+    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "kitchenTypes": ["eng"]
+  },{
+    "id": 3,
+    "name": "Restaurant 3",
+    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "kitchenTypes": ["rus", "eng"]
+  },{
+    "id": 4,
+    "name": "Restaurant 4",
+    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "kitchenTypes": ["arm", "rus"]
+  },{
+    "id": 5,
+    "name": "Restaurant 5",
+    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "kitchenTypes": ["rus"]
+  },{
+    "id": 6,
+    "name": "Restaurant 6",
+    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "kitchenTypes": ["arm", "rus"]
+  }
+]
