@@ -19,7 +19,7 @@ export const cachableFetch = async (url) => {
 }
 
 const useFetch = (url) => {
-    const [data, setData] = useState({});
+    const [data, setData] = useState([]);
 
     useMount(() => {
         (async () => {
