@@ -42,8 +42,22 @@ const shopReducer = produce((state = defaultState, actions) => {
             })
             return state
         case INCREASE_ITEM:
+            state.basket.forEach((item) => {
+                if(item.ruiid === payload.ruiid) {
+                    item = {...item, count: item.count++}
+                }
+            })
             return state
         case DECREASE_ITEM:
+            state.basket.forEach((item, i) => {
+                if(item.ruiid === payload.ruiid) {
+                    if(item.count > 1) {
+                        item = {...item, count: item.count--}
+                    } else {
+                        state.basket.splice(i-1,1)
+                    }
+                }
+            })
             return state
         case ADD_RESTAURANTS:
             payload.restaurants.forEach((restaurant) => {

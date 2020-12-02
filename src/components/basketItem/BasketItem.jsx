@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { CLASS_NAMES } from '../../constants';
-import { deleteItemBasket } from "../../store/actions";
+import { deleteItemBasket, decreaseItem, increaseItem } from "../../store/actions";
 import Icon from '../icon/Icon';
 import './basketItem.scss';
 
@@ -16,6 +16,14 @@ const BasketItem = ({
 
     const onBasketItemDeleteClick = () => {
         dispatch(deleteItemBasket(ruiid))
+    }
+
+    const onBasketItemDecreaseClick = () => {
+        dispatch(decreaseItem(ruiid))
+    }
+    
+    const onBasketItemIncreaseClick = () => {
+        dispatch(increaseItem(ruiid))
     }
 
     return (
@@ -37,13 +45,13 @@ const BasketItem = ({
                         <h3>{price}</h3>
                     </div>
                     <div className='counter'>
-                        <div className='decrease'>
+                        <div className='decrease' onClick={onBasketItemDecreaseClick}>
                             <p>-</p>
                         </div>
                         <div className='currentCount'>
                             <p>{count}</p>
                         </div>
-                        <div className='increase'>
+                        <div className='increase' onClick={onBasketItemIncreaseClick}>
                             <p>+</p>
                         </div>
                     </div>

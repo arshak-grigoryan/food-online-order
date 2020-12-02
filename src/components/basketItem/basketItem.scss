@@ -42,10 +42,14 @@
                 flex-direction: row;
                 > div {
                     padding: 10px;
-                    .decrease,
-                    .increase {
+                }
+                .decrease,
+                .increase {
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
                         cursor: pointer;
-                    } 
+                    }
                 }
             }
         }        

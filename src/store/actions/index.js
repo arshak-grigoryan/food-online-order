@@ -38,15 +38,17 @@ export const deleteItemBasket = (ruiid) => {
     }
 }
 
-export const increaseItem = () => {
+export const increaseItem = (ruiid) => {
     return {
         type: INCREASE_ITEM,
+        payload: { ruiid }
     }
 }
 
-export const decreaseItem = () => {
+export const decreaseItem = (ruiid) => {
     return {
         type: DECREASE_ITEM,
+        payload: { ruiid }
     }
 }
 
