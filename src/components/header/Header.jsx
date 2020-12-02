@@ -4,7 +4,7 @@ import Search from '../search/Search';
 import ShoppingCart from '../shoppingCart/ShoppingCart';
 import './header.scss';
 
-const Header = ({isSelectOptionExist, placeholder='search'}) => {
+const Header = ({isSelectOptionExist=false, placeholder='search'}) => {
 
     return (
         <div className='header'>

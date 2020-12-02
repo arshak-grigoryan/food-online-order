@@ -7,6 +7,7 @@ import { addSearchName } from '../../../store/actions';
 import { getSearchedName } from '../../../store/selectors';
 import MenuItem from '../../menuItem/MenuItem';
 import Search from '../../search/Search';
+import Header from '../../header/Header';
 import './restaurant.scss';
 
 const Restaurant = () => {
@@ -74,7 +75,7 @@ const Restaurant = () => {
 
     return (
         <div className='restaurant'>
-            <Search placeholder='Search Menu Items'/>
+            <Header placeholder='Search Menu Items'/>
             <div className='menuWrapper'>
                 <div className='menuFilter'>
                     <div className='kitchenTypes'>
