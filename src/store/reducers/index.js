@@ -38,7 +38,7 @@ const shopReducer = produce((state = defaultState, actions) => {
         case DELETE_ITEM_BASKET:
             state.basket.forEach((item, i) => {
                 if (item.ruiid === payload.ruiid) {
-                    state.basket.splice(i-1,1)
+                    state.basket.splice(i,1)
                 }
             })
             return state
@@ -55,7 +55,7 @@ const shopReducer = produce((state = defaultState, actions) => {
                     if(item.count > 1) {
                         item = {...item, count: item.count--}
                     } else {
-                        state.basket.splice(i-1,1)
+                        state.basket.splice(i,1)
                     }
                 }
             })
