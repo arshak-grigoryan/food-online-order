@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { useFetch } from "../../hooks";
+import { useFetch, useMount } from "../../hooks";
 import { KITCHEN_TYPES_URL } from "../../urls";
 import { selectKitchenType } from '../../store/actions';
 
@@ -13,6 +13,10 @@ const SelectOptions = () => {
     const onSelectChange = (e) => {
         dispatch(selectKitchenType(e.target.value))
     }
+
+    useMount(() => {
+        dispatch(selectKitchenType('all'))
+    })
 
     return (
         <div className='selectOptions'>
