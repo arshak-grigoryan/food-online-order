@@ -1,16 +1,17 @@
 import './menuItem.scss';
 
 const MenuItem = ({
-    id,
     name,
     photoUrl,
-    price
+    price,
+    kitchenType
 }) => {
     return (
         <div className='menuItem'>
             <img src={photoUrl} alt="img"/>
             <h2>{name}</h2>
             <p>Price {price}</p>
+            <p>Kiitchen {kitchenType}</p>
         </div>
     )
 }
