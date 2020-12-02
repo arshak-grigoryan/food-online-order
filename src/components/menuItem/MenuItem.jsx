@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import uuid from 'react-uuid';
 import { CLASS_NAMES } from '../../constants';
 import { addItemBasket } from '../../store/actions';
 import Icon from '../icon/Icon';
@@ -7,6 +6,7 @@ import './menuItem.scss';
 
 const MenuItem = ({
     id,
+    ruiid,
     name,
     photoUrl,
     price,
@@ -15,7 +15,7 @@ const MenuItem = ({
     const dispatch = useDispatch()
 
     const onAddItemBasketClick = () => {
-        dispatch(addItemBasket({id, name, photoUrl, price, uuid: uuid()}))
+        dispatch(addItemBasket({ id, name, photoUrl, price, ruiid }))
     }
 
     return (
