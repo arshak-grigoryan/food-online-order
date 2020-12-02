@@ -11,7 +11,7 @@ const Header = () => {
             <div className='left'></div>
             <div className='searchFilter'>
                 <SelectOptions/>
-                <Search/>                
+                <Search placeholder='Search Restaurants'/>                
             </div>
             <div className='cart'>
                 <ShoppingCart/>                   
