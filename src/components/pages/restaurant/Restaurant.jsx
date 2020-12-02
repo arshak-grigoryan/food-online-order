@@ -10,6 +10,8 @@ import Search from '../../search/Search';
 import './restaurant.scss';
 
 const Restaurant = () => {
+    const [minValue, setMinValue] = useState(0)
+    const [maxValue, setMaxValue] = useState(Infinity)
     const [selectedKitchenTypes, setSelectedKitchenTypes] = useState(null)
     const [currentRestaurant, setCurrentRestaurant] = useState(null)
     const dispatch = useDispatch()
@@ -62,22 +64,45 @@ const Restaurant = () => {
         }
     }
 
+    const onMinValueChange = (e) => {
+        setMinValue(e.target.value)
+    }
+
+    const onMaxValueChange = (e) => {
+        setMaxValue(e.target.value)
+    }
+
     return (
         <div className='restaurant'>
             <Search placeholder='Search Menu Items'/>
             <div className='menuWrapper'>
                 <div className='menuFilter'>
-                    <h2>Kitchen Types</h2>
-                    {
-                        currentRestaurant && currentRestaurant.kitchenTypes.map((kitchen, i) => {
-                            return (
-                                <div className='chechkboxItem' key={i}>
-                                    <input type="checkbox" id={kitchen} name={kitchen} value={kitchen} onChange={(e) => onCheckboxChoose(e)}/>
-                                    <label htmlFor={kitchen}>{kitchen}</label>
-                                </div>
-                            )
-                        })
-                    }
+                    <div className='kitchenTypes'>
+                        <h2>Kitchen Types</h2>
+                        {
+                            currentRestaurant && currentRestaurant.kitchenTypes.map((kitchen, i) => {
+                                return (
+                                    <div className='chechkboxItem' key={i}>
+                                        <input type="checkbox" id={kitchen} name={kitchen} value={kitchen} onChange={(e) => onCheckboxChoose(e)}/>
+                                        <label htmlFor={kitchen}>{kitchen}</label>
+                                    </div>
+                                )
+                            })
+                        }                        
+                    </div>
+                    <div className='value'>
+                        <h2>Value</h2>
+                        <div className='inputs'>
+                            <div className='filterInput'>
+                                <label htmlFor="min">Min</label>
+                                <input id='min' type="number" value={minValue} onChange={(e) => onMinValueChange(e)}/>                                
+                            </div>
+                            <div className='filterInput'>
+                                <label htmlFor="min">Max</label>
+                                <input id='max' type="number" value={maxValue} onChange={(e) => onMaxValueChange(e)}/>                                 
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className='restaurantMenu'>
                     {
@@ -94,6 +119,9 @@ const Restaurant = () => {
                                 } else {
                                     return true
                                 }
+                            })
+                            .filter(({ price }) => {
+                                return price >= minValue && price <= maxValue
                             })
                             .map(({ id, ...props }) => {
                                 return <MenuItem key={id} {...props}/>
