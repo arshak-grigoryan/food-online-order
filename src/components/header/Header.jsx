@@ -1,8 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { CLASS_NAMES } from '../../constants';
 import SelectOptions from '../selectOptions/SelectOptions';
 import Search from '../search/Search';
 import ShoppingCart from '../shoppingCart/ShoppingCart';
+import Icon from '../icon/Icon';
 import './header.scss';
 
 const Header = ({isSelectOptionExist=false, placeholder='search', isBackExist=false}) => {
@@ -16,7 +18,7 @@ const Header = ({isSelectOptionExist=false, placeholder='search', isBackExist=fa
     return (
         <div className='header'>
             <div className='left'>
-                { isBackExist && <button onClick={onGoBackClick}>Go Back</button> }
+                { isBackExist && <button onClick={onGoBackClick}><Icon type={CLASS_NAMES.arrowLeft}/></button> }
             </div>
             <div className='searchFilter'>
                 { isSelectOptionExist && <SelectOptions/> }

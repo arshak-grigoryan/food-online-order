@@ -3,6 +3,10 @@
     justify-content: center;
     .left, .cart {
         width: 20%;
+        button {
+            padding: 5px;
+            cursor: pointer;
+        }
     }
     .searchFilter {
         width: 60%;
