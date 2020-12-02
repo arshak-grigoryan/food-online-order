@@ -34,16 +34,15 @@ const Restaurants = () => {
         <div className='restaurants'>
             {
                 restaurants
-                .filter(({ kitchenTypes }) => {
-                    return (selectedKitchenType === 'all' || kitchenTypes.includes(selectedKitchenType))
-                })
-                .filter(({ name }) => {
-                    const lowercasedName = name.toLowerCase();
-                    return lowercasedName.includes(searchedName)
-                })
-                .map(({ id, ...props }) => {
-                    return <RestaurantCard key={id} id={id} {...props}/>
-                })
+                    .filter(({ kitchenTypes }) => {
+                        return (selectedKitchenType === 'all' || kitchenTypes.includes(selectedKitchenType))
+                    })
+                    .filter(({ name }) => {
+                        return name.toLowerCase().includes(searchedName)
+                    })
+                    .map(({ id, ...props }) => {
+                        return <RestaurantCard key={id} id={id} {...props}/>
+                    })
             }
         </div>
     )
