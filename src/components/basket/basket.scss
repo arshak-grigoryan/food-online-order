@@ -21,9 +21,13 @@
         }
         .closeBasket {
             width: 15%;
+            text-align: end;
             i {
                 font-size: 25px;
             }
         }
+    }
+    .basketItems {
+        overflow: auto;
     }
 }

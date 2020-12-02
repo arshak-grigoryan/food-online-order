@@ -4,6 +4,7 @@ import { closeBasket } from "../../store/actions";
 import { getBasket } from '../../store/selectors';
 import { CLASS_NAMES } from '../../constants';
 import Icon from '../icon/Icon';
+import BasketItem from '../basketItem/BasketItem';
 import './basket.scss';
 
 const Basket = () => {
@@ -37,6 +38,13 @@ const Basket = () => {
                 <div className='closeBasket'onClick={onCloseBasketClick}>
                     <Icon type={CLASS_NAMES.close}/>
                 </div>
+            </div>
+            <div className='basketItems'>
+                {
+                    basket && basket.map(({name, ...item}) => {
+                        return <BasketItem key={name} name={name} {...item}/>
+                    })
+                }
             </div>
         </div>
     )
