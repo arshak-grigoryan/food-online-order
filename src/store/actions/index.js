@@ -1,5 +1,6 @@
 import {
     OPEN_BASKET,
+    CLOSE_BASKET,
     ADD_ITEM_BASKET,
     DELETE_ITEM_BASKET,
     INCREASE_ITEM,
@@ -12,6 +13,12 @@ import {
 export const openBasket = () => {
     return {
         type: OPEN_BASKET
+    }
+}
+
+export const closeBasket = () => {
+    return {
+        type: CLOSE_BASKET
     }
 }
 

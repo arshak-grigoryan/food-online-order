@@ -2,6 +2,7 @@ import produce from 'immer';
 import defaultState from './defaultState';
 import {
     OPEN_BASKET,
+    CLOSE_BASKET,
     ADD_ITEM_BASKET,
     DELETE_ITEM_BASKET,
     INCREASE_ITEM,
@@ -17,6 +18,9 @@ const shopReducer = produce((state = defaultState, actions) => {
     switch(type) {
         case OPEN_BASKET:
             state.basketVisibility = true
+            return state
+        case CLOSE_BASKET:
+            state.basketVisibility = false
             return state
         case ADD_ITEM_BASKET:
             const { name } = payload.item

@@ -1,4 +1,5 @@
 export const OPEN_BASKET = 'OPEN_BASKET';
+export const CLOSE_BASKET = 'CLOSE_BASKET';
 export const ADD_ITEM_BASKET = 'ADD_ITEM_BASKET';
 export const DELETE_ITEM_BASKET = 'DELETE_ITEM_BASKET';
 export const INCREASE_ITEM = 'INCREASE_ITEM';
