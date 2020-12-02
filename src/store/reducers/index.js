@@ -10,6 +10,7 @@ import {
     ADD_RESTAURANTS,
     ADD_SEARCH_NAME,
     SELECT_KITCHEN_TYPE,
+    ORDER,
 } from '../constants';
 
 const shopReducer = produce((state = defaultState, actions) => {
@@ -69,6 +70,10 @@ const shopReducer = produce((state = defaultState, actions) => {
             return state
         case SELECT_KITCHEN_TYPE:
             state.selectedKitchenType = payload.kitchenType
+            return state
+        case ORDER:
+            state.basket = []
+            state.basketVisibility = false
             return state
         default:
             return state

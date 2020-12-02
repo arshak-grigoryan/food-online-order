@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeBasket } from "../../store/actions";
+import { closeBasket, order } from "../../store/actions";
 import { getBasket } from '../../store/selectors';
 import { CLASS_NAMES } from '../../constants';
 import Icon from '../icon/Icon';
@@ -28,6 +28,7 @@ const Basket = () => {
     },[basket])
 
     const onOrderItems = () => {
+        dispatch(order())
         console.log('ordered')
     }
 

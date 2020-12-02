@@ -8,6 +8,7 @@ import {
     ADD_RESTAURANTS,
     ADD_SEARCH_NAME,
     SELECT_KITCHEN_TYPE,
+    ORDER,
 } from '../constants';
 
 export const openBasket = () => {
@@ -70,5 +71,11 @@ export const selectKitchenType = (kitchenType) => {
     return {
         type: SELECT_KITCHEN_TYPE,
         payload: { kitchenType }
+    }
+}
+
+export const order = () => {
+    return {
+        type: ORDER
     }
 }

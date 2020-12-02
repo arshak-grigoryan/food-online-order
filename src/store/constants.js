@@ -7,3 +7,4 @@ export const DECREASE_ITEM = 'DECREASE_ITEM';
 export const ADD_RESTAURANTS = 'ADD_RESTAURANTS';
 export const ADD_SEARCH_NAME = 'ADD_SEARCH_NAME';
 export const SELECT_KITCHEN_TYPE = 'SELECT_KITCHEN_TYPE';
+export const ORDER = 'ORDER';
