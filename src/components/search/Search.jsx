@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import './search.css'
 
-const Search = () => {
+const Search = ({ placeholder = 'search' }) => {
 
     const dispatch = useDispatch()
 
@@ -14,7 +14,7 @@ const Search = () => {
 
     return (
         <div className='search'>
-            <input type="text" placeholder='search' onChange={(e) => onSearchNameChange(e)}/>
+            <input type="text" placeholder={placeholder} onChange={(e) => onSearchNameChange(e)}/>
         </div>
     )
 }
