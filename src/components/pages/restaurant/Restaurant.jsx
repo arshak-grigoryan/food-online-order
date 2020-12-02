@@ -17,8 +17,8 @@ const Restaurant = () => {
     const [currentRestaurant, setCurrentRestaurant] = useState(null)
     const dispatch = useDispatch()
     const [menuItems, setMenuItems] = useState([])
-    const { id } = useParams()
-    const menu = useFetch(`/mock/menus/${id}.json`)
+    const params = useParams()
+    const menu = useFetch(`/mock/menus/${params.id}.json`)
     const restaurants = useFetch(RESTAURANTS_URL)
 
     const { 
@@ -45,13 +45,13 @@ const Restaurant = () => {
 
     useEffect(() => {
         if(restaurants) {
-            const currentRestaurant = restaurants.find((restaurant) => restaurant.id === Number(id))
+            const currentRestaurant = restaurants.find((restaurant) => restaurant.id === Number(params.id))
             if(currentRestaurant) {
                 setCurrentRestaurant(currentRestaurant)
                 setSelectedKitchenTypes(currentRestaurant.kitchenTypes)
             }
         }
-    }, [restaurants, id])
+    }, [restaurants, params])
 
     const onCheckboxChoose = (e) => {
         const chechked = e.target.checked
@@ -136,8 +136,8 @@ const Restaurant = () => {
                             .filter(({ price }) => {
                                 return price >= minValue && price <= maxValue
                             })
-                            .map(({ id, ...props }) => {
-                                return <MenuItem key={id} {...props}/>
+                            .map(({ id, name, ...props }) => {
+                                return <MenuItem key={id} ruiid={params.id+name+id} id={id} name={name} {...props}/>
                             })
                     }
                 </div>                   
