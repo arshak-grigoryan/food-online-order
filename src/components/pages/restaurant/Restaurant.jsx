@@ -11,8 +11,8 @@ import Basket from '../../basket/Basket';
 import './restaurant.scss';
 
 const Restaurant = () => {
-    const [minValue, setMinValue] = useState(0)
-    const [maxValue, setMaxValue] = useState(Infinity)
+    const [minValue, setMinValue] = useState(undefined)
+    const [maxValue, setMaxValue] = useState(undefined)
     const [selectedKitchenTypes, setSelectedKitchenTypes] = useState(null)
     const [currentRestaurant, setCurrentRestaurant] = useState(null)
     const dispatch = useDispatch()
@@ -134,7 +134,7 @@ const Restaurant = () => {
                                 }
                             })
                             .filter(({ price }) => {
-                                return price >= minValue && price <= maxValue
+                                return price >= (minValue ? minValue : 0) && price <= (maxValue ? maxValue : 999999999)
                             })
                             .map(({ id, name, ...props }) => {
                                 return <MenuItem key={id} ruiid={params.id+name+id} id={id} name={name} {...props}/>
