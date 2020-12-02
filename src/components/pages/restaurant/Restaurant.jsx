@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useFetch, useMount } from '../../../hooks';
@@ -47,15 +47,18 @@ const Restaurant = () => {
         if(selectedKitchenTypes.includes(value) && chechked) {
             setSelectedKitchenTypes([value])
         }
+        else if(selectedKitchenTypes.includes(value) && chechked === false) {
+            setSelectedKitchenTypes((prevTypes) => {
+                return prevTypes.filter((type) => type !== value)
+            })
+        }        
         else if(!selectedKitchenTypes.includes(value) && chechked) {
             setSelectedKitchenTypes((prevTypes) => {
                 return [...prevTypes, value]
             })
         }
-        else if(selectedKitchenTypes.includes(value) && chechked === false) {
-            setSelectedKitchenTypes((prevTypes) => {
-                return prevTypes.filter((type) => type !== value)
-            })
+        else {
+            setSelectedKitchenTypes((prevTypes) => prevTypes)
         }
     }
 
