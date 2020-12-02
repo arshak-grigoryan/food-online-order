@@ -30,4 +30,11 @@
     .basketItems {
         overflow: auto;
     }
+    .order {
+        text-align: center;
+        padding: 10px;
+        button {
+            cursor: pointer;
+        }
+    }
 }

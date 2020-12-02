@@ -18,7 +18,6 @@ const Basket = () => {
     }
 
     useEffect(() => {
-        console.log(basket)
         if(basket) {
             let total = 0;
             basket.forEach(({price, count}) => {
@@ -27,6 +26,10 @@ const Basket = () => {
             setTotalPrice(total)
         }
     },[basket])
+
+    const onOrderItems = () => {
+        console.log('ordered')
+    }
 
     return (    
         <div className='basketRight'>
@@ -46,6 +49,14 @@ const Basket = () => {
                     })
                 }
             </div>
+            {
+                totalPrice ?
+                <div className='order'>
+                    <button onClick={onOrderItems}>Order</button>
+                </div>
+                :
+                null
+            }
         </div>
     )
 }
