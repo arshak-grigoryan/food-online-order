@@ -9,7 +9,6 @@ const ShoppingCart = () => {
     const dispatch = useDispatch()
 
     const onOpenBasketClick = () => {
-        console.log('open')
         dispatch(openBasket())
     }
 
