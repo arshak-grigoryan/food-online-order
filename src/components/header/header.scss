@@ -1,12 +1,16 @@
 .header {
     display: flex;
     justify-content: center;
-    .left, .cart {
-        width: 20%;
+    .left {
+        padding-left: 2rem;
+        text-align: start;
         button {
             padding: 5px;
             cursor: pointer;
         }
+    }
+    .left, .cart {
+        width: 20%;
     }
     .searchFilter {
         width: 60%;
