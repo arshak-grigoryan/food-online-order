@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name": "Dish 1",
-    "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
     "price": 1000,
     "kitchenType": "rus"
   },{
     "id": 2,
     "name": "Dish 2",
-    "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
     "price": 2000,
     "kitchenType": "eng"
   },{
     "id": 3,
     "name": "Dish 3",
-    "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
     "price": 1400,
     "kitchenType": "rus"
   },{
     "id": 4,
     "name": "Dish 4",
-    "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
     "price": 500,
     "kitchenType": "rus"
   },{
     "id": 5,
     "name": "Dish 5",
-    "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
     "price": 15000,
     "kitchenType": "eng"
   },{
     "id": 6,
     "name": "Dish 6",
-    "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
     "price": 1700,
     "kitchenType": "eng"
   }
