@@ -90,14 +90,14 @@ const Restaurant = () => {
                             })
                         }                        
                     </div>
-                    <div className='value'>
-                        <h2>Value</h2>
-                        <div className='inputs'>
-                            <div className='filterInput'>
+                    <div className='price'>
+                        <h2>Price</h2>
+                        <div className='inputsWrapper'>
+                            <div className='priceInput'>
                                 <label htmlFor="min">Min</label>
                                 <input id='min' type="number" value={minValue} onChange={(e) => onMinValueChange(e)}/>                                
                             </div>
-                            <div className='filterInput'>
+                            <div className='priceInput'>
                                 <label htmlFor="min">Max</label>
                                 <input id='max' type="number" value={maxValue} onChange={(e) => onMaxValueChange(e)}/>                                 
                             </div>
@@ -129,9 +129,7 @@ const Restaurant = () => {
                     }
                 </div>                   
             </div>
-         
         </div>
-
     )
 }
 
