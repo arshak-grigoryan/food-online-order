@@ -3,31 +3,37 @@
     "id": 1,
     "name": "Dish 1",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
-    "price": 1000
+    "price": 1000,
+    "kitchenType": "eng"
   },{
     "id": 2,
     "name": "Dish 2",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
-    "price": 2000
+    "price": 2000,
+    "kitchenType": "eng"
   },{
     "id": 3,
     "name": "Dish 3",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
-    "price": 1400
+    "price": 1400,
+    "kitchenType": "eng"
   },{
     "id": 4,
     "name": "Dish 4",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
-    "price": 500
+    "price": 500,
+    "kitchenType": "eng"
   },{
     "id": 5,
     "name": "Dish 5",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
-    "price": 15000
+    "price": 15000,
+    "kitchenType": "eng"
   },{
     "id": 6,
     "name": "Dish 6",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-fish-with-lentil-puree-and-vegetables-seen-from-above-picture-id168613528?s=2048x2048",
-    "price": 1700
+    "price": 1700,
+    "kitchenType": "eng"
   }
 ]
