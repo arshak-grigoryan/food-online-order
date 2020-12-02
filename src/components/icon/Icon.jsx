@@ -1,9 +1,7 @@
 import React from "react";
+import './icon.css'
 
 function Icon({type, ...props}) {
-  
-  console.log('Icon')
-
   return <i className={type} {...props}></i>
 }
 
