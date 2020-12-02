@@ -87,7 +87,7 @@ const Restaurant = () => {
         <>
         { basketVisibility && <Basket/> }
         <div className='restaurant'>
-            <Header placeholder='Search Menu Items'/>
+            <Header placeholder='Search Menu Items' isBackExist={true}/>
             <div className='menuWrapper'>
                 <div className='menuFilter'>
                     <div className='kitchenTypes'>
