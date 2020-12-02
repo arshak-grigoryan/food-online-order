@@ -31,9 +31,10 @@ export const addItemBasket = (item) => {
     }
 }
 
-export const deleteItemBasket = () => {
+export const deleteItemBasket = (ruiid) => {
     return {
         type: DELETE_ITEM_BASKET,
+        payload: { ruiid }
     }
 }
 
