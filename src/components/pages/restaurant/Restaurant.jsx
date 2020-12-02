@@ -72,6 +72,7 @@ const Restaurant = () => {
         setMaxValue(e.target.value)
     }
 
+    
     return (
         <div className='restaurant'>
             <Header placeholder='Search Menu Items'/>
