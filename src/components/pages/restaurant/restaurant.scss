@@ -1,9 +1,11 @@
 .restaurant {
     text-align: center;
+    padding: 1rem;
     .menuWrapper {
         width: 100%;
         display: flex;
         .menuFilter {
+            min-width: 200px;
             width: 15%;
             display: flex;
             flex-direction: column;
@@ -55,6 +57,7 @@
             }
         }
         .restaurantMenu {
+            min-width: 400px;
             width: 85%;
             display: flex;
             flex-wrap: wrap;
