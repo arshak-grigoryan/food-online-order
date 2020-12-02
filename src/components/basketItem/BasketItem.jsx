@@ -1,4 +1,6 @@
+import { useDispatch } from 'react-redux';
 import { CLASS_NAMES } from '../../constants';
+import { deleteItemBasket } from "../../store/actions";
 import Icon from '../icon/Icon';
 import './basketItem.scss';
 
@@ -7,15 +9,22 @@ const BasketItem = ({
     name,
     photoUrl,
     price,
-    count
+    count,
+    ruiid
 }) => {
+    const dispatch = useDispatch()
+
+    const onBasketItemDeleteClick = () => {
+        dispatch(deleteItemBasket(ruiid))
+    }
+
     return (
         <div className='basketItem'>
             <div className='nameDeleteItem'>
                 <div className='name'>
                     <h3>{name}</h3>
                 </div>
-                <div className='deleteItem'>
+                <div className='deleteItem' onClick={onBasketItemDeleteClick}>
                     <Icon type={CLASS_NAMES.close}/>
                 </div>                
             </div>
