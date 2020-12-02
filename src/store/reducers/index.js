@@ -7,7 +7,7 @@ import {
     DECREASE_ITEM,
     ADD_RESTAURANTS,
     ADD_SEARCH_NAME,
-    SELECT_KITCHEN_TYPE
+    SELECT_KITCHEN_TYPE,
 } from '../constants';
 
 const shopReducer = produce((state = defaultState, actions) => {
@@ -17,6 +17,17 @@ const shopReducer = produce((state = defaultState, actions) => {
 
     switch(type) {
         case ADD_ITEM_BASKET:
+            const { name } = payload.item
+            const isExist = state.basket.find((item) => item.name === name)
+            if(isExist) {
+                state.basket.forEach((item) => {
+                    if(item.name === name) {
+                        item = {...item, count: item.count++}
+                    }
+                })                
+            } else {
+                state.basket.push({...payload.item, count: 1})
+            }
             return state
         case DELETE_ITEM_BASKET:
             return state

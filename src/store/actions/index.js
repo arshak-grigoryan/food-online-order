@@ -8,9 +8,12 @@ import {
     SELECT_KITCHEN_TYPE,
 } from '../constants';
 
-export const addItemBasket = () => {
+export const addItemBasket = (item) => {
     return {
         type: ADD_ITEM_BASKET,
+        payload: {
+            item,
+        }
     }
 }
 
