@@ -6,7 +6,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <Header/>
+            <Header isSelectOptionExist={true} placeholder='Search Restaurants'/>
             <Restaurants/>
         </div>
     )

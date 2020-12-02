@@ -4,14 +4,14 @@ import Search from '../search/Search';
 import ShoppingCart from '../shoppingCart/ShoppingCart';
 import './header.scss';
 
-const Header = () => {
+const Header = ({isSelectOptionExist, placeholder='search'}) => {
 
     return (
         <div className='header'>
             <div className='left'></div>
             <div className='searchFilter'>
-                <SelectOptions/>
-                <Search placeholder='Search Restaurants'/>                
+                { isSelectOptionExist && <SelectOptions/> }
+                <Search placeholder={placeholder}/>                
             </div>
             <div className='cart'>
                 <ShoppingCart/>                   
