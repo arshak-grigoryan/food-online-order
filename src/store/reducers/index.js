@@ -23,11 +23,11 @@ const shopReducer = produce((state = defaultState, actions) => {
             state.basketVisibility = false
             return state
         case ADD_ITEM_BASKET:
-            const { name } = payload.item
-            const isExist = state.basket.find((item) => item.name === name)
+            const { uuid } = payload.item
+            const isExist = state.basket.find((item) => item.uuid === uuid)
             if(isExist) {
                 state.basket.forEach((item) => {
-                    if(item.name === name) {
+                    if(item.uuid === uuid) {
                         item = {...item, count: item.count++}
                     }
                 })                

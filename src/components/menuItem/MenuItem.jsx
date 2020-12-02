@@ -1,9 +1,9 @@
-import Icon from '../icon/Icon';
+import { useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
 import { CLASS_NAMES } from '../../constants';
 import { addItemBasket } from '../../store/actions';
-
+import Icon from '../icon/Icon';
 import './menuItem.scss';
-import { useDispatch } from 'react-redux';
 
 const MenuItem = ({
     id,
@@ -14,17 +14,17 @@ const MenuItem = ({
 }) => {
     const dispatch = useDispatch()
 
-    const onAddItemBasletClick = () => {
-        dispatch(addItemBasket({id, name, photoUrl, price}))
+    const onAddItemBasketClick = () => {
+        dispatch(addItemBasket({id, name, photoUrl, price, uuid: uuid()}))
     }
-    
+
     return (
         <div className='menuItem'>
             <img src={photoUrl} alt="img"/>
             <h2>{name}</h2>
             <p>Price {price}</p>
             <p>Kiitchen {kitchenType}</p>
-            <div className='basket' onClick={onAddItemBasletClick}>
+            <div className='basket' onClick={onAddItemBasketClick}>
                 <Icon type={CLASS_NAMES.shoppingCart}/>
             </div>
         </div>

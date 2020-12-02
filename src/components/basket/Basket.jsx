@@ -41,8 +41,8 @@ const Basket = () => {
             </div>
             <div className='basketItems'>
                 {
-                    basket && basket.map(({name, ...item}) => {
-                        return <BasketItem key={name} name={name} {...item}/>
+                    basket && basket.map(({uuid, ...item}) => {
+                        return <BasketItem key={uuid} uuid={uuid} {...item}/>
                     })
                 }
             </div>
