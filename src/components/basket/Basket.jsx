@@ -37,7 +37,7 @@ const Basket = () => {
             <div className='top'>
                 <div className='left'></div>
                 <div className='totalPrice'>
-                    <h3>Total {totalPrice}</h3>
+                    <h3>{ totalPrice ? `Total ${totalPrice}` : 'Baskes is Empty'}</h3>
                 </div>
                 <div className='closeBasket'onClick={onCloseBasketClick}>
                     <Icon type={CLASS_NAMES.close}/>
