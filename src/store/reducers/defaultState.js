@@ -4,6 +4,7 @@ const defaultState = {
     basket: [],
     searchedName: '',
     selectedKitchenType: 'all',
+    basketVisibility: false,
 }
 
 export default defaultState

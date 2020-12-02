@@ -1,13 +1,20 @@
-import Icon from '../icon/Icon';
+import { useDispatch } from 'react-redux';
+import { openBasket } from '../../store/actions';
 import { CLASS_NAMES } from '../../constants'
-
+import Icon from '../icon/Icon';
 import './shoppingCart.scss';
 
 const ShoppingCart = () => {
 
+    const dispatch = useDispatch()
+
+    const onOpenBasketClick = () => {
+        console.log('open')
+        dispatch(openBasket())
+    }
 
     return (
-        <div className='shoppingCart'>
+        <div className='shoppingCart' onClick={onOpenBasketClick}>
             <Icon type={CLASS_NAMES.shoppingCart}/>
         </div>
     )

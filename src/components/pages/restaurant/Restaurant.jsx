@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom';
 import { useFetch, useMount } from '../../../hooks';
 import { RESTAURANTS_URL } from "../../../urls";
 import { addSearchName } from '../../../store/actions';
-import { getSearchedName } from '../../../store/selectors';
+import { getSearchedName, getBasketVisibility } from '../../../store/selectors';
 import MenuItem from '../../menuItem/MenuItem';
 import Header from '../../header/Header';
+import Basket from '../../basket/Basket';
 import './restaurant.scss';
 
 const Restaurant = () => {
@@ -20,7 +21,16 @@ const Restaurant = () => {
     const menu = useFetch(`/mock/menus/${id}.json`)
     const restaurants = useFetch(RESTAURANTS_URL)
 
-    const { searchedName } = useSelector((state) => ( { searchedName: getSearchedName(state) } ))
+    const { 
+        searchedName,
+        basketVisibility
+    } = useSelector(
+        (state) => (
+            {
+                searchedName: getSearchedName(state),
+                basketVisibility: getBasketVisibility(state)
+            }
+        ))
 
     useMount(() => {
         // reset search value for current page when page visited for first time reloaded
@@ -74,6 +84,8 @@ const Restaurant = () => {
 
     
     return (
+        <>
+        { basketVisibility && <Basket/> }
         <div className='restaurant'>
             <Header placeholder='Search Menu Items'/>
             <div className='menuWrapper'>
@@ -131,6 +143,7 @@ const Restaurant = () => {
                 </div>                   
             </div>
         </div>
+        </>
     )
 }
 

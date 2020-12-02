@@ -1,4 +1,5 @@
 import {
+    OPEN_BASKET,
     ADD_ITEM_BASKET,
     DELETE_ITEM_BASKET,
     INCREASE_ITEM,
@@ -7,6 +8,12 @@ import {
     ADD_SEARCH_NAME,
     SELECT_KITCHEN_TYPE,
 } from '../constants';
+
+export const openBasket = () => {
+    return {
+        type: OPEN_BASKET
+    }
+}
 
 export const addItemBasket = (item) => {
     return {

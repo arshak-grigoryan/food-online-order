@@ -1,6 +1,7 @@
 import produce from 'immer';
 import defaultState from './defaultState';
 import {
+    OPEN_BASKET,
     ADD_ITEM_BASKET,
     DELETE_ITEM_BASKET,
     INCREASE_ITEM,
@@ -13,9 +14,10 @@ import {
 const shopReducer = produce((state = defaultState, actions) => {
     const { type, payload } = actions;
 
-    if (!payload) return state;
-
     switch(type) {
+        case OPEN_BASKET:
+            state.basketVisibility = true
+            return state
         case ADD_ITEM_BASKET:
             const { name } = payload.item
             const isExist = state.basket.find((item) => item.name === name)
