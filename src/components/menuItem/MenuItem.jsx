@@ -1,3 +1,5 @@
+import Icon from '../icon/Icon';
+import { CLASS_NAMES } from '../../constants';
 import './menuItem.scss';
 
 const MenuItem = ({
@@ -12,6 +14,9 @@ const MenuItem = ({
             <h2>{name}</h2>
             <p>Price {price}</p>
             <p>Kiitchen {kitchenType}</p>
+            <div className='basket'>
+                <Icon type={CLASS_NAMES.shoppingCart}/>
+            </div>
         </div>
     )
 }
