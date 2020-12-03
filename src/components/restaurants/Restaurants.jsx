@@ -1,56 +1,57 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useFetch, useMount } from "../../hooks";
-import { RESTAURANTS_URL } from "../../urls";
-import { getRestaurants, getSearchedName, getSelectedKitchenType } from '../../store/selectors';
+import { RESTAURANTS_URL } from "../../constants";
+import {
+  getRestaurants,
+  getSearchedName,
+  getSelectedKitchenType,
+} from "../../store/selectors";
 import { addRestaurants, addSearchName } from "../../store/actions";
-import RestaurantCard from '../restaurantCard/RestaurantCard';
-import './restaurants.css';
+import RestaurantCard from "../restaurantCard/RestaurantCard";
+import "./restaurants.scss";
 
 const Restaurants = () => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-    const restaurantsData = useFetch(RESTAURANTS_URL)
+  const restaurantsData = useFetch(RESTAURANTS_URL);
 
-    const {
-        restaurants,
-        searchedName,
-        selectedKitchenType,
-    } = useSelector(
-        (state) => ({
-            restaurants: getRestaurants(state),
-            searchedName: getSearchedName(state),
-            selectedKitchenType: getSelectedKitchenType(state),
-        })
-    )
-
-    useMount(() => {
-        // reset search value for current page when page visited for first time reloaded
-        dispatch(addSearchName(''))
+  const { restaurants, searchedName, selectedKitchenType } = useSelector(
+    (state) => ({
+      restaurants: getRestaurants(state),
+      searchedName: getSearchedName(state),
+      selectedKitchenType: getSelectedKitchenType(state),
     })
+  );
 
-    useEffect(() => {
-        if(!restaurants.length) {
-            dispatch(addRestaurants(restaurantsData))
-        }
-    },[dispatch, restaurantsData, restaurants])
+  useMount(() => {
+    // reset search value for current page when page visited for first time reloaded
+    dispatch(addSearchName(""));
+  });
 
-    return (
-        <div className='restaurants'>
-            {
-                restaurants
-                    .filter(({ kitchenTypes }) => {
-                        return (selectedKitchenType === 'all' || kitchenTypes.includes(selectedKitchenType))
-                    })
-                    .filter(({ name }) => {
-                        return name.toLowerCase().includes(searchedName)
-                    })
-                    .map(({ id, ...props }) => {
-                        return <RestaurantCard key={id} id={id} {...props}/>
-                    })
-            }
-        </div>
-    )
-}
+  useEffect(() => {
+    if (!restaurants.length) {
+      dispatch(addRestaurants(restaurantsData));
+    }
+  }, [dispatch, restaurantsData, restaurants]);
 
-export default Restaurants
+  return (
+    <div className="restaurants">
+      {restaurants
+        .filter(({ kitchenTypes }) => {
+          return (
+            selectedKitchenType === "all" ||
+            kitchenTypes.includes(selectedKitchenType)
+          );
+        })
+        .filter(({ name }) => {
+          return name.toLowerCase().includes(searchedName);
+        })
+        .map(({ id, ...props }) => {
+          return <RestaurantCard key={id} id={id} {...props} />;
+        })}
+    </div>
+  );
+};
+
+export default Restaurants;

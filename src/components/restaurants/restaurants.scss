@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+
+.restaurants {
+  width: 100%;
+  padding: $mainPadding * 2;
+  display: flex;
+  flex-wrap: wrap;
+}
