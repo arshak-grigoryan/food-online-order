@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+input {
+  padding: $mainPadding;
+  font-size: 15px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  color: $mainColor;
+  &::placeholder {
+    color: $mainColor;
+  }
+}
+.restaurantsSearch {
+  input {
+    border-radius: 0px 5px 5px 0px;
+  }
+}

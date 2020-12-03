@@ -1,22 +1,27 @@
-import React from 'react';
+import React from "react";
 import { addSearchName } from "../../store/actions";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
+import "./search.scss";
 
-import './search.css'
+const Search = ({ placeholder = "search", isRestaurantsSearch = false }) => {
+  console.log(isRestaurantsSearch);
+  const dispatch = useDispatch();
 
-const Search = ({ placeholder = 'search' }) => {
+  const onSearchNameChange = (e) => {
+    dispatch(addSearchName(e.target.value));
+  };
 
-    const dispatch = useDispatch()
+  return (
+    <div
+      className={isRestaurantsSearch ? "search restaurantsSearch" : "search"}
+    >
+      <input
+        type="text"
+        placeholder={placeholder}
+        onChange={(e) => onSearchNameChange(e)}
+      />
+    </div>
+  );
+};
 
-    const onSearchNameChange = (e) => {
-        dispatch(addSearchName(e.target.value))
-    }
-
-    return (
-        <div className='search'>
-            <input type="text" placeholder={placeholder} onChange={(e) => onSearchNameChange(e)}/>
-        </div>
-    )
-}
-
-export default Search 
+export default Search;
