@@ -1,6 +1,23 @@
+@import "../../variables.scss";
+
 .selectOptions {
-    select {
-        padding: 0.5rem;
-        font-size: 15px;
+  select {
+    padding: $mainPadding;
+    font-size: 15px;
+    background-color: #f3f3f3;
+    transition: $mainTransition;
+    border: 1px solid #dadada;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    color: $mainColor;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #dadada;
     }
+    option {
+      color: $mainColor;
+      background-color: white;
+    }
+  }
 }
