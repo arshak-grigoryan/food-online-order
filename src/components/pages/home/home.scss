@@ -1,4 +1,7 @@
+@import "../../../variables.scss";
+
 .home {
-    text-align: center;
-    padding: 1rem;
+  width: 100%;
+  text-align: center;
+  transition: $mainTransition;
 }
