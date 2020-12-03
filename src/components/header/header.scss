@@ -1,30 +1,36 @@
+@import "../../variables.scss";
+
 .header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: $mainPadding * 2;
+  background-color: $mainColor;
+  .left {
+    text-align: start;
+    button {
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        i {
+          color: tomato !important;
+        }
+      }
+    }
+  }
+  .left,
+  .cart {
+    width: 20%;
+  }
+  .searchFilter {
+    width: 60%;
     display: flex;
     justify-content: center;
-    .left {
-        padding-left: 2rem;
-        text-align: start;
-        button {
-            padding: 5px;
-            cursor: pointer;
-            &:hover {
-                i {
-                    color: tomato !important;
-                }
-            }
-        }
-    }
-    .left, .cart {
-        width: 20%;
-    }
-    .searchFilter {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-    }
-    .cart {
-        padding: 0 2rem;
-        display: flex;
-        justify-content: flex-end;
-    }
+    align-items: center;
+  }
+  .cart {
+    padding: 0 $mainPadding * 2;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
