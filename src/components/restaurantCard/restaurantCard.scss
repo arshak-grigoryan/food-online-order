@@ -1,27 +1,43 @@
-.restaurantCard {
-    width: 33.33333%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    img{
-        width: 100%;
+@import "../../variables.scss";
+
+.restaurantCardWrapper {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: $mainPadding * 2;
+  .restaurantCard {
+    width: 100%;
+    border: 1px solid #dadada;
+    cursor: pointer;
+    background-color: rgb(243, 244, 252);
+    transition: $mainTransition;
+    &:hover {
+      margin-top: $mainPadding * -2;
     }
-    h2{
-        width: 100%;
+    img {
+      width: 100%;
     }
-    .kitchens {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .kitchenTypes {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            p {
-                padding: 5px;
-                text-transform: capitalize;
-            }
+    h2 {
+      width: 100%;
+      color: $mainColor;
+      padding: $mainPadding / 2;
+    }
+    .kitchenTypes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: $mainPadding / 2;
+      .kitchenWrapper {
+        padding: $mainPadding / 2;
+        .kitchen {
+          font-size: 12px;
+          padding: $mainPadding / 2;
+          text-transform: capitalize;
+          border: 1px solid $mainColor;
+          border-radius: 3px;
+          color: $mainColor;
         }
+      }
     }
+  }
 }
