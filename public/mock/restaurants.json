@@ -1,33 +1,43 @@
 [
   {
     "id": 1,
-    "name": "Restaurant 1",
+    "name": "Miodrag",
     "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
     "kitchenTypes": ["arm", "rus", "eng"]
   },{
     "id": 2,
-    "name": "Restaurant 2",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "name": "Vostok",
+    "photoUrl": "https://media.gettyimages.com/photos/cafebar-in-moscow-picture-id1158221681?s=2048x2048",
     "kitchenTypes": ["eng"]
   },{
     "id": 3,
-    "name": "Restaurant 3",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "name": "Portra",
+    "photoUrl": "https://media.gettyimages.com/photos/view-inside-a-bar-no-people-picture-id1073455468?s=2048x2048",
     "kitchenTypes": ["rus", "eng"]
   },{
     "id": 4,
-    "name": "Restaurant 4",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "name": "Wunder",
+    "photoUrl": "https://media.gettyimages.com/photos/three-businesswomen-having-meeting-and-business-lunch-at-highend-picture-id956292532?s=2048x2048",
     "kitchenTypes": ["arm", "rus"]
   },{
     "id": 5,
-    "name": "Restaurant 5",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "name": "Andresr",
+    "photoUrl": "https://media.gettyimages.com/photos/unattended-restaurant-with-bright-lights-picture-id1030626678?s=2048x2048",
     "kitchenTypes": ["rus"]
   },{
     "id": 6,
-    "name": "Restaurant 6",
-    "photoUrl": "https://media.gettyimages.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?s=612x612",
+    "name": "Sareen",
+    "photoUrl": "https://media.gettyimages.com/photos/empty-cafeteria-picture-id1134159071?s=2048x2048",
     "kitchenTypes": ["arm", "rus"]
+  },{
+    "id": 7,
+    "name": "Moyo",
+    "photoUrl": "https://media.gettyimages.com/photos/an-italian-restaurant-interior-setup-picture-id1130751052?s=2048x2048",
+    "kitchenTypes": ["arm", "rus", "eng"]
+  },{
+    "id": 8,
+    "name": "South",
+    "photoUrl": "https://media.gettyimages.com/photos/interior-of-a-pub-picture-id1148223648?s=2048x2048",
+    "kitchenTypes": ["eng"]
   }
 ]
