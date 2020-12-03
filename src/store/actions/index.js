@@ -9,6 +9,7 @@ import {
     ADD_SEARCH_NAME,
     SELECT_KITCHEN_TYPE,
     ORDER,
+    BASKET_ANIMATION,
 } from '../constants';
 
 export const openBasket = () => {
@@ -77,5 +78,11 @@ export const selectKitchenType = (kitchenType) => {
 export const order = () => {
     return {
         type: ORDER
+    }
+}
+
+export const animateBasket = () => {
+    return {
+        type: BASKET_ANIMATION
     }
 }

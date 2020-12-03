@@ -4,3 +4,4 @@ export const getBasket = (state) => state.basket;
 export const getSearchedName = (state) => state.searchedName;
 export const getSelectedKitchenType = (state) => state.selectedKitchenType;
 export const getBasketVisibility = (state) => state.basketVisibility;
+export const getIsBasketAnimation= (state) => state.isBasketAnimation;

@@ -11,6 +11,7 @@ import {
     ADD_SEARCH_NAME,
     SELECT_KITCHEN_TYPE,
     ORDER,
+    BASKET_ANIMATION
 } from '../constants';
 
 const shopReducer = produce((state = defaultState, actions) => {
@@ -74,6 +75,9 @@ const shopReducer = produce((state = defaultState, actions) => {
         case ORDER:
             state.basket = []
             state.basketVisibility = false
+            return state
+        case BASKET_ANIMATION:
+            state.isBasketAnimation = !state.isBasketAnimation
             return state
         default:
             return state
