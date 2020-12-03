@@ -1,9 +1,0 @@
-i {
-    color: slategrey;
-    font-size: 15px;
-    transition: .3s;
-}
-i:hover {
-    cursor: pointer;
-    color: tomato;
-}

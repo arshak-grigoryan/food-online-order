@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+.faicon {
+  i {
+    color: #f3f3f3;
+    font-size: 15px;
+    transition: $mainTransition;
+    &:hover {
+      cursor: pointer;
+      color: #da3743;
+    }
+  }
+}
