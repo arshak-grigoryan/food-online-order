@@ -1,40 +1,43 @@
+@import "../../variables.scss";
+
 .basketRight {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-    background-color: white;
-    border-left: 2px solid black;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  border-left: 2px solid black;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: $mainTransition;
+  .top {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    .top {
-        width: 100%;
-        display: flex;
-        .left {
-            width: 15%;
-        }
-        .totalPrice {
-            width: 70%;
-        }
-        .closeBasket {
-            width: 15%;
-            text-align: end;
-            i {
-                font-size: 25px;
-            }
-        }
+    .left {
+      width: 15%;
     }
-    .basketItems {
-        overflow: auto;
+    .totalPrice {
+      width: 70%;
     }
-    .order {
-        text-align: center;
-        padding: 10px;
-        button {
-            cursor: pointer;
-        }
+    .closeBasket {
+      width: 15%;
+      text-align: end;
+      i {
+        font-size: 25px;
+      }
     }
+  }
+  .basketItems {
+    overflow: auto;
+  }
+  .order {
+    text-align: center;
+    padding: 10px;
+    button {
+      cursor: pointer;
+    }
+  }
 }
