@@ -1,57 +1,54 @@
 .basketItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .nameDeleteItem {
+    padding: 10px 0;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    .nameDeleteItem {
-        padding:10px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    .name {
+      h3 {
+        font-size: 18px;
+      }
+    }
+    .deleteItem {
+      height: 20px;
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .photo {
+      width: 40%;
+      img {
         width: 100%;
+      }
+    }
+    .priceCounter {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      .counter {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        .name {
-            h3 {
-                font-size: 18px;
-            }
+        > div {
+          padding: 10px;
         }
-        .deleteItem {
-            height: 20px;
-            i {
-                font-size: 15px;
-            }
+        .decrease,
+        .increase {
+          font-size: 18px;
+          font-weight: bold;
         }
+      }
     }
-    .wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        .photo {
-            width: 40%;
-            img {
-                width: 100%;
-            }
-        }
-        .priceCounter {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            .counter {
-                display: flex;
-                flex-direction: row;
-                > div {
-                    padding: 10px;
-                }
-                .decrease,
-                .increase {
-                    p {
-                        font-size: 18px;
-                        font-weight: bold;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }        
-    }
+  }
 }
