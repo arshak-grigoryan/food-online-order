@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+
+.shoppingCart {
+  padding: $mainPadding;
+  i {
+    font-size: $mainPadding * 3;
+  }
+}
