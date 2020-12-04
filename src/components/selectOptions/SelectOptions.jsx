@@ -1,8 +1,8 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useFetch, useMount } from "../../hooks";
 import { KITCHEN_TYPES_URL } from "../../constants";
 import { selectKitchenType } from "../../store/actions";
-
+import { getSelectedKitchenType } from "../../store/selectors";
 import "./selectOptions.scss";
 
 const SelectOptions = () => {
@@ -10,13 +10,19 @@ const SelectOptions = () => {
 
   const kitchenTypes = useFetch(KITCHEN_TYPES_URL);
 
+  const { selectedKitchenType } = useSelector((state) => ({
+    selectKitchenType: getSelectedKitchenType(state),
+  }));
+
   const onSelectChange = (e) => {
     dispatch(selectKitchenType(e.target.value));
   };
 
   useMount(() => {
     // reset selected option for current page when page visited for first time reloaded
-    dispatch(selectKitchenType("all"));
+    if (selectedKitchenType && selectedKitchenType !== "all") {
+      dispatch(selectKitchenType("all"));
+    }
   });
 
   return (
