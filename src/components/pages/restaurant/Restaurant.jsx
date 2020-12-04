@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useFetch, useMount } from "../../../hooks";
 import { RESTAURANTS_URL } from "../../../constants";
-import { addSearchName, animateBasket } from "../../../store/actions";
+import {
+  addSearchName,
+  animateBasket,
+  closeBasket,
+} from "../../../store/actions";
 import {
   getSearchedName,
   getBasketVisibility,
@@ -58,9 +62,19 @@ const Restaurant = () => {
 
   useEffect(() => {
     if (basketVisibility) {
+      console.log(basketVisibility);
       setTimeout(() => dispatch(animateBasket()));
     }
-  }, [basketVisibility]);
+  }, [basketVisibility, dispatch]);
+
+  useEffect(() => {
+    return () => {
+      if (basketVisibility) {
+        console.log(basketVisibility);
+        dispatch(closeBasket());
+      }
+    };
+  }, [dispatch, basketVisibility]);
 
   const onCheckboxChoose = (e) => {
     const chechked = e.target.checked;
@@ -99,47 +113,49 @@ const Restaurant = () => {
       >
         <Header placeholder="Search Menu Items" isBackExist={true} />
         <div className="menuWrapper">
-          <div className="menuFilter">
-            <div className="kitchenTypes">
-              <h2>Kitchen Types</h2>
-              <div className="chechkboxItemsWrapper">
-                {currentRestaurant &&
-                  currentRestaurant.kitchenTypes.map((kitchen, i) => {
-                    return (
-                      <div className="chechkboxItem" key={i}>
-                        <input
-                          type="checkbox"
-                          id={kitchen}
-                          name={kitchen}
-                          value={kitchen}
-                          onChange={(e) => onCheckboxChoose(e)}
-                        />
-                        <label htmlFor={kitchen}>{kitchen}</label>
-                      </div>
-                    );
-                  })}
-              </div>
-            </div>
-            <div className="price">
-              <h2>Price</h2>
-              <div className="inputsWrapper">
-                <div className="priceInput">
-                  <label htmlFor="min">Min</label>
-                  <input
-                    id="min"
-                    type="number"
-                    value={minValue}
-                    onChange={(e) => onMinValueChange(e)}
-                  />
+          <div className="menuFilterWrapper">
+            <div className="menuFilter">
+              <div className="kitchenTypes">
+                <h2>Kitchen Types</h2>
+                <div className="chechkboxItemsWrapper">
+                  {currentRestaurant &&
+                    currentRestaurant.kitchenTypes.map((kitchen, i) => {
+                      return (
+                        <div className="chechkboxItem" key={i}>
+                          <input
+                            type="checkbox"
+                            id={kitchen}
+                            name={kitchen}
+                            value={kitchen}
+                            onChange={(e) => onCheckboxChoose(e)}
+                          />
+                          <label htmlFor={kitchen}>{kitchen}</label>
+                        </div>
+                      );
+                    })}
                 </div>
-                <div className="priceInput">
-                  <label htmlFor="min">Max</label>
-                  <input
-                    id="max"
-                    type="number"
-                    value={maxValue}
-                    onChange={(e) => onMaxValueChange(e)}
-                  />
+              </div>
+              <div className="price">
+                <h2>Price</h2>
+                <div className="inputsWrapper">
+                  <div className="priceInput">
+                    <label htmlFor="min">Min</label>
+                    <input
+                      id="min"
+                      type="number"
+                      value={minValue}
+                      onChange={(e) => onMinValueChange(e)}
+                    />
+                  </div>
+                  <div className="priceInput">
+                    <label htmlFor="min">Max</label>
+                    <input
+                      id="max"
+                      type="number"
+                      value={maxValue}
+                      onChange={(e) => onMaxValueChange(e)}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
