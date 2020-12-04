@@ -5,8 +5,8 @@
   padding: $mainPadding * 2;
   .menuItem {
     width: 100%;
-    border: 1px solid #dadada;
-    background-color: rgb(243, 244, 252);
+    border: $mainBorderWidth solid $mainBorderColor;
+    background-color: $itemCardColor;
     // transition: $mainTransition;
     display: flex;
     flex-direction: column;
@@ -29,11 +29,11 @@
       .kitchenWrapper {
         padding: $mainPadding / 2;
         .kitchen {
-          font-size: 12px;
+          font-size: $mainFontSize;
           padding: $mainPadding / 2;
           text-transform: capitalize;
-          border: 1px solid $mainColor;
-          border-radius: 3px;
+          border: $mainBorderWidth solid $mainColor;
+          border-radius: $mainBorderRadius;
           color: $mainColor;
         }
       }
@@ -54,7 +54,7 @@
           color: $mainColor;
           font-size: $mainFontSize * 5 / 4;
           &:hover {
-            color: #da3743;
+            color: $mainHoverColor;
           }
         }
       }

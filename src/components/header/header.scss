@@ -9,11 +9,11 @@
   .left {
     text-align: start;
     button {
-      padding: 5px;
+      padding: $mainPadding / 2;
       cursor: pointer;
       &:hover {
         i {
-          color: tomato !important;
+          color: $mainHoverColor !important;
         }
       }
     }

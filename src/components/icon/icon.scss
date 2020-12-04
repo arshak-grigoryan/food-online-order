@@ -2,12 +2,12 @@
 
 .faicon {
   i {
-    color: #f3f3f3;
-    font-size: 15px;
+    color: $mainIconColor;
+    font-size: $mainFontSize;
     transition: $mainTransition;
     &:hover {
       cursor: pointer;
-      color: #da3743;
+      color: $mainHoverColor;
     }
   }
 }

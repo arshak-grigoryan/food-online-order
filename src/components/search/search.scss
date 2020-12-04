@@ -2,9 +2,9 @@
 
 input {
   padding: $mainPadding;
-  font-size: 15px;
-  border: 1px solid #dadada;
-  border-radius: 5px;
+  font-size: $mainFontSize;
+  border: $mainBorderWidth solid $mainBorderColor;
+  border-radius: $mainBorderRadius;
   color: $mainColor;
   &::placeholder {
     color: $mainColor;
@@ -12,6 +12,6 @@ input {
 }
 .restaurantsSearch {
   input {
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0 $mainBorderRadius $mainBorderRadius 0;
   }
 }

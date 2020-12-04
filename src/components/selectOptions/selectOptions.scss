@@ -3,21 +3,21 @@
 .selectOptions {
   select {
     padding: $mainPadding;
-    font-size: 15px;
-    background-color: #f3f3f3;
+    font-size: $mainFontSize;
+    background-color: $mainIconColor;
     transition: $mainTransition;
-    border: 1px solid #dadada;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border: $mainBorderWidth solid $mainBorderColor;
+    border-top-left-radius: $mainBorderRadius;
+    border-bottom-left-radius: $mainBorderRadius;
     color: $mainColor;
     outline: none;
     cursor: pointer;
     &:hover {
-      background-color: #dadada;
+      background-color: $mainBorderColor;
     }
     option {
       color: $mainColor;
-      background-color: white;
+      background-color: $white;
     }
   }
 }

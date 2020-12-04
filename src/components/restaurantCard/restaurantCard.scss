@@ -7,9 +7,9 @@
   padding: $mainPadding * 2;
   .restaurantCard {
     width: 100%;
-    border: 1px solid #dadada;
+    border: $mainBorderWidth solid $mainBorderColor;
     cursor: pointer;
-    background-color: rgb(243, 244, 252);
+    background-color: $itemCardColor;
     transition: $mainTransition;
     &:hover {
       margin-top: $mainPadding * -2;
