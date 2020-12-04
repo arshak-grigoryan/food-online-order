@@ -1,11 +1,23 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useMount } from "../../hooks";
+import { getSearchedName } from "../../store/selectors";
 import { addSearchName } from "../../store/actions";
-import { useDispatch } from "react-redux";
 import "./search.scss";
 
 const Search = ({ placeholder = "search", isRestaurantsSearch = false }) => {
-  console.log(isRestaurantsSearch);
   const dispatch = useDispatch();
+
+  const { searchedName } = useSelector((state) => ({
+    searchedName: getSearchedName(state),
+  }));
+
+  useMount(() => {
+    // reset search value for current page when page visited for first time reloaded
+    if (searchedName !== "") {
+      dispatch(addSearchName(""));
+    }
+  });
 
   const onSearchNameChange = (e) => {
     dispatch(addSearchName(e.target.value));

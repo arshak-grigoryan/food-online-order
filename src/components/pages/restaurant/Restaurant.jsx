@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { useFetch, useMount } from "../../../hooks";
+import { useFetch } from "../../../hooks";
 import { RESTAURANTS_URL } from "../../../constants";
-import {
-  addSearchName,
-  animateBasket,
-} from "../../../store/actions";
+import { animateBasket } from "../../../store/actions";
 import {
   getSearchedName,
   getBasketVisibility,
@@ -35,11 +32,6 @@ const Restaurant = () => {
       isBasketAnimation: getIsBasketAnimation(state),
     })
   );
-
-  useMount(() => {
-    // reset search value for current page when page visited for first time reloaded
-    dispatch(addSearchName(""));
-  });
 
   useEffect(() => {
     if (menu) {

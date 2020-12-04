@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useFetch, useMount } from "../../hooks";
+import { useFetch } from "../../hooks";
 import { RESTAURANTS_URL } from "../../constants";
 import {
   getRestaurants,
   getSearchedName,
   getSelectedKitchenType,
 } from "../../store/selectors";
-import { addRestaurants, addSearchName } from "../../store/actions";
+import { addRestaurants } from "../../store/actions";
 import RestaurantCard from "../restaurantCard/RestaurantCard";
 import "./restaurants.scss";
 
@@ -23,11 +23,6 @@ const Restaurants = () => {
       selectedKitchenType: getSelectedKitchenType(state),
     })
   );
-
-  useMount(() => {
-    // reset search value for current page when page visited for first time reloaded
-    dispatch(addSearchName(""));
-  });
 
   useEffect(() => {
     if (!restaurants.length) {
