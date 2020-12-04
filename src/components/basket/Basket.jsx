@@ -38,6 +38,14 @@ const Basket = ({ style }) => {
     }
   }, [basket]);
 
+  useEffect(() => {
+    return () => {
+        if(basketVisibility) {
+            dispatch(closeBasket())
+        }
+    }
+  },[dispatch, basketVisibility])
+  
   const onOrderItems = () => {
     dispatch(order());
     console.log("ordered");

@@ -6,7 +6,6 @@ import { RESTAURANTS_URL } from "../../../constants";
 import {
   addSearchName,
   animateBasket,
-  closeBasket,
 } from "../../../store/actions";
 import {
   getSearchedName,
@@ -62,19 +61,9 @@ const Restaurant = () => {
 
   useEffect(() => {
     if (basketVisibility) {
-      console.log(basketVisibility);
       setTimeout(() => dispatch(animateBasket()));
     }
   }, [basketVisibility, dispatch]);
-
-  useEffect(() => {
-    return () => {
-      if (basketVisibility) {
-        console.log(basketVisibility);
-        dispatch(closeBasket());
-      }
-    };
-  }, [dispatch, basketVisibility]);
 
   const onCheckboxChoose = (e) => {
     const chechked = e.target.checked;
