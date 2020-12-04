@@ -20,7 +20,7 @@
     h2 {
       width: 100%;
       color: $mainColor;
-      padding: $mainPadding / 2;
+      font-size: $mainFontSize;
     }
     .kitchenTypes {
       display: flex;
@@ -39,5 +39,14 @@
         }
       }
     }
+  }
+  @media (max-width: 1200px) {
+    width: 33.33333%;
+  }
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
