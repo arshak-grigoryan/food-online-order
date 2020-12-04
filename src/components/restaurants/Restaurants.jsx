@@ -26,7 +26,9 @@ const Restaurants = () => {
 
   useEffect(() => {
     if (!restaurants.length) {
-      dispatch(addRestaurants(restaurantsData));
+        if(restaurantsData) {
+            dispatch(addRestaurants(restaurantsData));
+        }
     }
   }, [dispatch, restaurantsData, restaurants]);
 
