@@ -27,7 +27,7 @@ const Home = () => {
     <>
       <div
         className="home"
-        style={{ width: isBasketAnimation ? "calc(100% - 300px)" : "100%" }}
+        style={{ width: isBasketAnimation ? "calc(100% - 20%)" : "100%" }}
       >
         <Header
           isSelectOptionExist={true}
@@ -37,7 +37,7 @@ const Home = () => {
         <Restaurants />
       </div>
       {basketVisibility && (
-        <Basket style={{ right: isBasketAnimation ? "0" : "-300px" }} />
+        <Basket style={{ right: isBasketAnimation ? "0" : "-20%" }} />
       )}
     </>
   );

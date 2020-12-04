@@ -1,22 +1,29 @@
+@import '../../variables.scss';
+
 .basketItem {
   width: 100%;
   display: flex;
   flex-direction: column;
   .nameDeleteItem {
-    padding: 10px 0;
+    padding: $mainPadding 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     .name {
       h3 {
-        font-size: 18px;
+        font-size: $mainFontSize;
+        color: $mainColor;
       }
     }
     .deleteItem {
       height: 20px;
       i {
-        font-size: 15px;
+        font-size: $mainFontSize;
+        color: $mainColor;
+        &:hover {
+            color: $mainHoverColor;
+        }
       }
     }
   }
@@ -36,17 +43,24 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-size: 18px;
+      font-size: $mainFontSize;
       .counter {
         display: flex;
         flex-direction: row;
         > div {
-          padding: 10px;
+          padding: $mainPadding;
+          i {
+              color: $mainColor;
+              &:hover {
+                  color: $mainHoverColor;
+              }
+          }
         }
         .decrease,
         .increase {
-          font-size: 18px;
+          font-size: $mainFontSize;
           font-weight: bold;
+          color: $mainColor;
         }
       }
     }

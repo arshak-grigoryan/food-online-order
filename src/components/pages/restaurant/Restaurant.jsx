@@ -84,11 +84,11 @@ const Restaurant = () => {
   return (
     <>
       {basketVisibility && (
-        <Basket style={{ right: isBasketAnimation ? "0" : "-300px" }} />
+        <Basket style={{ right: isBasketAnimation ? "0" : "-20%" }} />
       )}
       <div
         className="restaurant"
-        style={{ width: isBasketAnimation ? "calc(100% - 300px)" : "100%" }}
+        style={{ width: isBasketAnimation ? "calc(100% - 20%)" : "100%" }}
       >
         <Header placeholder="Search Menu Items" isBackExist={true} />
         <div className="menuWrapper">

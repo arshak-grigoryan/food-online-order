@@ -3,30 +3,31 @@
 .basketRight {
   position: fixed;
   top: 0;
-  right: -300px;
-  width: 300px;
+  right: -20%;
+  width: 20%;
   height: 100%;
-  background-color: white;
-  border-left: 2px solid black;
+  background-color: $white;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: $mainPadding;
   transition: $mainTransition;
   .top {
     width: 100%;
     display: flex;
-    .left {
-      width: 15%;
-    }
     .totalPrice {
-      width: 70%;
+      width: 50%;
+      font-size: $mainFontSize;
     }
     .closeBasket {
-      width: 15%;
+      width: 50%;
       text-align: end;
       i {
-        font-size: 25px;
+        font-size: $mainFontSize * 2;
+        color: $mainColor;
+        &:hover {
+            color: $mainHoverColor;
+        }
       }
     }
   }
@@ -35,9 +36,18 @@
   }
   .order {
     text-align: center;
-    padding: 10px;
-    button {
+    padding: $mainPadding;
+    > div {
+        display: inline-block;
+        padding: $mainPadding / 2;
+        border: $mainBorderWidth * 2 solid $mainColor;
+        border-radius: $mainBorderRadius;
       cursor: pointer;
+      transition: $mainTransition;
+      &:hover {
+        border: $mainBorderWidth * 2 solid $mainHoverColor;
+        color: $mainHoverColor;
+      }
     }
   }
 }
