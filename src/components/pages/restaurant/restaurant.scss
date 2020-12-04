@@ -1,6 +1,8 @@
 @import "../../../variables.scss";
 
 .restaurant {
+    width: 100%;
+    height: 100%;
   text-align: center;
   transition: $mainTransition;
   .menuWrapper {
@@ -12,6 +14,7 @@
       padding: $mainPadding * 2;
       .menuFilter {
         width: 100%;
+        height: 100%;
         padding: $mainPadding * 2;
         background-color: $white;
         .kitchenTypes,

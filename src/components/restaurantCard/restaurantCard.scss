@@ -12,7 +12,7 @@
     background-color: $itemCardColor;
     transition: $mainTransition;
     &:hover {
-      margin-top: $mainPadding * -2;
+      transform: scale(1.1);
     }
     img {
       width: 100%;
