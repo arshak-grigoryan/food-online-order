@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFetch, useMount } from "../../hooks";
 import { RESTAURANTS_URL } from "../../constants";
 import {
+    getBasketVisibility,
   getRestaurants,
   getSearchedName,
   getSelectedKitchenType,
 } from "../../store/selectors";
-import { addRestaurants, addSearchName } from "../../store/actions";
+import { addRestaurants, addSearchName, closeBasket } from "../../store/actions";
 import RestaurantCard from "../restaurantCard/RestaurantCard";
 import "./restaurants.scss";
 
@@ -16,11 +17,12 @@ const Restaurants = () => {
 
   const restaurantsData = useFetch(RESTAURANTS_URL);
 
-  const { restaurants, searchedName, selectedKitchenType } = useSelector(
+  const { restaurants, searchedName, selectedKitchenType, basketVisibility } = useSelector(
     (state) => ({
       restaurants: getRestaurants(state),
       searchedName: getSearchedName(state),
       selectedKitchenType: getSelectedKitchenType(state),
+      basketVisibility: getBasketVisibility(state)
     })
   );
 
@@ -34,6 +36,14 @@ const Restaurants = () => {
       dispatch(addRestaurants(restaurantsData));
     }
   }, [dispatch, restaurantsData, restaurants]);
+
+  useEffect(() => {
+    return () => {
+        if(basketVisibility) {
+            dispatch(closeBasket())
+        }
+    }
+  },[dispatch, basketVisibility])
 
   return (
     <div className="restaurants">
