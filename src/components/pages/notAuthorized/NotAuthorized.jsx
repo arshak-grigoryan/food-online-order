@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './notAuthorized.css';
+import './notAuthorized.scss';
 
 const NotAuthorized = () => {
     return <div className='notAuthorized'>NotAuthorized</div>
