@@ -15,8 +15,8 @@ import Basket from "../../basket/Basket";
 import "./restaurant.scss";
 
 const Restaurant = () => {
-  const [minValue, setMinValue] = useState(undefined);
-  const [maxValue, setMaxValue] = useState(undefined);
+  const [minValue, setMinValue] = useState();
+  const [maxValue, setMaxValue] = useState();
   const [selectedKitchenTypes, setSelectedKitchenTypes] = useState(null);
   const [currentRestaurant, setCurrentRestaurant] = useState(null);
   const dispatch = useDispatch();
@@ -44,10 +44,8 @@ const Restaurant = () => {
       const currentRestaurant = restaurants.find(
         (restaurant) => restaurant.id === Number(params.id)
       );
-      if (currentRestaurant) {
-        setCurrentRestaurant(currentRestaurant);
-        setSelectedKitchenTypes(currentRestaurant.kitchenTypes);
-      }
+      setCurrentRestaurant(currentRestaurant);
+      setSelectedKitchenTypes(currentRestaurant.kitchenTypes);
     }
   }, [restaurants, params]);
 
