@@ -1,5 +1,8 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { animateBasket } from "../../store/actions";
+import { getBasketVisibility } from '../../store/selectors';
 import { CLASS_NAMES } from "../../constants";
 import SelectOptions from "../selectOptions/SelectOptions";
 import Search from "../search/Search";
@@ -13,9 +16,14 @@ const Header = ({
   isBackExist = false,
   isRestaurantsSearch,
 }) => {
+    const dispatch = useDispatch()
   const history = useHistory();
 
+  const { basketVisibility } = useSelector((state) => ({ basketVisibility:getBasketVisibility(state) }))
   const onGoBackClick = () => {
+      if(basketVisibility) {
+        dispatch(animateBasket());
+      }
     history.push("/");
   };
 

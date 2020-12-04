@@ -4,7 +4,6 @@ import { closeBasket, order, animateBasket } from "../../store/actions";
 import {
   getBasket,
   getBasketVisibility,
-  getIsBasketAnimation,
 } from "../../store/selectors";
 import { CLASS_NAMES } from "../../constants";
 import Icon from "../icon/Icon";
@@ -15,11 +14,10 @@ const Basket = ({ style }) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const dispatch = useDispatch();
-  const { basket, basketVisibility, isBasketAnimation } = useSelector(
+  const { basket, basketVisibility } = useSelector(
     (state) => ({
       basket: getBasket(state),
       basketVisibility: getBasketVisibility(state),
-      isBasketAnimation: getIsBasketAnimation(state),
     })
   );
 
@@ -45,16 +43,17 @@ const Basket = ({ style }) => {
         }
     }
   },[dispatch, basketVisibility])
-  
+
   const onOrderItems = () => {
     dispatch(order());
+    dispatch(animateBasket());
+    dispatch(closeBasket())
     console.log("ordered");
   };
 
   return (
     <div className="basketRight" style={style}>
       <div className="top">
-        <div className="left"></div>
         <div className="totalPrice">
           <h3>{totalPrice ? `Total ${totalPrice}` : "Baskes is Empty"}</h3>
         </div>
@@ -70,7 +69,7 @@ const Basket = ({ style }) => {
       </div>
       {totalPrice ? (
         <div className="order">
-          <button onClick={onOrderItems}>Order</button>
+          <div onClick={onOrderItems}>Order</div>
         </div>
       ) : null}
     </div>
