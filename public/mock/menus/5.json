@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name": "Dish 1",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/large-lobster-tail-served-with-white-wine-picture-id155387793?s=2048x2048",
     "price": 1000,
-    "kitchenType": "rus"
+    "kitchenType": "Ita"
   },{
     "id": 2,
     "name": "Dish 2",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/seared-alaskan-scallops-with-roasted-cauliflower-picture-id142941208?s=2048x2048",
     "price": 2000,
     "kitchenType": "rus"
   },{
     "id": 3,
     "name": "Dish 3",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/grilled-salmon-steak-on-a-plate-picture-id163137003?s=2048x2048",
     "price": 1400,
-    "kitchenType": "rus"
+    "kitchenType": "Ita"
   },{
     "id": 4,
     "name": "Dish 4",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/delicous-homemade-chicken-curry-dish-with-rice-picture-id511873584?s=2048x2048",
     "price": 500,
     "kitchenType": "rus"
   },{
     "id": 5,
     "name": "Dish 5",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/expensive-steak-dinner-picture-id459310257?s=2048x2048",
     "price": 15000,
-    "kitchenType": "rus"
+    "kitchenType": "Ita"
   },{
     "id": 6,
     "name": "Dish 6",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/fine-dining-grilled-sea-bass-picture-id1135604824?s=2048x2048",
     "price": 1700,
     "kitchenType": "rus"
   }

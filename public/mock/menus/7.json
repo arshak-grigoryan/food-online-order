@@ -2,37 +2,37 @@
     {
       "id": 1,
       "name": "Dish 1",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/plate-of-salad-picture-id185119929?s=2048x2048",
       "price": 1000,
-      "kitchenType": "rus"
+      "kitchenType": "Ita"
     },{
       "id": 2,
       "name": "Dish 2",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/seafood-and-pastasicilyspaghetti-picture-id1006587840?s=2048x2048",
       "price": 2000,
       "kitchenType": "rus"
     },{
       "id": 3,
       "name": "Dish 3",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/healthy-seafood-picture-id184272109?s=2048x2048",
       "price": 1400,
       "kitchenType": "eng"
     },{
       "id": 4,
       "name": "Dish 4",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/curry-with-shrimps-served-in-a-coconut-traditional-thai-dish-picture-id1187414121?s=2048x2048",
       "price": 500,
-      "kitchenType": "arm"
+      "kitchenType": "Ita"
     },{
       "id": 5,
       "name": "Dish 5",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/quinoa-salad-picture-id1178392566?s=2048x2048",
       "price": 15000,
-      "kitchenType": "rus"
+      "kitchenType": "Ita"
     },{
       "id": 6,
       "name": "Dish 6",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/heesecake-with-berry-sauce-isolated-on-white-picture-id1173154030?s=2048x2048",
       "price": 1700,
       "kitchenType": "arm"
     }

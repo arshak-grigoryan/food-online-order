@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name": "Dish 1",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/spaghetti-bolognese-picture-id936610098?s=2048x2048",
     "price": 1000,
     "kitchenType": "arm"
   },{
     "id": 2,
     "name": "Dish 2",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/grilled-salmon-fillet-picture-id168511286?s=2048x2048",
     "price": 2000,
-    "kitchenType": "arm"
+    "kitchenType": "Ita"
   },{
     "id": 3,
     "name": "Dish 3",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/italian-seafood-pasta-with-mussels-and-clams-picture-id1207012550?s=2048x2048",
     "price": 1400,
     "kitchenType": "rus"
   },{
     "id": 4,
     "name": "Dish 4",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/pasta-with-basil-tomatoes-parmesan-and-zucchini-picture-id129232438?s=2048x2048",
     "price": 500,
     "kitchenType": "rus"
   },{
     "id": 5,
     "name": "Dish 5",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/stack-of-pork-ribs-picture-id182245919?s=2048x2048",
     "price": 15000,
-    "kitchenType": "arm"
+    "kitchenType": "Ita"
   },{
     "id": 6,
     "name": "Dish 6",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/dish-of-seafood-on-a-wooden-board-with-a-glass-of-wine-picture-id1177063130?s=2048x2048",
     "price": 1700,
     "kitchenType": "arm"
   }

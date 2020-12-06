@@ -2,39 +2,39 @@
     {
       "id": 1,
       "name": "Dish 1",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/boiled-lobster-with-cheese-served-with-spaghetti-picture-id1192828251?s=2048x2048",
       "price": 6800,
       "kitchenType": "eng"
     },{
       "id": 2,
       "name": "Dish 2",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/salmon-fillet-topped-with-arugula-pesto-and-salad-picture-id637966548?s=2048x2048",
       "price": 8000,
-      "kitchenType": "eng"
+      "kitchenType": "Ita"
     },{
       "id": 3,
       "name": "Dish 3",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/green-and-white-asparagus-with-cod-picture-id1156924034?s=2048x2048",
       "price": 4000,
       "kitchenType": "eng"
     },{
       "id": 4,
       "name": "Dish 4",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/traditional-christmas-cake-decorated-with-berries-icing-sugar-and-picture-id1184404091?s=2048x2048",
       "price": 1500,
-      "kitchenType": "eng"
+      "kitchenType": "Ita"
     },{
       "id": 5,
       "name": "Dish 5",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/fried-chicken-with-potato-chip-picture-id1174071992?s=2048x2048",
       "price": 3000,
       "kitchenType": "eng"
     },{
       "id": 6,
       "name": "Dish 6",
-      "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+      "photoUrl": "https://media.gettyimages.com/photos/moroccan-chicken-picture-id1219739594?s=2048x2048",
       "price": 2400,
-      "kitchenType": "eng"
+      "kitchenType": "Ita"
     }
   ]
   

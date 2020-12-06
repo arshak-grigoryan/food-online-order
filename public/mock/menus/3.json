@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name": "Dish 1",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/penne-bolognese-picture-id155433174?s=2048x2048",
     "price": 1000,
     "kitchenType": "rus"
   },{
     "id": 2,
     "name": "Dish 2",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/cheeseburger-and-french-fries-stock-photo-picture-id1206028650?s=2048x2048",
     "price": 2000,
     "kitchenType": "eng"
   },{
     "id": 3,
     "name": "Dish 3",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/breakfast-toast-with-avocado-fried-egg-and-sprouts-picture-id983267824?s=2048x2048",
     "price": 1400,
     "kitchenType": "rus"
   },{
     "id": 4,
     "name": "Dish 4",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/spaghetti-bolognese-picture-id1183748291?s=2048x2048",
     "price": 500,
     "kitchenType": "rus"
   },{
     "id": 5,
     "name": "Dish 5",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/healthy-salmon-dinner-picture-id183507434?s=2048x2048",
     "price": 15000,
     "kitchenType": "eng"
   },{
     "id": 6,
     "name": "Dish 6",
-    "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-picture-id914886270?s=2048x2048",
+    "photoUrl": "https://media.gettyimages.com/photos/tagliatelle-with-porcini-mushrooms-picture-id1187361747?s=2048x2048",
     "price": 1700,
     "kitchenType": "eng"
   }

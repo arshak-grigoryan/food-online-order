@@ -10,5 +10,9 @@
   {
     "name": "English",
     "abbr": "eng"
+  },
+  {
+    "name": "Italian",
+    "abbr": "Ita"
   }
 ]
