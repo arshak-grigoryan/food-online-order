@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeBasket, order, animateBasket } from "../../store/actions";
+import { closeBasket, order, animateBasket, orderModalToggle } from "../../store/actions";
 import {
   getBasket,
   getBasketVisibility,
@@ -48,31 +48,36 @@ const Basket = ({ style }) => {
     dispatch(order());
     dispatch(animateBasket());
     dispatch(closeBasket())
+    dispatch(orderModalToggle())
     console.log("ordered");
   };
-
+  const menu = document.querySelector('.restaurant')
+  console.log(menu.getBoundingClientRect())
   return (
-    <div className="basketRight" style={style}>
-      <div className="top">
-        <div className="totalPrice">
-          <h3>{totalPrice ? `Total ${totalPrice}` : "Baskes is Empty"}</h3>
+    <div className='basketRightWrapper' style={style}>
+      <div className="basketRight">
+        <div className="top">
+          <div className="totalPrice">
+            <h3>{totalPrice ? `Total $ ${totalPrice}` : "Cart is Empty"}</h3>
+          </div>
+          <div className="closeBasket" onClick={onCloseBasketClick}>
+            <Icon type={CLASS_NAMES.close} />
+          </div>
         </div>
-        <div className="closeBasket" onClick={onCloseBasketClick}>
-          <Icon type={CLASS_NAMES.close} />
+        <div className="basketItems">
+          {basket &&
+            basket.map(({ ruiid, ...item }) => {
+              return <BasketItem key={ruiid} ruiid={ruiid} {...item} />;
+            })}
         </div>
-      </div>
-      <div className="basketItems">
-        {basket &&
-          basket.map(({ ruiid, ...item }) => {
-            return <BasketItem key={ruiid} ruiid={ruiid} {...item} />;
-          })}
-      </div>
-      {totalPrice ? (
-        <div className="order">
-          <div onClick={onOrderItems}>Order</div>
-        </div>
-      ) : null}
+        {totalPrice ? (
+          <div className="order">
+            <div onClick={onOrderItems}>Order</div>
+          </div>
+        ) : null}
+      </div>  
     </div>
+
   );
 };
 
