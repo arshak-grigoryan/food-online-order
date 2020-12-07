@@ -37,6 +37,7 @@ const Restaurant = () => {
     if (menu) {
       setMenuItems(menu);
     }
+    return () => setMenuItems(menu);
   }, [menu]);
 
   useEffect(() => {
@@ -44,8 +45,10 @@ const Restaurant = () => {
       const currentRestaurant = restaurants.find(
         (restaurant) => restaurant.id === Number(params.id)
       );
-      setCurrentRestaurant(currentRestaurant);
-      setSelectedKitchenTypes(currentRestaurant.kitchenTypes);
+      if(currentRestaurant) {
+        setCurrentRestaurant(currentRestaurant);
+        setSelectedKitchenTypes(currentRestaurant.kitchenTypes);        
+      }
     }
   }, [restaurants, params]);
 
@@ -95,7 +98,7 @@ const Restaurant = () => {
           <div className="menuFilterWrapper">
             <div className="menuFilter">
               <div className="kitchenTypes">
-                <h2>Kitchen Types</h2>
+                <h2>Cuisine</h2>
                 <div className="chechkboxItemsWrapper">
                   {currentRestaurant &&
                     currentRestaurant.kitchenTypes.map((kitchen, i) => {
@@ -118,7 +121,7 @@ const Restaurant = () => {
                 <h2>Price</h2>
                 <div className="inputsWrapper">
                   <div className="priceInput">
-                    <label htmlFor="min">Min</label>
+                    <label htmlFor="min">Min $</label>
                     <input
                       id="min"
                       type="number"
@@ -127,7 +130,7 @@ const Restaurant = () => {
                     />
                   </div>
                   <div className="priceInput">
-                    <label htmlFor="min">Max</label>
+                    <label htmlFor="min">Max $</label>
                     <input
                       id="max"
                       type="number"
@@ -140,7 +143,7 @@ const Restaurant = () => {
             </div>
           </div>
           <div className="restaurantMenu">
-            {menuItems
+            {menuItems && menuItems
               .filter(({ name }) => {
                 return name.toLowerCase().includes(searchedName);
               })
