@@ -12,7 +12,7 @@ const RestaurantCard = ({ id, name, photoUrl, kitchenTypes }) => {
   return (
     <div className="restaurantCardWrapper">
       <div className="restaurantCard" onClick={onRestaurantClick}>
-        <img src={photoUrl} alt="img" />
+        <div className='photo' style={{backgroundImage: `url(${photoUrl})`}}></div>
         <h2>{name}</h2>
         <div className="kitchenTypes">
           {kitchenTypes.map((kitchen, i) => {

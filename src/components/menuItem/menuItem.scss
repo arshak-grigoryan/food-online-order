@@ -7,14 +7,14 @@
     width: 100%;
     border: $mainBorderWidth solid $mainBorderColor;
     background-color: $itemCardColor;
-    // transition: $mainTransition;
     display: flex;
     flex-direction: column;
-    // &:hover {
-    //   margin-top: $mainPadding * -2;
-    // }
-    img {
+    .photo {
       width: 100%;
+      height: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;     
     }
     h2 {
       width: 100%;
@@ -60,7 +60,7 @@
       }
     }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     width: 33.33333%;
   }
   @media (max-width: 1024px) {

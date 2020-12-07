@@ -14,7 +14,8 @@ const MenuItem = ({ id, ruiid, name, photoUrl, price, kitchenType }) => {
   return (
     <div className="menuItemWrapper">
       <div className="menuItem">
-        <img src={photoUrl} alt="img" />
+        <div className='photo' style={{backgroundImage: `url(${photoUrl})`}}>
+        </div>
         <h2>{name}</h2>
         {/* <div className='kitchenTypes'>
                     <div className='kitchenWrapper'>
