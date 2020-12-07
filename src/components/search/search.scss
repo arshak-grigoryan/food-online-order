@@ -3,7 +3,7 @@
 input {
   padding: $mainPadding;
   font-size: $mainFontSize;
-  border: $mainBorderWidth solid $mainBorderColor;
+  border: $mainBorderWidth * 3 / 2 solid $mainBorderColor;
   border-radius: $mainBorderRadius;
   color: $mainColor;
   &::placeholder {
