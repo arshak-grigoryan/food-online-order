@@ -4,7 +4,6 @@ import { Route } from "react-router-dom";
 import SuspenseLoader from "../loader/SuspenseLoader";
 
 const SuspensedRoute = ({ component: Component, children, ...props }) => {
-  
   if (Component) {
     return (
       <Route {...props}>
@@ -12,7 +11,7 @@ const SuspensedRoute = ({ component: Component, children, ...props }) => {
           <Component />
         </SuspenseLoader>
       </Route>
-    );      
+    );
   }
 
   return (
@@ -20,6 +19,6 @@ const SuspensedRoute = ({ component: Component, children, ...props }) => {
       <SuspenseLoader>{children}</SuspenseLoader>
     </Route>
   );
-}
+};
 
 export default SuspensedRoute;
