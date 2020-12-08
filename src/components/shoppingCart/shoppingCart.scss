@@ -1,8 +1,21 @@
 @import "../../variables.scss";
 
 .shoppingCart {
-  padding: $mainPadding;
+  display: flex;
+  align-items: center;
+  color: $mainBorderColor;
   i {
+    padding: $mainPadding;
     font-size: $mainPadding * 3;
+  }
+  sup {
+    transition: $mainTransition;
+    cursor: pointer;
+  }
+  &:hover {
+    sup,
+    i {
+      color: $mainHoverColor;
+    }
   }
 }
