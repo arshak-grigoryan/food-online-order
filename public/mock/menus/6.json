@@ -4,36 +4,36 @@
     "name": "Dish 1",
     "photoUrl": "https://media.gettyimages.com/photos/spaghetti-carbonara-with-wine-picture-id86055601?s=2048x2048",
     "price": 1000,
-    "kitchenType": "rus"
+    "cuisine": "rus"
   },{
     "id": 2,
     "name": "Dish 2",
     "photoUrl": "https://media.gettyimages.com/photos/close-up-of-fresh-steamed-lobster-with-herbs-in-grey-plate-picture-id117149629?s=2048x2048",
     "price": 2000,
-    "kitchenType": "arm"
+    "cuisine": "arm"
   },{
     "id": 3,
     "name": "Dish 3",
     "photoUrl": "https://media.gettyimages.com/photos/pacific-cod-fennel-potatoes-proscuitto-mussels-picture-id142941173?s=2048x2048",
     "price": 1400,
-    "kitchenType": "arm"
+    "cuisine": "arm"
   },{
     "id": 4,
     "name": "Dish 4",
     "photoUrl": "https://media.gettyimages.com/photos/creamy-mushroom-fettuccine-alfredo-picture-id1216016253?s=2048x2048",
     "price": 500,
-    "kitchenType": "arm"
+    "cuisine": "arm"
   },{
     "id": 5,
     "name": "Dish 5",
     "photoUrl": "https://media.gettyimages.com/photos/homemade-fettuccine-pasta-with-bolognese-sauce-picture-id622458064?s=2048x2048",
     "price": 15000,
-    "kitchenType": "rus"
+    "cuisine": "rus"
   },{
     "id": 6,
     "name": "Dish 6",
     "photoUrl": "https://media.gettyimages.com/photos/seafood-pasta-picture-id942498014?s=2048x2048",
     "price": 1700,
-    "kitchenType": "arm"
+    "cuisine": "arm"
   }
 ]

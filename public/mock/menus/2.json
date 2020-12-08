@@ -4,36 +4,36 @@
     "name": "Dish 1",
     "photoUrl": "https://media.gettyimages.com/photos/healthy-spaghetti-with-roasted-butternut-squash-and-sage-butter-picture-id927121592?s=2048x2048",
     "price": 1000,
-    "kitchenType": "eng"
+    "cuisine": "eng"
   },{
     "id": 2,
     "name": "Dish 2",
     "photoUrl": "https://media.gettyimages.com/photos/pasta-with-king-prawns-picture-id183869552?s=2048x2048",
     "price": 2000,
-    "kitchenType": "Ita"
+    "cuisine": "Ita"
   },{
     "id": 3,
     "name": "Dish 3",
     "photoUrl": "https://media.gettyimages.com/photos/green-bean-dish-with-cloth-napkin-on-wood-surface-picture-id143219170?s=2048x2048",
     "price": 1400,
-    "kitchenType": "Ita"
+    "cuisine": "Ita"
   },{
     "id": 4,
     "name": "Dish 4",
     "photoUrl": "https://media.gettyimages.com/photos/roasted-butternut-squash-with-green-lentils-and-rocket-leaves-picture-id1182657102?s=2048x2048",
     "price": 500,
-    "kitchenType": "eng"
+    "cuisine": "eng"
   },{
     "id": 5,
     "name": "Dish 5",
     "photoUrl": "https://media.gettyimages.com/photos/healthy-butternut-squash-and-beans-curry-picture-id1018839258?s=2048x2048",
     "price": 15000,
-    "kitchenType": "eng"
+    "cuisine": "eng"
   },{
     "id": 6,
     "name": "Dish 6",
     "photoUrl": "https://media.gettyimages.com/photos/iceland-lunch-picture-id1087174198?s=2048x2048",
     "price": 1700,
-    "kitchenType": "Ita"
+    "cuisine": "Ita"
   }
 ]

@@ -4,36 +4,36 @@
     "name": "Dish 1",
     "photoUrl": "https://media.gettyimages.com/photos/broiled-seafood-picture-id184283500?s=2048x2048",
     "price": 1000,
-    "kitchenType": "arm"
+    "cuisine": "arm"
   },{
     "id": 2,
     "name": "Dish 2",
     "photoUrl": "https://media.gettyimages.com/photos/grilled-halibut-with-capersolives-and-tomatoes-picture-id515705844?s=2048x2048",
     "price": 2000,
-    "kitchenType": "rus"
+    "cuisine": "rus"
   },{
     "id": 3,
     "name": "Dish 3",
     "photoUrl": "https://media.gettyimages.com/photos/healthy-wild-rice-salad-with-grilled-teriyaki-salmon-fillet-picture-id950469672?s=2048x2048",
     "price": 1400,
-    "kitchenType": "eng"
+    "cuisine": "eng"
   },{
     "id": 4,
     "name": "Dish 4",
     "photoUrl": "https://media.gettyimages.com/photos/roasted-salmon-salad-picture-id173923946?s=2048x2048",
     "price": 500,
-    "kitchenType": "Ita"
+    "cuisine": "Ita"
   },{
     "id": 5,
     "name": "Dish 5",
     "photoUrl": "https://media.gettyimages.com/photos/appetizing-meal-with-baked-fish-picture-id1031471734?s=2048x2048",
     "price": 15000,
-    "kitchenType": "arm"
+    "cuisine": "arm"
   },{
     "id": 6,
     "name": "Dish 6",
     "photoUrl": "https://media.gettyimages.com/photos/homemade-pasta-picture-id488960908?s=2048x2048",
     "price": 1700,
-    "kitchenType": "Ita"
+    "cuisine": "Ita"
   }
 ]
