@@ -5,10 +5,10 @@ import { RESTAURANTS_URL } from "../../constants";
 import {
   getRestaurants,
   getSearchedName,
-  getSelectedKitchenType,
+  getSelectedCuisine,
 } from "../../store/selectors";
 import { addRestaurants } from "../../store/actions";
-import RestaurantCard from "../restaurantCard/RestaurantCard";
+import RestaurantItem from "../restaurantItem/RestaurantItem";
 import "./restaurants.scss";
 
 const Restaurants = () => {
@@ -16,36 +16,35 @@ const Restaurants = () => {
 
   const restaurantsData = useFetch(RESTAURANTS_URL);
 
-  const { restaurants, searchedName, selectedKitchenType } = useSelector(
+  const { restaurants, searchedName, selectedCuisine } = useSelector(
     (state) => ({
       restaurants: getRestaurants(state),
       searchedName: getSearchedName(state),
-      selectedKitchenType: getSelectedKitchenType(state),
+      selectedCuisine: getSelectedCuisine(state),
     })
   );
 
   useEffect(() => {
     if (!restaurants.length) {
-        if(restaurantsData) {
-            dispatch(addRestaurants(restaurantsData));
-        }
+      if (restaurantsData) {
+        dispatch(addRestaurants(restaurantsData));
+      }
     }
   }, [dispatch, restaurantsData, restaurants]);
 
   return (
     <div className="restaurants">
       {restaurants
-        .filter(({ kitchenTypes }) => {
+        .filter(({ cuisines }) => {
           return (
-            selectedKitchenType === "all" ||
-            kitchenTypes.includes(selectedKitchenType)
+            selectedCuisine === "all" || cuisines.includes(selectedCuisine)
           );
         })
         .filter(({ name }) => {
           return name.toLowerCase().includes(searchedName);
         })
         .map(({ id, ...props }) => {
-          return <RestaurantCard key={id} id={id} {...props} />;
+          return <RestaurantItem key={id} id={id} {...props} />;
         })}
     </div>
   );
