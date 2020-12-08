@@ -1,7 +1,7 @@
-export const getKitchenTypes = (state) => state.kitchenTypes;
 export const getRestaurants = (state) => state.restaurants;
-export const getBasket = (state) => state.basket;
+export const getCart = (state) => state.cart;
 export const getSearchedName = (state) => state.searchedName;
-export const getSelectedKitchenType = (state) => state.selectedKitchenType;
-export const getBasketVisibility = (state) => state.basketVisibility;
-export const getIsBasketAnimation= (state) => state.isBasketAnimation;
+export const getSelectedCuisine = (state) => state.selectedCuisine;
+export const getIsCart = (state) => state.isCart;
+export const getisCartAnimating = (state) => state.isCartAnimating;
+export const getIsOrderModal = (state) => state.isOrderModal;
