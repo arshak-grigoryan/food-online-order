@@ -1,0 +1,56 @@
+@import "../../variables.scss";
+
+.restaurantItemWrapper {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: $mainPadding * 2;
+  .restaurantItem {
+    width: 100%;
+    border: $mainBorderWidth solid $mainBorderColor;
+    cursor: pointer;
+    background-color: $itemCardColor;
+    transition: $mainTransition;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .photo {
+      width: 100%;
+      height: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h2 {
+      width: 100%;
+      color: $mainColor;
+      font-size: $mainFontSize;
+    }
+    .cuisines {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: $mainPadding / 2;
+      .cuisineWrapper {
+        padding: $mainPadding / 2;
+        .cuisine {
+          font-size: 12px;
+          padding: $mainPadding / 2;
+          text-transform: capitalize;
+          border: 1px solid $mainColor;
+          border-radius: 3px;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+    width: 33.33333%;
+  }
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
