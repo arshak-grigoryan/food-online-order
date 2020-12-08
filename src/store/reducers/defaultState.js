@@ -1,11 +1,11 @@
 const defaultState = {
-    kitchenTypes: [],
     restaurants: [],
-    basket: [],
+    cart: [],
     searchedName: '',
-    selectedKitchenType: 'all',
-    basketVisibility: false,
-    isBasketAnimation: false,
+    selectedCuisine: 'all',
+    isCart: false,
+    isCartAnimating: false,
+    isOrderModal: false,
 }
 
 export default defaultState

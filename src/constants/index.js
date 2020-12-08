@@ -6,4 +6,5 @@ export const CLASS_NAMES = {
     plus: 'fas fa-plus',
 }
 export const RESTAURANTS_URL = '/mock/restaurants.json';
-export const KITCHEN_TYPES_URL = '/mock/kitchenTypes.json';
+export const CUISINES_URL = '/mock/cuisines.json';
+export const TRANSITION_TIME_MS = 300

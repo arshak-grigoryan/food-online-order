@@ -1,55 +1,57 @@
 import {
-    OPEN_BASKET,
-    CLOSE_BASKET,
-    ADD_ITEM_BASKET,
-    DELETE_ITEM_BASKET,
-    INCREASE_ITEM,
-    DECREASE_ITEM,
+    OPEN_CART,
+    CLOSE_CART,
+    ADD_CART_ITEM,
+    DELETE_CART_ITEM,
+    INCREASE_CART_ITEM,
+    DECREASE_CART_ITEM,
     ADD_RESTAURANTS,
     ADD_SEARCH_NAME,
-    SELECT_KITCHEN_TYPE,
+    SELECT_CUISINE,
     ORDER,
-    BASKET_ANIMATION,
+    CART_OPENING_ANIMATION,
+    CART_CLOSING_ANIMATION,
+    ORDER_MODAL,
 } from '../constants';
 
-export const openBasket = () => {
+export const openCart = () => {
     return {
-        type: OPEN_BASKET
+        type: OPEN_CART
     }
 }
 
-export const closeBasket = () => {
+export const closeCart = () => {
     return {
-        type: CLOSE_BASKET
+        type: CLOSE_CART
     }
 }
 
-export const addItemBasket = (item) => {
+export const addCartItem = (item) => {
     return {
-        type: ADD_ITEM_BASKET,
+        type: ADD_CART_ITEM,
         payload: {
             item,
         }
     }
 }
 
-export const deleteItemBasket = (ruiid) => {
+export const deleteCartItem = (ruiid) => {
     return {
-        type: DELETE_ITEM_BASKET,
+        type: DELETE_CART_ITEM,
         payload: { ruiid }
     }
 }
 
-export const increaseItem = (ruiid) => {
+export const increaseCartItem = (ruiid) => {
     return {
-        type: INCREASE_ITEM,
+        type: INCREASE_CART_ITEM,
         payload: { ruiid }
     }
 }
 
-export const decreaseItem = (ruiid) => {
+export const decreaseCartItem = (ruiid) => {
     return {
-        type: DECREASE_ITEM,
+        type: DECREASE_CART_ITEM,
         payload: { ruiid }
     }
 }
@@ -68,10 +70,10 @@ export const addSearchName = (name) => {
     }
 }
 
-export const selectKitchenType = (kitchenType) => {
+export const selectCusine = (cuisine) => {
     return {
-        type: SELECT_KITCHEN_TYPE,
-        payload: { kitchenType }
+        type: SELECT_CUISINE,
+        payload: { cuisine }
     }
 }
 
@@ -81,8 +83,20 @@ export const order = () => {
     }
 }
 
-export const animateBasket = () => {
+export const startCartOpeningAnimation = () => {
     return {
-        type: BASKET_ANIMATION
+        type: CART_OPENING_ANIMATION
+    }
+}
+
+export const startCartClosingAnimation = () => {
+    return {
+        type: CART_CLOSING_ANIMATION
+    }
+}
+
+export const orderModalToggle = () => {
+    return {
+        type: ORDER_MODAL
     }
 }
