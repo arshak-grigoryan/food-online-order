@@ -14,31 +14,14 @@
       height: 200px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;     
+      background-size: cover;
     }
     h2 {
       width: 100%;
       color: $mainColor;
       font-size: $mainFontSize;
     }
-    .kitchenTypes {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding: $mainPadding / 2;
-      .kitchenWrapper {
-        padding: $mainPadding / 2;
-        .kitchen {
-          font-size: $mainFontSize;
-          padding: $mainPadding / 2;
-          text-transform: capitalize;
-          border: $mainBorderWidth solid $mainColor;
-          border-radius: $mainBorderRadius;
-          color: $mainColor;
-        }
-      }
-    }
-    .priceBasket {
+    .priceCart {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,7 +31,7 @@
         padding: $mainPadding / 2;
         font-size: $mainFontSize * 5 / 4;
       }
-      .basket {
+      .cart {
         padding: $mainPadding / 2;
         i {
           color: $mainColor;

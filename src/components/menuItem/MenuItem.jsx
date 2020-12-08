@@ -1,30 +1,27 @@
 import { useDispatch } from "react-redux";
 import { CLASS_NAMES } from "../../constants";
-import { addItemBasket } from "../../store/actions";
+import { addCartItem } from "../../store/actions";
 import Icon from "../icon/Icon";
 import "./menuItem.scss";
 
-const MenuItem = ({ id, ruiid, name, photoUrl, price, kitchenType }) => {
+const MenuItem = ({ id, ruiid, name, photoUrl, price }) => {
   const dispatch = useDispatch();
 
-  const onAddItemBasketClick = () => {
-    dispatch(addItemBasket({ id, name, photoUrl, price, ruiid }));
+  const onaddCartItemick = () => {
+    dispatch(addCartItem({ id, name, photoUrl, price, ruiid }));
   };
 
   return (
     <div className="menuItemWrapper">
       <div className="menuItem">
-        <div className='photo' style={{backgroundImage: `url(${photoUrl})`}}>
-        </div>
+        <div
+          className="photo"
+          style={{ backgroundImage: `url(${photoUrl})` }}
+        ></div>
         <h2>{name}</h2>
-        {/* <div className='kitchenTypes'>
-                    <div className='kitchenWrapper'>
-                        <div className='kitchen'>{kitchenType}</div>
-                    </div>
-                </div> */}
-        <div className="priceBasket">
+        <div className="priceCart">
           <div className="price">$ {price}</div>
-          <div className="basket" onClick={onAddItemBasketClick}>
+          <div className="cart" onClick={onaddCartItemick}>
             <Icon type={CLASS_NAMES.shoppingCart} />
           </div>
         </div>
