@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getBasket } from "../../../store/selectors";
+import { getCart } from "../../../store/selectors";
 import { order, orderModalToggle } from "../../../store/actions";
 import "./order.scss";
 
@@ -8,17 +8,17 @@ const Order = () => {
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const { basket } = useSelector((state) => ({
-    basket: getBasket(state),
+  const { cart } = useSelector((state) => ({
+    cart: getCart(state),
   }));
 
   useEffect(() => {
     let total = 0;
-    basket.forEach(({ price, count }) => {
+    cart.forEach(({ price, count }) => {
       total += price * count;
     });
     setTotalPrice(total);
-  }, [basket]);
+  }, [cart]);
 
   const onConfirmOrderClick = () => {
     dispatch(order());
@@ -43,7 +43,7 @@ const Order = () => {
               </tr>
             </thead>
             <tbody>
-              {basket.map(({ ruiid, name, price, count }) => {
+              {cart.map(({ ruiid, name, price, count }) => {
                 return (
                   <tr key={ruiid}>
                     <td>{name}</td>
