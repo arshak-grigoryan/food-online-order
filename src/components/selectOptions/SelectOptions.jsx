@@ -1,39 +1,39 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useFetch, useMount } from "../../hooks";
-import { KITCHEN_TYPES_URL } from "../../constants";
-import { selectKitchenType } from "../../store/actions";
-import { getSelectedKitchenType } from "../../store/selectors";
+import { CUISINES_URL } from "../../constants";
+import { selectCusine } from "../../store/actions";
+import { getSelectedCuisine } from "../../store/selectors";
 import "./selectOptions.scss";
 
 const SelectOptions = () => {
   const dispatch = useDispatch();
 
-  const kitchenTypes = useFetch(KITCHEN_TYPES_URL);
+  const cuisines = useFetch(CUISINES_URL);
 
-  const { selectedKitchenType } = useSelector((state) => ({
-    selectKitchenType: getSelectedKitchenType(state),
+  const { selectedCuisine } = useSelector((state) => ({
+    selectCusine: getSelectedCuisine(state),
   }));
 
   const onSelectChange = (e) => {
-    dispatch(selectKitchenType(e.target.value));
+    dispatch(selectCusine(e.target.value));
   };
 
   useMount(() => {
-    // reset selected option for current page when page visited for first time reloaded
-    if (selectedKitchenType && selectedKitchenType !== "all") {
-      dispatch(selectKitchenType("all"));
+    // reset selected option for current page when page visited for first time or reloaded
+    if (selectedCuisine !== "all") {
+      dispatch(selectCusine("all"));
     }
   });
 
   return (
     <div className="selectOptions">
-      <select id="kitchens" onChange={(e) => onSelectChange(e)}>
+      <select onChange={(e) => onSelectChange(e)}>
         <option value="all">All</option>
-        {kitchenTypes &&
-          kitchenTypes.map((kitchen, i) => {
+        {cuisines &&
+          cuisines.map((cuisine, i) => {
             return (
-              <option value={kitchen.abbr} key={i}>
-                {kitchen.name}
+              <option value={cuisine.abbr} key={i}>
+                {cuisine.name}
               </option>
             );
           })}
