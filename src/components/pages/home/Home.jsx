@@ -1,33 +1,25 @@
-import { useDispatch, useSelector } from "react-redux";
-import {
-  getBasketVisibility,
-  getIsBasketAnimation,
-} from "../../../store/selectors";
-import { animateBasket } from "../../../store/actions";
+import { useSelector } from "react-redux";
+import { TRANSITION_TIME_MS } from "../../../constants";
+import { getIsCart, getisCartAnimating } from "../../../store/selectors";
 import Header from "../../header/Header";
 import Restaurants from "../../restaurants/Restaurants";
-import Basket from "../../basket/Basket";
+import Cart from "../../cart/Cart";
 import "./home.scss";
-import { useEffect } from "react";
 
 const Home = () => {
-  const dispatch = useDispatch();
-  const { basketVisibility, isBasketAnimation } = useSelector((state) => ({
-    basketVisibility: getBasketVisibility(state),
-    isBasketAnimation: getIsBasketAnimation(state),
+  const { isCart, isCartAnimating } = useSelector((state) => ({
+    isCart: getIsCart(state),
+    isCartAnimating: getisCartAnimating(state),
   }));
-
-  useEffect(() => {
-    if (basketVisibility) {
-      setTimeout(() => dispatch(animateBasket()));
-    }
-  }, [basketVisibility, dispatch]);
 
   return (
     <>
       <div
         className="home"
-        style={{ width: isBasketAnimation ? "calc(100% - 20%)" : "100%" }}
+        style={{
+          width: isCartAnimating ? "calc(100% - 20%)" : "100%",
+          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : "0s",
+        }}
       >
         <Header
           isSelectOptionExist={true}
@@ -36,9 +28,7 @@ const Home = () => {
         />
         <Restaurants />
       </div>
-      {basketVisibility && (
-        <Basket style={{ right: isBasketAnimation ? "0" : "-20%" }} />
-      )}
+      {isCart && <Cart style={{ right: isCartAnimating ? "0" : "-20%" }} />}
     </>
   );
 };
