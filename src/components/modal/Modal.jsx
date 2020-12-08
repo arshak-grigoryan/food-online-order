@@ -11,7 +11,7 @@ const Modal = ({ children }) => {
   useEffect(() => {
     modalRoot.appendChild(el);
     return () => modalRoot.removeChild(el);
-  }, [children]);
+  }, [children, el]);
 
   return ReactDOM.createPortal(children, el);
 };
