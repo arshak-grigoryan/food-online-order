@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../../hooks";
@@ -168,4 +168,4 @@ const Restaurant = () => {
   );
 };
 
-export default memo(Restaurant);
+export default Restaurant;
