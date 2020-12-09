@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../../hooks";
-import { RESTAURANTS_URL, TRANSITION_TIME_MS, CART_WIDTH } from "../../../constants";
+import {
+  RESTAURANTS_URL,
+  TRANSITION_TIME_MS,
+  CART_WIDTH,
+} from "../../../constants";
 import {
   getSearchedName,
   getIsCart,
@@ -40,8 +44,11 @@ const Restaurant = () => {
         setSelectedCuisines(currentRestaurant.cuisines);
       }
     }
-    return () => setMenuItems(menu);
   }, [restaurants, params, menu]);
+
+  useEffect(() => {
+    return () => setMenuItems(menu);
+  }, [menu]);
 
   const onCheckboxChoose = (e) => {
     const chechked = e.target.checked;
@@ -71,7 +78,9 @@ const Restaurant = () => {
 
   return (
     <>
-      {isCart && <Cart style={{ right: isCartAnimating ? "0" : `-${CART_WIDTH}` }} />}
+      {isCart && (
+        <Cart style={{ right: isCartAnimating ? "0" : `-${CART_WIDTH}` }} />
+      )}
       <div
         className="restaurant"
         style={{
