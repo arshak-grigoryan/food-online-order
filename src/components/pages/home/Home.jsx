@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { TRANSITION_TIME_MS } from "../../../constants";
+import { TRANSITION_TIME_MS, CART_WIDTH } from "../../../constants";
 import { getIsCart, getisCartAnimating } from "../../../store/selectors";
 import Header from "../../header/Header";
 import Restaurants from "../../restaurants/Restaurants";
@@ -17,7 +17,7 @@ const Home = () => {
       <div
         className="home"
         style={{
-          width: isCartAnimating ? "calc(100% - 20%)" : "100%",
+          width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : "100%",
           transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : "0",
         }}
       >
@@ -28,7 +28,7 @@ const Home = () => {
         />
         <Restaurants />
       </div>
-      {isCart && <Cart style={{ right: isCartAnimating ? "0" : "-20%" }} />}
+      {isCart && <Cart style={{ right: isCartAnimating ? "0" : `-${CART_WIDTH}` }} />}
     </>
   );
 };

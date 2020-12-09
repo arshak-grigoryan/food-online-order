@@ -2,7 +2,7 @@ import { memo, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../../hooks";
-import { RESTAURANTS_URL, TRANSITION_TIME_MS } from "../../../constants";
+import { RESTAURANTS_URL, TRANSITION_TIME_MS, CART_WIDTH } from "../../../constants";
 import {
   getSearchedName,
   getIsCart,
@@ -71,11 +71,11 @@ const Restaurant = () => {
 
   return (
     <>
-      {isCart && <Cart style={{ right: isCartAnimating ? "0" : "-20%" }} />}
+      {isCart && <Cart style={{ right: isCartAnimating ? "0" : `-${CART_WIDTH}` }} />}
       <div
         className="restaurant"
         style={{
-          width: isCartAnimating ? "calc(100% - 20%)" : "100%",
+          width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : "100%",
           transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : "0",
         }}
       >
