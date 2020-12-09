@@ -8,6 +8,9 @@
   background-color: $mainColor;
   .left {
     text-align: start;
+    padding-left: $mainPadding * 2;
+    display: flex;
+    align-items: center;
     button {
       padding: $mainPadding / 2;
       cursor: pointer;
