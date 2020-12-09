@@ -1,11 +1,11 @@
 @import "../../variables.scss";
 
 .cartRightWrapper {
-  width: 20%;
+  // width: 20%;
   height: 100%;
   position: fixed;
   top: 0;
-  right: -20%;
+  // right: -20%;
   border-left: $mainBorderWidth * 2 solid $mainBorderColor;
   background-color: $white;
   z-index: 1;
