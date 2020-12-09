@@ -85,7 +85,7 @@ const Restaurant = () => {
         className="restaurant"
         style={{
           width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : "100%",
-          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : "0",
+          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : "0s",
         }}
       >
         <Header placeholder="Search Menu Items" isBackExist={true} />
