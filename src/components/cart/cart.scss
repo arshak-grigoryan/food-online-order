@@ -34,7 +34,8 @@
       }
     }
     .cartItems {
-      height: 50%;
+      // scss variable not working in calc
+      height: calc(100vh - 8px * 17);
       overflow: auto;
       padding: 0 $mainPadding $mainPadding $mainPadding;
     }
