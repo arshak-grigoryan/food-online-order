@@ -55,6 +55,7 @@
     .buttons {
       display: flex;
       justify-content: flex-end;
+      padding-top: $mainPadding;
       .closeInvoice {
         padding: $mainPadding;
         border: $mainBorderWidth * 2 solid $mainBorderColor;
