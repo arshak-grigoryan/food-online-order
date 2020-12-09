@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { getIsOrderModal } from "./store/selectors";
 import Router from "./components/router/Router";
 import Modal from "./components/modal/Modal";
-import Order from "./components/popup/order/Order";
+import Invoice from "./components/popup/invoice/Invoice";
 import "./app.css";
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="app">
       <Router />
-      <Modal>{isOrderModal && <Order />}</Modal>
+      <Modal>{isOrderModal && <Invoice />}</Modal>
     </div>
   );
 };
