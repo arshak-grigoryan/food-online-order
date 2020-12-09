@@ -90,7 +90,7 @@ const shopReducer = produce((state = defaultState, actions) => {
       state.cart = [];
       return state;
     case ORDER_MODAL:
-      state.isOrderModal = !state.isOrderModal;
+      state.isInvoiceModal = !state.isInvoiceModal;
       return state;
     default:
       return state;

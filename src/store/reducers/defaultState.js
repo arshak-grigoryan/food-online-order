@@ -5,7 +5,7 @@ const defaultState = {
   selectedCuisine: "all",
   isCart: false,
   isCartAnimating: false,
-  isOrderModal: false,
+  isInvoiceModal: false,
 };
 
 export default defaultState;

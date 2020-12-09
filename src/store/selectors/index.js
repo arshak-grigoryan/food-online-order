@@ -4,4 +4,4 @@ export const getSearchedName = (state) => state.searchedName;
 export const getSelectedCuisine = (state) => state.selectedCuisine;
 export const getIsCart = (state) => state.isCart;
 export const getisCartAnimating = (state) => state.isCartAnimating;
-export const getIsOrderModal = (state) => state.isOrderModal;
+export const getIsInvoiceModal = (state) => state.isInvoiceModal;
