@@ -10,4 +10,4 @@ export const DELETE_CART_ITEM = "DELETE_CART_ITEM";
 export const INCREASE_CART_ITEM = "INCREASE_CART_ITEM";
 export const DECREASE_CART_ITEM = "DECREASE_CART_ITEM";
 export const ORDER = "ORDER";
-export const ORDER_MODAL = "ORDER_MODAL";
+export const INVOICE_MODAL = "INVOICE_MODAL";

@@ -11,7 +11,7 @@ import {
   ORDER,
   CART_OPENING_ANIMATION,
   CART_CLOSING_ANIMATION,
-  ORDER_MODAL,
+  INVOICE_MODAL,
 } from "../constants";
 
 export const openCart = () => {
@@ -97,6 +97,6 @@ export const startCartClosingAnimation = () => {
 
 export const orderModalToggle = () => {
   return {
-    type: ORDER_MODAL,
+    type: INVOICE_MODAL,
   };
 };

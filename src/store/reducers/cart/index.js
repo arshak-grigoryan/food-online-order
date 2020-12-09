@@ -10,7 +10,7 @@ import {
   INCREASE_CART_ITEM,
   DECREASE_CART_ITEM,
   ORDER,
-  ORDER_MODAL,
+  INVOICE_MODAL,
 } from "../../constants";
 
 const cartReducer = produce((state = defaultState, actions) => {
@@ -75,7 +75,7 @@ const cartReducer = produce((state = defaultState, actions) => {
     case ORDER:
       state.cart = [];
       return state;
-    case ORDER_MODAL:
+    case INVOICE_MODAL:
       state.isInvoiceModal = !state.isInvoiceModal;
       return state;
     default:
