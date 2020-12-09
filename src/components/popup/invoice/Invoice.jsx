@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCart } from "../../../store/selectors";
-import { order, orderModalToggle } from "../../../store/actions";
+import { order, invoiceModalToggle } from "../../../store/actions";
 import { MONTHS } from "../../../constants";
 import "./invoice.scss";
 
@@ -35,7 +35,7 @@ const Invoice = () => {
 
   const onCloseInvoiceClick = () => {
     dispatch(order());
-    dispatch(orderModalToggle());
+    dispatch(invoiceModalToggle());
   };
 
   return (

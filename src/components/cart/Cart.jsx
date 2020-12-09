@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   closeCart,
-  orderModalToggle,
+  invoiceModalToggle,
   startCartClosingAnimation,
 } from "../../store/actions";
 import { getCart } from "../../store/selectors";
@@ -45,7 +45,7 @@ const Cart = ({ style }) => {
   const onOrderItems = () => {
     dispatch(closeCart());
     dispatch(startCartClosingAnimation());
-    dispatch(orderModalToggle());
+    dispatch(invoiceModalToggle());
   };
 
   return (

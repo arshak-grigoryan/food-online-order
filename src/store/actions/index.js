@@ -95,7 +95,7 @@ export const startCartClosingAnimation = () => {
   };
 };
 
-export const orderModalToggle = () => {
+export const invoiceModalToggle = () => {
   return {
     type: INVOICE_MODAL,
   };
