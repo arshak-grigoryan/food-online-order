@@ -8,6 +8,7 @@
   .menuWrapper {
     width: 100%;
     display: flex;
+    padding: $mainPadding * 2;
     .menuFilterWrapper {
       min-width: 200px;
       width: 15%;
