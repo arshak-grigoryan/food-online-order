@@ -5,10 +5,9 @@ import store from './store';
 import './index.css';
 import App from './App';
 
-const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  rootElement
+  document.getElementById('root')
 );
