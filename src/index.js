@@ -5,11 +5,9 @@ import store from './store';
 import './index.css';
 import App from './App';
 
-const rootEl = document.getElementById('root');
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  rootEl
+  document.getElementById('root')
 );
