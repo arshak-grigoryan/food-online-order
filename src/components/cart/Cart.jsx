@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   closeCart,
   invoiceModalToggle,
   startCartClosingAnimation,
-} from "../../store/actions";
-import { getCart } from "../../store/selectors";
-import { CART_WIDTH, CLASS_NAMES, TRANSITION_TIME_MS } from "../../constants";
-import Icon from "../icon/Icon";
-import CartItem from "../cartItem/CartItem";
-import "./cart.scss";
+} from '../../store/actions';
+import { getCart } from '../../store/selectors';
+import { CART_WIDTH, CLASS_NAMES, TRANSITION_TIME_MS } from '../../constants';
+import Icon from '../icon/Icon';
+import CartItem from '../cartItem/CartItem';
+import './cart.scss';
 
 const Cart = ({ style }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -50,26 +50,30 @@ const Cart = ({ style }) => {
 
   return (
     <div
-      className="cartRightWrapper"
-      style={{ ...style, width: CART_WIDTH, transition: `${TRANSITION_TIME_MS}ms` }}
+      className='cartRightWrapper'
+      style={{
+        ...style,
+        width: CART_WIDTH,
+        transition: `${TRANSITION_TIME_MS}ms`,
+      }}
     >
-      <div className="cartRight">
-        <div className="top">
-          <div className="totalPrice">
-            <h3>{totalPrice ? `Total $ ${totalPrice}` : "Cart is Empty"}</h3>
+      <div className='cartRight'>
+        <div className='top'>
+          <div className='totalPrice'>
+            <h3>{totalPrice ? `Total $ ${totalPrice}` : 'Cart is Empty'}</h3>
           </div>
-          <div className="closeCart" onClick={onCartCloseClick}>
+          <div className='closeCart' onClick={onCartCloseClick}>
             <Icon type={CLASS_NAMES.close} />
           </div>
         </div>
-        <div className="cartItems">
+        <div className='cartItems'>
           {cart &&
             cart.map(({ ruiid, ...item }) => {
               return <CartItem key={ruiid} ruiid={ruiid} {...item} />;
             })}
         </div>
         {totalPrice ? (
-          <div className="order">
+          <div className='order'>
             <div onClick={onOrderItems}>Order</div>
           </div>
         ) : null}
