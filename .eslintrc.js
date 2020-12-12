@@ -3,8 +3,7 @@ module.exports = {
     "react-app"
   ],
   "rules": {
-    "quotes": ["warn", "single"],
-    "jsx-quotes": ["warn", "prefer-single"]
+    "quotes": ["warn", "single"]
   },
   "overrides": [
     {
