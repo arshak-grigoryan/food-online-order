@@ -1,15 +1,15 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useFetch } from "../../hooks";
-import { RESTAURANTS_URL } from "../../constants";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useFetch } from '../../hooks';
+import { RESTAURANTS_URL } from '../../constants';
 import {
   getRestaurants,
   getSearchedName,
   getSelectedCuisine,
-} from "../../store/selectors";
-import { addRestaurants } from "../../store/actions";
-import RestaurantItem from "../restaurantItem/RestaurantItem";
-import "./restaurants.scss";
+} from '../../store/selectors';
+import { addRestaurants } from '../../store/actions';
+import RestaurantItem from '../restaurantItem/RestaurantItem';
+import './restaurants.scss';
 
 const Restaurants = () => {
   const dispatch = useDispatch();
@@ -33,11 +33,11 @@ const Restaurants = () => {
   }, [dispatch, restaurantsData, restaurants]);
 
   return (
-    <div className="restaurants">
+    <div className='restaurants'>
       {restaurants
         .filter(({ cuisines }) => {
           return (
-            selectedCuisine === "all" || cuisines.includes(selectedCuisine)
+            selectedCuisine === 'all' || cuisines.includes(selectedCuisine)
           );
         })
         .filter(({ name }) => {

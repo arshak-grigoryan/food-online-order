@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { useFetch } from "../../../hooks";
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { useFetch } from '../../../hooks';
 import {
   RESTAURANTS_URL,
   TRANSITION_TIME_MS,
   CART_WIDTH,
-} from "../../../constants";
+} from '../../../constants';
 import {
   getSearchedName,
   getIsCart,
   getisCartAnimating,
-} from "../../../store/selectors";
-import MenuItem from "../../menuItem/MenuItem";
-import Header from "../../header/Header";
-import Cart from "../../cart/Cart";
-import "./restaurant.scss";
+} from '../../../store/selectors';
+import MenuItem from '../../menuItem/MenuItem';
+import Header from '../../header/Header';
+import Cart from '../../cart/Cart';
+import './restaurant.scss';
 
 const Restaurant = () => {
   const [minValue, setMinValue] = useState();
@@ -79,28 +79,28 @@ const Restaurant = () => {
   return (
     <>
       {isCart && (
-        <Cart style={{ right: isCartAnimating ? "0" : `-${CART_WIDTH}` }} />
+        <Cart style={{ right: isCartAnimating ? '0' : `-${CART_WIDTH}` }} />
       )}
       <div
-        className="restaurant"
+        className='restaurant'
         style={{
-          width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : "100%",
-          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : "0s",
+          width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%',
+          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0s',
         }}
       >
-        <Header placeholder="Search Menu Items" isBackExist={true} />
-        <div className="menuWrapper">
-          <div className="menuFilterWrapper">
-            <div className="menuFilter">
-              <div className="cuisine">
+        <Header placeholder='Search Menu Items' isBackExist={true} />
+        <div className='menuWrapper'>
+          <div className='menuFilterWrapper'>
+            <div className='menuFilter'>
+              <div className='cuisine'>
                 <h2>Cuisine</h2>
-                <div className="chechkboxItemsWrapper">
+                <div className='chechkboxItemsWrapper'>
                   {currentRestaurant &&
                     currentRestaurant.cuisines.map((kitchen, i) => {
                       return (
-                        <div className="chechkboxItem" key={i}>
+                        <div className='chechkboxItem' key={i}>
                           <input
-                            type="checkbox"
+                            type='checkbox'
                             id={kitchen}
                             name={kitchen}
                             value={kitchen}
@@ -112,23 +112,23 @@ const Restaurant = () => {
                     })}
                 </div>
               </div>
-              <div className="price">
+              <div className='price'>
                 <h2>Price</h2>
-                <div className="inputsWrapper">
-                  <div className="priceInput">
-                    <label htmlFor="min">Min $</label>
+                <div className='inputsWrapper'>
+                  <div className='priceInput'>
+                    <label htmlFor='min'>Min $</label>
                     <input
-                      id="min"
-                      type="number"
+                      id='min'
+                      type='number'
                       value={minValue}
                       onChange={(e) => onMinValueChange(e)}
                     />
                   </div>
-                  <div className="priceInput">
-                    <label htmlFor="min">Max $</label>
+                  <div className='priceInput'>
+                    <label htmlFor='min'>Max $</label>
                     <input
-                      id="max"
-                      type="number"
+                      id='max'
+                      type='number'
                       value={maxValue}
                       onChange={(e) => onMaxValueChange(e)}
                     />
@@ -137,7 +137,7 @@ const Restaurant = () => {
               </div>
             </div>
           </div>
-          <div className="restaurantMenu">
+          <div className='restaurantMenu'>
             {menuItems &&
               menuItems
                 .filter(({ name }) => {

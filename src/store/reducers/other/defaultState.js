@@ -1,7 +1,7 @@
 const defaultState = {
   restaurants: [],
-  searchedName: "",
-  selectedCuisine: "all",
+  searchedName: '',
+  selectedCuisine: 'all',
 };
 
 export default defaultState;

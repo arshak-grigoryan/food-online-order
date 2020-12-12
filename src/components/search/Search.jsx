@@ -1,11 +1,11 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useMount } from "../../hooks";
-import { getSearchedName } from "../../store/selectors";
-import { addSearchName } from "../../store/actions";
-import "./search.scss";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useMount } from '../../hooks';
+import { getSearchedName } from '../../store/selectors';
+import { addSearchName } from '../../store/actions';
+import './search.scss';
 
-const Search = ({ placeholder = "search", isRestaurantsSearch = false }) => {
+const Search = ({ placeholder = 'search', isRestaurantsSearch = false }) => {
   const dispatch = useDispatch();
 
   const { searchedName } = useSelector((state) => ({
@@ -14,8 +14,8 @@ const Search = ({ placeholder = "search", isRestaurantsSearch = false }) => {
 
   useMount(() => {
     // reset search value for current page when page visited for first time reloaded
-    if (searchedName !== "") {
-      dispatch(addSearchName(""));
+    if (searchedName !== '') {
+      dispatch(addSearchName(''));
     }
   });
 
@@ -25,10 +25,10 @@ const Search = ({ placeholder = "search", isRestaurantsSearch = false }) => {
 
   return (
     <div
-      className={isRestaurantsSearch ? "search restaurantsSearch" : "search"}
+      className={isRestaurantsSearch ? 'search restaurantsSearch' : 'search'}
     >
       <input
-        type="text"
+        type='text'
         placeholder={placeholder}
         onChange={(e) => onSearchNameChange(e)}
       />

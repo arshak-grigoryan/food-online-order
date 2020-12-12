@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getCart } from "../../../store/selectors";
-import { order, invoiceModalToggle } from "../../../store/actions";
-import { MONTHS } from "../../../constants";
-import "./invoice.scss";
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCart } from '../../../store/selectors';
+import { order, invoiceModalToggle } from '../../../store/actions';
+import { MONTHS } from '../../../constants';
+import './invoice.scss';
 
 const Invoice = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Invoice = () => {
 
   useEffect(() => {
     if (!el) {
-      const el = document.getElementById("modalTable");
+      const el = document.getElementById('modalTable');
       setEl(el);
     } else {
       const height = el.getBoundingClientRect().height;
@@ -39,17 +39,17 @@ const Invoice = () => {
   };
 
   return (
-    <div className="modalPopup">
-      <div className="invoice">
-        <div className="top">
-          <div className="w">
+    <div className='modalPopup'>
+      <div className='invoice'>
+        <div className='top'>
+          <div className='w'>
             <span>{new Date().getHours()}:</span>
             <span>{new Date().getMinutes()}:</span>
             <span>{new Date().getSeconds()}</span>
-            <span className="type">AM</span>
+            <span className='type'>AM</span>
             {/* <span>{DAYS[new Date().getDay()]}</span> */}
           </div>
-          <div className="dmy">
+          <div className='dmy'>
             <span>{new Date().getDate()}</span>
             <span>{MONTHS[new Date().getMonth()]}</span>
             <span>{new Date().getFullYear()}</span>
@@ -57,8 +57,8 @@ const Invoice = () => {
         </div>
         <h1>Invoice</h1>
         <div
-          id="modalTable"
-          className="table"
+          id='modalTable'
+          className='table'
           style={{
             height:
               tableHeight > window.innerHeight / 2
@@ -86,7 +86,7 @@ const Invoice = () => {
                   </tr>
                 );
               })}
-              <tr key="total">
+              <tr key='total'>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -95,8 +95,8 @@ const Invoice = () => {
             </tbody>
           </table>
         </div>
-        <div className="buttons">
-          <div className="closeInvoice" onClick={onCloseInvoiceClick}>
+        <div className='buttons'>
+          <div className='closeInvoice' onClick={onCloseInvoiceClick}>
             Close
           </div>
         </div>

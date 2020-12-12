@@ -1,7 +1,7 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import React from 'react';
+import { Route } from 'react-router-dom';
 
-import SuspenseLoader from "../loader/SuspenseLoader";
+import SuspenseLoader from '../loader/SuspenseLoader';
 
 const SuspensedRoute = ({ component: Component, children, ...props }) => {
   if (Component) {

@@ -12,7 +12,7 @@ import {
   CART_OPENING_ANIMATION,
   CART_CLOSING_ANIMATION,
   INVOICE_MODAL,
-} from "../constants";
+} from '../constants';
 
 export const openCart = () => {
   return {
