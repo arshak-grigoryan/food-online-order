@@ -11,8 +11,6 @@ const App = () => {
     isInvoiceModal: getIsInvoiceModal(state),
   }));
 
-  const re = 10;
-  re = 20;
   return (
     <div className="app">
       <Router />
