@@ -17,10 +17,10 @@ const Invoice = () => {
 
   useEffect(() => {
     if (!el) {
-      const el = document.getElementById('modalTable');
-      setEl(el);
+      const elem = document.getElementById('modalTable');
+      setEl(elem);
     } else {
-      const height = el.getBoundingClientRect().height;
+      const { height } = el.getBoundingClientRect();
       setTableHeight(height);
     }
   }, [el]);
@@ -39,17 +39,17 @@ const Invoice = () => {
   };
 
   return (
-    <div className='modalPopup'>
-      <div className='invoice'>
-        <div className='top'>
-          <div className='w'>
+    <div className="modalPopup">
+      <div className="invoice">
+        <div className="top">
+          <div className="w">
             <span>{new Date().getHours()}:</span>
             <span>{new Date().getMinutes()}:</span>
             <span>{new Date().getSeconds()}</span>
-            <span className='type'>AM</span>
+            <span className="type">AM</span>
             {/* <span>{DAYS[new Date().getDay()]}</span> */}
           </div>
-          <div className='dmy'>
+          <div className="dmy">
             <span>{new Date().getDate()}</span>
             <span>{MONTHS[new Date().getMonth()]}</span>
             <span>{new Date().getFullYear()}</span>
@@ -57,8 +57,8 @@ const Invoice = () => {
         </div>
         <h1>Invoice</h1>
         <div
-          id='modalTable'
-          className='table'
+          id="modalTable"
+          className="table"
           style={{
             height:
               tableHeight > window.innerHeight / 2
@@ -76,17 +76,17 @@ const Invoice = () => {
               </tr>
             </thead>
             <tbody>
-              {cart.map(({ ruiid, name, price, count }) => {
-                return (
+              {cart.map(({
+                ruiid, name, price, count,
+              }) => (
                   <tr key={ruiid}>
                     <td>{name}</td>
                     <td>{price}</td>
                     <td>{count}</td>
                     <td>{price * count}</td>
                   </tr>
-                );
-              })}
-              <tr key='total'>
+              ))}
+              <tr key="total">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -95,8 +95,8 @@ const Invoice = () => {
             </tbody>
           </table>
         </div>
-        <div className='buttons'>
-          <div className='closeInvoice' onClick={onCloseInvoiceClick}>
+        <div className="buttons">
+          <div className="closeInvoice" onClick={onCloseInvoiceClick}>
             Close
           </div>
         </div>
