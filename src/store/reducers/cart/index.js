@@ -1,8 +1,6 @@
 import produce from 'immer';
 import defaultState from './defaultState';
-import {
-  OPEN_CART, CLOSE_CART, CART_OPENING_ANIMATION, CART_CLOSING_ANIMATION, ADD_CART_ITEM, DELETE_CART_ITEM, INCREASE_CART_ITEM, DECREASE_CART_ITEM, ORDER, INVOICE_MODAL
-} from '../../constants';
+import { OPEN_CART, CLOSE_CART, CART_OPENING_ANIMATION, CART_CLOSING_ANIMATION, ADD_CART_ITEM, DELETE_CART_ITEM, INCREASE_CART_ITEM, DECREASE_CART_ITEM, ORDER, INVOICE_MODAL } from '../../constants';
 
 const cartReducer = produce((state = defaultState, actions) => {
   const { type, payload } = actions;
@@ -25,7 +23,10 @@ const cartReducer = produce((state = defaultState, actions) => {
       if (isExist) {
         state.cart.forEach((item) => {
           if (item.ruiid === payload.item.ruiid) {
-            item = { ...item, count: item.count++ };
+            item = {
+              ...item,
+              count: item.count++,
+            };
           }
         });
       } else {
@@ -47,7 +48,10 @@ const cartReducer = produce((state = defaultState, actions) => {
     case INCREASE_CART_ITEM:
       state.cart.forEach((item) => {
         if (item.ruiid === payload.ruiid) {
-          item = { ...item, count: item.count++ };
+          item = {
+            ...item,
+            count: item.count++,
+          };
         }
       });
       return state;
@@ -55,7 +59,10 @@ const cartReducer = produce((state = defaultState, actions) => {
       state.cart.forEach((item, i) => {
         if (item.ruiid === payload.ruiid) {
           if (item.count > 1) {
-            item = { ...item, count: item.count-- };
+            item = {
+              ...item,
+              count: item.count--,
+            };
           } else {
             state.cart.splice(i, 1);
           }

@@ -9,9 +9,7 @@ import ShoppingCart from '../shoppingCart/ShoppingCart';
 import Icon from '../icon/Icon';
 import './header.scss';
 
-const Header = ({
-  isSelectOptionExist = false, placeholder, isBackExist = false, isRestaurantsSearch
-}) => {
+const Header = ({ isSelectOptionExist = false, placeholder, isBackExist = false, isRestaurantsSearch }) => {
   const history = useHistory();
 
   const { isCart } = useSelector((state) => ({
@@ -27,7 +25,12 @@ const Header = ({
       <div className="left">
         {isBackExist && (
           <button onClick={onGoBackClick}>
-            <Icon type={CLASS_NAMES.arrowLeft} style={{ color: '#2c3e50' }} />
+            <Icon
+              type={CLASS_NAMES.arrowLeft}
+              style={{
+                color: '#2c3e50',
+              }}
+            />
           </button>
         )}
       </div>

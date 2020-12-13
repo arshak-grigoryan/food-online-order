@@ -4,9 +4,7 @@ import { addCartItem } from '../../store/actions';
 import Icon from '../icon/Icon';
 import './menuItem.scss';
 
-const MenuItem = ({
-  id, ruiid, name, photoUrl, price
-}) => {
+const MenuItem = ({ id, ruiid, name, photoUrl, price }) => {
   const dispatch = useDispatch();
 
   const onaddCartItemick = () => {

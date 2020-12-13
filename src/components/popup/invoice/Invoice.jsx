@@ -73,9 +73,7 @@ const Invoice = () => {
               </tr>
             </thead>
             <tbody>
-              {cart.map(({
-                ruiid, name, price, count
-              }) => (
+              {cart.map(({ ruiid, name, price, count }) => (
                 <tr key={ruiid}>
                   <td>{name}</td>
                   <td>{price}</td>

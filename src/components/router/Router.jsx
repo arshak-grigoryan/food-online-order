@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter, Route, Redirect, Switch
-} from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import NotAuthorized from '../pages/notAuthorized/NotAuthorized';
 import SuspensedRoute from './SuspensedRoute';
 import Home from '../pages/home/Home';

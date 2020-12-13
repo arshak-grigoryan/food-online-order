@@ -62,7 +62,13 @@ const Restaurant = () => {
 
   return (
     <>
-      {isCart && <Cart style={{ right: isCartAnimating ? '0' : `-${CART_WIDTH}` }} />}
+      {isCart && (
+        <Cart
+          style={{
+            right: isCartAnimating ? '0' : `-${CART_WIDTH}`,
+          }}
+        />
+      )}
       <div
         className="restaurant"
         style={{
