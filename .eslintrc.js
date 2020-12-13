@@ -1,12 +1,14 @@
 module.exports = {
   extends: [
+    "react-app",
     "airbnb/base",
-    "react-app"
+    "prettier",
+  ],
+  "plugins": [
+    "prettier",
   ],
   rules: {
     "quotes": ["warn", "single"],
-    "max-len": "off",
-    "linebreak-style": "off", // prettier endOfLine
     "no-plusplus": "off",
     "no-param-reassign": "off",
     "import/no-extraneous-dependencies": ["warn", { "devDependencies": true }],

@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "eslint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
     "pretty:write": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
   },
   "browserslist": {
@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.2.0",
     "husky": "^4.3.5",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
