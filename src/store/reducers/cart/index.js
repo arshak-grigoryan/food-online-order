@@ -1,16 +1,7 @@
 import produce from 'immer';
 import defaultState from './defaultState';
 import {
-  OPEN_CART,
-  CLOSE_CART,
-  CART_OPENING_ANIMATION,
-  CART_CLOSING_ANIMATION,
-  ADD_CART_ITEM,
-  DELETE_CART_ITEM,
-  INCREASE_CART_ITEM,
-  DECREASE_CART_ITEM,
-  ORDER,
-  INVOICE_MODAL,
+  OPEN_CART, CLOSE_CART, CART_OPENING_ANIMATION, CART_CLOSING_ANIMATION, ADD_CART_ITEM, DELETE_CART_ITEM, INCREASE_CART_ITEM, DECREASE_CART_ITEM, ORDER, INVOICE_MODAL
 } from '../../constants';
 
 const cartReducer = produce((state = defaultState, actions) => {
@@ -30,9 +21,7 @@ const cartReducer = produce((state = defaultState, actions) => {
       state.isCartAnimating = false;
       return state;
     case ADD_CART_ITEM: {
-      const isExist = state.cart.find(
-        (item) => item.ruiid === payload.item.ruiid
-      );
+      const isExist = state.cart.find((item) => item.ruiid === payload.item.ruiid);
       if (isExist) {
         state.cart.forEach((item) => {
           if (item.ruiid === payload.item.ruiid) {
