@@ -10,10 +10,7 @@ import Icon from '../icon/Icon';
 import './header.scss';
 
 const Header = ({
-  isSelectOptionExist = false,
-  placeholder,
-  isBackExist = false,
-  isRestaurantsSearch,
+  isSelectOptionExist = false, placeholder, isBackExist = false, isRestaurantsSearch
 }) => {
   const history = useHistory();
 
@@ -36,10 +33,7 @@ const Header = ({
       </div>
       <div className="searchFilter">
         {isSelectOptionExist && <SelectOptions />}
-        <Search
-          placeholder={placeholder}
-          isRestaurantsSearch={isRestaurantsSearch}
-        />
+        <Search placeholder={placeholder} isRestaurantsSearch={isRestaurantsSearch} />
       </div>
       <div className="cart">{!isCart && <ShoppingCart />}</div>
     </div>

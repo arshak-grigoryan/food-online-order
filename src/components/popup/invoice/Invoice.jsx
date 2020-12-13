@@ -60,10 +60,7 @@ const Invoice = () => {
           id="modalTable"
           className="table"
           style={{
-            height:
-              tableHeight > window.innerHeight / 2
-                ? window.innerHeight / 2
-                : tableHeight,
+            height: tableHeight > window.innerHeight / 2 ? window.innerHeight / 2 : tableHeight,
           }}
         >
           <table>
@@ -76,7 +73,9 @@ const Invoice = () => {
               </tr>
             </thead>
             <tbody>
-              {cart.map(({ ruiid, name, price, count }) => (
+              {cart.map(({
+                ruiid, name, price, count
+              }) => (
                 <tr key={ruiid}>
                   <td>{name}</td>
                   <td>{price}</td>

@@ -29,14 +29,12 @@ const SelectOptions = () => {
     <div className="selectOptions">
       <select onChange={(e) => onSelectChange(e)}>
         <option value="all">All</option>
-        {cuisines &&
-          cuisines.map((cuisine, i) => {
-            return (
-              <option value={cuisine.abbr} key={i}>
-                {cuisine.name}
-              </option>
-            );
-          })}
+        {cuisines
+          && cuisines.map((cuisine, i) => (
+            <option value={cuisine.abbr} key={i}>
+              {cuisine.name}
+            </option>
+          ))}
       </select>
     </div>
   );
