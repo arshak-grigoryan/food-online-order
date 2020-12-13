@@ -35,10 +35,13 @@ const Cart = ({ style }) => {
     }
   }, [cart]);
 
-  useEffect(() => () => {
-    dispatch(closeCart());
-    dispatch(startCartClosingAnimation());
-  }, [dispatch]);
+  useEffect(
+    () => () => {
+      dispatch(closeCart());
+      dispatch(startCartClosingAnimation());
+    },
+    [dispatch],
+  );
 
   const onOrderItems = () => {
     dispatch(closeCart());
@@ -65,8 +68,10 @@ const Cart = ({ style }) => {
           </div>
         </div>
         <div className="cartItems">
-          {cart &&
-            cart.map(({ ruiid, ...item }) => <CartItem key={ruiid} ruiid={ruiid} {...item} />)}
+          {cart
+            && cart.map(({ ruiid, ...item }) => (
+              <CartItem key={ruiid} ruiid={ruiid} {...item} />
+            ))}
         </div>
         {totalPrice ? (
           <div className="order">
