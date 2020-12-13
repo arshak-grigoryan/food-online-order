@@ -9,7 +9,12 @@ import ShoppingCart from '../shoppingCart/ShoppingCart';
 import Icon from '../icon/Icon';
 import './header.scss';
 
-const Header = ({ isSelectOptionExist = false, placeholder, isBackExist = false, isRestaurantsSearch }) => {
+const Header = ({
+  isSelectOptionExist = false,
+  placeholder,
+  isBackExist = false,
+  isRestaurantsSearch,
+}) => {
   const history = useHistory();
 
   const { isCart } = useSelector((state) => ({
@@ -36,7 +41,10 @@ const Header = ({ isSelectOptionExist = false, placeholder, isBackExist = false,
       </div>
       <div className="searchFilter">
         {isSelectOptionExist && <SelectOptions />}
-        <Search placeholder={placeholder} isRestaurantsSearch={isRestaurantsSearch} />
+        <Search
+          placeholder={placeholder}
+          isRestaurantsSearch={isRestaurantsSearch}
+        />
       </div>
       <div className="cart">{!isCart && <ShoppingCart />}</div>
     </div>

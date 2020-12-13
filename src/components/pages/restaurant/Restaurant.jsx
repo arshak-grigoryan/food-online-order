@@ -2,8 +2,12 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../../hooks';
-import { RESTAURANTS_URL, TRANSITION_TIME_MS, CART_WIDTH } from '../../../constants';
-import { getSearchedName, getIsCart, getisCartAnimating } from '../../../store/selectors';
+import { RESTAURANTS_URL,
+  TRANSITION_TIME_MS,
+  CART_WIDTH } from '../../../constants';
+import { getSearchedName,
+  getIsCart,
+  getisCartAnimating } from '../../../store/selectors';
 import MenuItem from '../../menuItem/MenuItem';
 import Header from '../../header/Header';
 import Cart from '../../cart/Cart';
@@ -28,7 +32,9 @@ const Restaurant = () => {
   useEffect(() => {
     if (restaurants && menu) {
       setMenuItems(menu);
-      const selectedRestaurant = restaurants.find((restaurant) => restaurant.id === Number(params.id));
+      const selectedRestaurant = restaurants.find(
+        (restaurant) => restaurant.id === Number(params.id)
+      );
       if (selectedRestaurant) {
         setCurrentRestaurant(selectedRestaurant);
         setSelectedCuisines(selectedRestaurant.cuisines);
@@ -86,7 +92,13 @@ const Restaurant = () => {
                   {currentRestaurant
                     && currentRestaurant.cuisines.map((kitchen, i) => (
                       <div className="chechkboxItem" key={i}>
-                        <input type="checkbox" id={kitchen} name={kitchen} value={kitchen} onChange={(e) => onCheckboxChoose(e)} />
+                        <input
+                          type="checkbox"
+                          id={kitchen}
+                          name={kitchen}
+                          value={kitchen}
+                          onChange={(e) => onCheckboxChoose(e)}
+                        />
                         <label htmlFor={kitchen}>{kitchen}</label>
                       </div>
                     ))}
@@ -97,11 +109,21 @@ const Restaurant = () => {
                 <div className="inputsWrapper">
                   <div className="priceInput">
                     <label htmlFor="min">Min $</label>
-                    <input id="min" type="number" value={minValue === 0 ? '' : minValue} onChange={(e) => onMinValueChange(e)} />
+                    <input
+                      id="min"
+                      type="number"
+                      value={minValue === 0 ? '' : minValue}
+                      onChange={(e) => onMinValueChange(e)}
+                    />
                   </div>
                   <div className="priceInput">
                     <label htmlFor="min">Max $</label>
-                    <input id="max" type="number" value={maxValue === 999999999 ? '' : maxValue} onChange={(e) => onMaxValueChange(e)} />
+                    <input
+                      id="max"
+                      type="number"
+                      value={maxValue === 999999999 ? '' : maxValue}
+                      onChange={(e) => onMaxValueChange(e)}
+                    />
                   </div>
                 </div>
               </div>
@@ -121,7 +143,15 @@ const Restaurant = () => {
                   return true;
                 })
                 .filter(({ price }) => price >= minValue && price <= maxValue)
-                .map(({ id, name, ...props }) => <MenuItem key={id} ruiid={params.id + name + id} id={id} name={name} {...props} />)}
+                .map(({ id, name, ...props }) => (
+                  <MenuItem
+                    key={id}
+                    ruiid={params.id + name + id}
+                    id={id}
+                    name={name}
+                    {...props}
+                  />
+                ))}
           </div>
         </div>
       </div>

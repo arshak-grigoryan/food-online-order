@@ -60,7 +60,10 @@ const Invoice = () => {
           id="modalTable"
           className="table"
           style={{
-            height: tableHeight > window.innerHeight / 2 ? window.innerHeight / 2 : tableHeight,
+            height:
+              tableHeight > window.innerHeight / 2
+                ? window.innerHeight / 2
+                : tableHeight,
           }}
         >
           <table>
