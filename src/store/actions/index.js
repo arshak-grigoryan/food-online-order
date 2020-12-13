@@ -14,89 +14,63 @@ import {
   INVOICE_MODAL,
 } from '../constants';
 
-export const openCart = () => {
-  return {
-    type: OPEN_CART,
-  };
-};
+export const openCart = () => ({
+  type: OPEN_CART,
+});
 
-export const closeCart = () => {
-  return {
-    type: CLOSE_CART,
-  };
-};
+export const closeCart = () => ({
+  type: CLOSE_CART,
+});
 
-export const addCartItem = (item) => {
-  return {
-    type: ADD_CART_ITEM,
-    payload: {
-      item,
-    },
-  };
-};
+export const addCartItem = (item) => ({
+  type: ADD_CART_ITEM,
+  payload: {
+    item,
+  },
+});
 
-export const deleteCartItem = (ruiid) => {
-  return {
-    type: DELETE_CART_ITEM,
-    payload: { ruiid },
-  };
-};
+export const deleteCartItem = (ruiid) => ({
+  type: DELETE_CART_ITEM,
+  payload: { ruiid },
+});
 
-export const increaseCartItem = (ruiid) => {
-  return {
-    type: INCREASE_CART_ITEM,
-    payload: { ruiid },
-  };
-};
+export const increaseCartItem = (ruiid) => ({
+  type: INCREASE_CART_ITEM,
+  payload: { ruiid },
+});
 
-export const decreaseCartItem = (ruiid) => {
-  return {
-    type: DECREASE_CART_ITEM,
-    payload: { ruiid },
-  };
-};
+export const decreaseCartItem = (ruiid) => ({
+  type: DECREASE_CART_ITEM,
+  payload: { ruiid },
+});
 
-export const addRestaurants = (restaurants) => {
-  return {
-    type: ADD_RESTAURANTS,
-    payload: { restaurants },
-  };
-};
+export const addRestaurants = (restaurants) => ({
+  type: ADD_RESTAURANTS,
+  payload: { restaurants },
+});
 
-export const addSearchName = (name) => {
-  return {
-    type: ADD_SEARCH_NAME,
-    payload: { name },
-  };
-};
+export const addSearchName = (name) => ({
+  type: ADD_SEARCH_NAME,
+  payload: { name },
+});
 
-export const selectCusine = (cuisine) => {
-  return {
-    type: SELECT_CUISINE,
-    payload: { cuisine },
-  };
-};
+export const selectCusine = (cuisine) => ({
+  type: SELECT_CUISINE,
+  payload: { cuisine },
+});
 
-export const order = () => {
-  return {
-    type: ORDER,
-  };
-};
+export const order = () => ({
+  type: ORDER,
+});
 
-export const startCartOpeningAnimation = () => {
-  return {
-    type: CART_OPENING_ANIMATION,
-  };
-};
+export const startCartOpeningAnimation = () => ({
+  type: CART_OPENING_ANIMATION,
+});
 
-export const startCartClosingAnimation = () => {
-  return {
-    type: CART_CLOSING_ANIMATION,
-  };
-};
+export const startCartClosingAnimation = () => ({
+  type: CART_CLOSING_ANIMATION,
+});
 
-export const invoiceModalToggle = () => {
-  return {
-    type: INVOICE_MODAL,
-  };
-};
+export const invoiceModalToggle = () => ({
+  type: INVOICE_MODAL,
+});
