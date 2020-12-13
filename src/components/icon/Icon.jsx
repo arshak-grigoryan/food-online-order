@@ -3,7 +3,7 @@ import './icon.scss';
 
 function Icon({ type, style = {} }) {
   return (
-    <div className='faicon'>
+    <div className="faicon">
       <i className={type} style={style}></i>
     </div>
   );

@@ -8,9 +8,7 @@ import {
 import Icon from '../icon/Icon';
 import './cartItem.scss';
 
-const CartItem = ({
-  id, name, photoUrl, price, count, ruiid,
-}) => {
+const CartItem = ({ id, name, photoUrl, price, count, ruiid }) => {
   const dispatch = useDispatch();
 
   const onCartItemDeleteClick = () => {

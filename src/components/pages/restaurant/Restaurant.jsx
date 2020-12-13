@@ -37,7 +37,7 @@ const Restaurant = () => {
     if (restaurants && menu) {
       setMenuItems(menu);
       const selectedRestaurant = restaurants.find(
-        (restaurant) => restaurant.id === Number(params.id),
+        (restaurant) => restaurant.id === Number(params.id)
       );
       if (selectedRestaurant) {
         setCurrentRestaurant(selectedRestaurant);
@@ -54,7 +54,9 @@ const Restaurant = () => {
     if (selectedCuisines.includes(value) && chechked) {
       setSelectedCuisines([value]);
     } else if (selectedCuisines.includes(value) && chechked === false) {
-      setSelectedCuisines((prevTypes) => prevTypes.filter((type) => type !== value));
+      setSelectedCuisines((prevTypes) =>
+        prevTypes.filter((type) => type !== value)
+      );
     } else if (!selectedCuisines.includes(value) && chechked) {
       setSelectedCuisines((prevTypes) => [...prevTypes, value]);
     } else {
@@ -89,8 +91,8 @@ const Restaurant = () => {
               <div className="cuisine">
                 <h2>Cuisine</h2>
                 <div className="chechkboxItemsWrapper">
-                  {currentRestaurant
-                    && currentRestaurant.cuisines.map((kitchen, i) => (
+                  {currentRestaurant &&
+                    currentRestaurant.cuisines.map((kitchen, i) => (
                       <div className="chechkboxItem" key={i}>
                         <input
                           type="checkbox"
@@ -130,8 +132,8 @@ const Restaurant = () => {
             </div>
           </div>
           <div className="restaurantMenu">
-            {menuItems
-              && menuItems
+            {menuItems &&
+              menuItems
                 .filter(({ name }) => name.toLowerCase().includes(searchedName))
                 .filter(({ cuisine }) => {
                   if (selectedCuisines) {

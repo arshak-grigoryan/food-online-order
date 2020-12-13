@@ -76,15 +76,13 @@ const Invoice = () => {
               </tr>
             </thead>
             <tbody>
-              {cart.map(({
-                ruiid, name, price, count,
-              }) => (
-                  <tr key={ruiid}>
-                    <td>{name}</td>
-                    <td>{price}</td>
-                    <td>{count}</td>
-                    <td>{price * count}</td>
-                  </tr>
+              {cart.map(({ ruiid, name, price, count }) => (
+                <tr key={ruiid}>
+                  <td>{name}</td>
+                  <td>{price}</td>
+                  <td>{count}</td>
+                  <td>{price * count}</td>
+                </tr>
               ))}
               <tr key="total">
                 <td></td>

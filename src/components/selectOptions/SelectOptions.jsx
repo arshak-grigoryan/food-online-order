@@ -26,9 +26,9 @@ const SelectOptions = () => {
   });
 
   return (
-    <div className='selectOptions'>
+    <div className="selectOptions">
       <select onChange={(e) => onSelectChange(e)}>
-        <option value='all'>All</option>
+        <option value="all">All</option>
         {cuisines &&
           cuisines.map((cuisine, i) => {
             return (

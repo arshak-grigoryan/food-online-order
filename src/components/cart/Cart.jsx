@@ -40,7 +40,7 @@ const Cart = ({ style }) => {
       dispatch(closeCart());
       dispatch(startCartClosingAnimation());
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onOrderItems = () => {
@@ -68,8 +68,8 @@ const Cart = ({ style }) => {
           </div>
         </div>
         <div className="cartItems">
-          {cart
-            && cart.map(({ ruiid, ...item }) => (
+          {cart &&
+            cart.map(({ ruiid, ...item }) => (
               <CartItem key={ruiid} ruiid={ruiid} {...item} />
             ))}
         </div>

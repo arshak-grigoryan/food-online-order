@@ -28,7 +28,7 @@ const Search = ({ placeholder = 'search', isRestaurantsSearch = false }) => {
       className={isRestaurantsSearch ? 'search restaurantsSearch' : 'search'}
     >
       <input
-        type='text'
+        type="text"
         placeholder={placeholder}
         onChange={(e) => onSearchNameChange(e)}
       />

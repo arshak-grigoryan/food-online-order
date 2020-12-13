@@ -9,11 +9,11 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <SuspensedRoute exact path='/restaurants' component={Home} />
-        <SuspensedRoute path='/restaurants/:id' component={Restaurant} />
-        <Route path='/notAuthorized' component={NotAuthorized} />
-        <Redirect exact from='/' to='/restaurants' />
-        <Redirect to='/notAuthorized' />
+        <SuspensedRoute exact path="/restaurants" component={Home} />
+        <SuspensedRoute path="/restaurants/:id" component={Restaurant} />
+        <Route path="/notAuthorized" component={NotAuthorized} />
+        <Redirect exact from="/" to="/restaurants" />
+        <Redirect to="/notAuthorized" />
       </Switch>
     </BrowserRouter>
   );

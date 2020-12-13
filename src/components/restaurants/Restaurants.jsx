@@ -33,7 +33,7 @@ const Restaurants = () => {
   }, [dispatch, restaurantsData, restaurants]);
 
   return (
-    <div className='restaurants'>
+    <div className="restaurants">
       {restaurants
         .filter(({ cuisines }) => {
           return (

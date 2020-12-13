@@ -29,7 +29,7 @@ const ShoppingCart = () => {
   };
 
   return leng ? (
-    <div className='shoppingCart' onClick={onOpenCartClick}>
+    <div className="shoppingCart" onClick={onOpenCartClick}>
       <Icon type={CLASS_NAMES.shoppingCart} style={{ fontSize: '20px' }} />
       <sup>{leng}</sup>
     </div>

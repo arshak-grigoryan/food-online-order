@@ -31,7 +31,7 @@ const cartReducer = produce((state = defaultState, actions) => {
       return state;
     case ADD_CART_ITEM: {
       const isExist = state.cart.find(
-        (item) => item.ruiid === payload.item.ruiid,
+        (item) => item.ruiid === payload.item.ruiid
       );
       if (isExist) {
         state.cart.forEach((item) => {

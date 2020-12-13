@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       <div
-        className='home'
+        className="home"
         style={{
           width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%',
           transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0s',
@@ -23,7 +23,7 @@ const Home = () => {
       >
         <Header
           isSelectOptionExist={true}
-          placeholder='Search Restaurants'
+          placeholder="Search Restaurants"
           isRestaurantsSearch={true}
         />
         <Restaurants />

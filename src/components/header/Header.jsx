@@ -26,22 +26,22 @@ const Header = ({
   };
 
   return (
-    <div className='header'>
-      <div className='left'>
+    <div className="header">
+      <div className="left">
         {isBackExist && (
           <button onClick={onGoBackClick}>
             <Icon type={CLASS_NAMES.arrowLeft} style={{ color: '#2c3e50' }} />
           </button>
         )}
       </div>
-      <div className='searchFilter'>
+      <div className="searchFilter">
         {isSelectOptionExist && <SelectOptions />}
         <Search
           placeholder={placeholder}
           isRestaurantsSearch={isRestaurantsSearch}
         />
       </div>
-      <div className='cart'>{!isCart && <ShoppingCart />}</div>
+      <div className="cart">{!isCart && <ShoppingCart />}</div>
     </div>
   );
 };
