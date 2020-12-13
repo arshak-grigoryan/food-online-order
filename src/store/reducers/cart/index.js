@@ -29,9 +29,9 @@ const cartReducer = produce((state = defaultState, actions) => {
     case CART_CLOSING_ANIMATION:
       state.isCartAnimating = false;
       return state;
-    case ADD_CART_ITEM:
+    case ADD_CART_ITEM: {
       const isExist = state.cart.find(
-        (item) => item.ruiid === payload.item.ruiid
+        (item) => item.ruiid === payload.item.ruiid,
       );
       if (isExist) {
         state.cart.forEach((item) => {
@@ -47,6 +47,7 @@ const cartReducer = produce((state = defaultState, actions) => {
         });
       }
       return state;
+    }
     case DELETE_CART_ITEM:
       state.cart.forEach((item, i) => {
         if (item.ruiid === payload.ruiid) {
