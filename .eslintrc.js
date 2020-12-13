@@ -23,7 +23,7 @@ module.exports = {
       }
     }
   ],
-  settings : {
+  settings: {
     // https://stackoverflow.com/questions/42264007/eslint-errorring-importing-jsx-without-extension
     "import/resolver": {
       "node": {
