@@ -36,33 +36,27 @@ const Restaurant = () => {
   useEffect(() => {
     if (restaurants && menu) {
       setMenuItems(menu);
-      const currentRestaurant = restaurants.find(
-        (restaurant) => restaurant.id === Number(params.id)
+      const selectedRestaurant = restaurants.find(
+        (restaurant) => restaurant.id === Number(params.id),
       );
-      if (currentRestaurant) {
-        setCurrentRestaurant(currentRestaurant);
-        setSelectedCuisines(currentRestaurant.cuisines);
+      if (selectedRestaurant) {
+        setCurrentRestaurant(selectedRestaurant);
+        setSelectedCuisines(selectedRestaurant.cuisines);
       }
     }
   }, [restaurants, params, menu]);
 
-  useEffect(() => {
-    return () => setMenuItems(menu);
-  }, [menu]);
+  useEffect(() => () => setMenuItems(menu), [menu]);
 
   const onCheckboxChoose = (e) => {
     const chechked = e.target.checked;
-    const value = e.target.value;
+    const { value } = e.target;
     if (selectedCuisines.includes(value) && chechked) {
       setSelectedCuisines([value]);
     } else if (selectedCuisines.includes(value) && chechked === false) {
-      setSelectedCuisines((prevTypes) => {
-        return prevTypes.filter((type) => type !== value);
-      });
+      setSelectedCuisines((prevTypes) => prevTypes.filter((type) => type !== value));
     } else if (!selectedCuisines.includes(value) && chechked) {
-      setSelectedCuisines((prevTypes) => {
-        return [...prevTypes, value];
-      });
+      setSelectedCuisines((prevTypes) => [...prevTypes, value]);
     } else {
       setSelectedCuisines((prevTypes) => prevTypes);
     }
@@ -82,25 +76,24 @@ const Restaurant = () => {
         <Cart style={{ right: isCartAnimating ? '0' : `-${CART_WIDTH}` }} />
       )}
       <div
-        className='restaurant'
+        className="restaurant"
         style={{
           width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%',
           transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0s',
         }}
       >
-        <Header placeholder='Search Menu Items' isBackExist={true} />
-        <div className='menuWrapper'>
-          <div className='menuFilterWrapper'>
-            <div className='menuFilter'>
-              <div className='cuisine'>
+        <Header placeholder="Search Menu Items" isBackExist={true} />
+        <div className="menuWrapper">
+          <div className="menuFilterWrapper">
+            <div className="menuFilter">
+              <div className="cuisine">
                 <h2>Cuisine</h2>
-                <div className='chechkboxItemsWrapper'>
-                  {currentRestaurant &&
-                    currentRestaurant.cuisines.map((kitchen, i) => {
-                      return (
-                        <div className='chechkboxItem' key={i}>
+                <div className="chechkboxItemsWrapper">
+                  {currentRestaurant
+                    && currentRestaurant.cuisines.map((kitchen, i) => (
+                        <div className="chechkboxItem" key={i}>
                           <input
-                            type='checkbox'
+                            type="checkbox"
                             id={kitchen}
                             name={kitchen}
                             value={kitchen}
@@ -108,27 +101,26 @@ const Restaurant = () => {
                           />
                           <label htmlFor={kitchen}>{kitchen}</label>
                         </div>
-                      );
-                    })}
+                    ))}
                 </div>
               </div>
-              <div className='price'>
+              <div className="price">
                 <h2>Price</h2>
-                <div className='inputsWrapper'>
-                  <div className='priceInput'>
-                    <label htmlFor='min'>Min $</label>
+                <div className="inputsWrapper">
+                  <div className="priceInput">
+                    <label htmlFor="min">Min $</label>
                     <input
-                      id='min'
-                      type='number'
+                      id="min"
+                      type="number"
                       value={minValue}
                       onChange={(e) => onMinValueChange(e)}
                     />
                   </div>
-                  <div className='priceInput'>
-                    <label htmlFor='min'>Max $</label>
+                  <div className="priceInput">
+                    <label htmlFor="min">Max $</label>
                     <input
-                      id='max'
-                      type='number'
+                      id="max"
+                      type="number"
                       value={maxValue}
                       onChange={(e) => onMaxValueChange(e)}
                     />
@@ -137,30 +129,24 @@ const Restaurant = () => {
               </div>
             </div>
           </div>
-          <div className='restaurantMenu'>
-            {menuItems &&
-              menuItems
-                .filter(({ name }) => {
-                  return name.toLowerCase().includes(searchedName);
-                })
+          <div className="restaurantMenu">
+            {menuItems
+              && menuItems
+                .filter(({ name }) => name.toLowerCase().includes(searchedName))
                 .filter(({ cuisine }) => {
                   if (selectedCuisines) {
                     if (selectedCuisines.length) {
                       return selectedCuisines.includes(cuisine);
                     }
                     return true;
-                  } else {
-                    return true;
                   }
+                  return true;
                 })
-                .filter(({ price }) => {
-                  return (
-                    price >= (minValue ? minValue : 0) &&
-                    price <= (maxValue ? maxValue : 999999999)
-                  );
-                })
-                .map(({ id, name, ...props }) => {
-                  return (
+                .filter(({ price }) => (
+                  price >= (minValue ? minValue : 0)
+                    && price <= (maxValue ? maxValue : 999999999)
+                ))
+                .map(({ id, name, ...props }) => (
                     <MenuItem
                       key={id}
                       ruiid={params.id + name + id}
@@ -168,8 +154,7 @@ const Restaurant = () => {
                       name={name}
                       {...props}
                     />
-                  );
-                })}
+                ))}
           </div>
         </div>
       </div>
