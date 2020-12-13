@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { closeCart,
+import {
+  closeCart,
   invoiceModalToggle,
-  startCartClosingAnimation } from '../../store/actions';
+  startCartClosingAnimation,
+} from '../../store/actions';
 import { getCart } from '../../store/selectors';
 import { CART_WIDTH, CLASS_NAMES, TRANSITION_TIME_MS } from '../../constants';
 import Icon from '../icon/Icon';
@@ -66,8 +68,8 @@ const Cart = ({ style }) => {
           </div>
         </div>
         <div className="cartItems">
-          {cart
-            && cart.map(({ ruiid, ...item }) => (
+          {cart &&
+            cart.map(({ ruiid, ...item }) => (
               <CartItem key={ruiid} ruiid={ruiid} {...item} />
             ))}
         </div>

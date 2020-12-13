@@ -2,12 +2,16 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../../hooks';
-import { RESTAURANTS_URL,
+import {
+  RESTAURANTS_URL,
   TRANSITION_TIME_MS,
-  CART_WIDTH } from '../../../constants';
-import { getSearchedName,
+  CART_WIDTH,
+} from '../../../constants';
+import {
+  getSearchedName,
   getIsCart,
-  getisCartAnimating } from '../../../store/selectors';
+  getisCartAnimating,
+} from '../../../store/selectors';
 import MenuItem from '../../menuItem/MenuItem';
 import Header from '../../header/Header';
 import Cart from '../../cart/Cart';
@@ -50,7 +54,9 @@ const Restaurant = () => {
     if (selectedCuisines.includes(value) && chechked) {
       setSelectedCuisines([value]);
     } else if (selectedCuisines.includes(value) && chechked === false) {
-      setSelectedCuisines((prevTypes) => prevTypes.filter((type) => type !== value));
+      setSelectedCuisines((prevTypes) =>
+        prevTypes.filter((type) => type !== value)
+      );
     } else if (!selectedCuisines.includes(value) && chechked) {
       setSelectedCuisines((prevTypes) => [...prevTypes, value]);
     } else {
@@ -89,8 +95,8 @@ const Restaurant = () => {
               <div className="cuisine">
                 <h2>Cuisine</h2>
                 <div className="chechkboxItemsWrapper">
-                  {currentRestaurant
-                    && currentRestaurant.cuisines.map((kitchen, i) => (
+                  {currentRestaurant &&
+                    currentRestaurant.cuisines.map((kitchen, i) => (
                       <div className="chechkboxItem" key={i}>
                         <input
                           type="checkbox"
@@ -130,8 +136,8 @@ const Restaurant = () => {
             </div>
           </div>
           <div className="restaurantMenu">
-            {menuItems
-              && menuItems
+            {menuItems &&
+              menuItems
                 .filter(({ name }) => name.toLowerCase().includes(searchedName))
                 .filter(({ cuisine }) => {
                   if (selectedCuisines) {

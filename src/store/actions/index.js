@@ -1,4 +1,5 @@
-import { OPEN_CART,
+import {
+  OPEN_CART,
   CLOSE_CART,
   ADD_CART_ITEM,
   DELETE_CART_ITEM,
@@ -10,7 +11,8 @@ import { OPEN_CART,
   ORDER,
   CART_OPENING_ANIMATION,
   CART_CLOSING_ANIMATION,
-  INVOICE_MODAL } from '../constants';
+  INVOICE_MODAL,
+} from '../constants';
 
 export const openCart = () => ({
   type: OPEN_CART,

@@ -1,8 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { CLASS_NAMES } from '../../constants';
-import { deleteCartItem,
+import {
+  deleteCartItem,
   decreaseCartItem,
-  increaseCartItem } from '../../store/actions';
+  increaseCartItem,
+} from '../../store/actions';
 import Icon from '../icon/Icon';
 import './cartItem.scss';
 

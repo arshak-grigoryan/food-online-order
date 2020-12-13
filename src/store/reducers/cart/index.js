@@ -1,6 +1,7 @@
 import produce from 'immer';
 import defaultState from './defaultState';
-import { OPEN_CART,
+import {
+  OPEN_CART,
   CLOSE_CART,
   CART_OPENING_ANIMATION,
   CART_CLOSING_ANIMATION,
@@ -9,7 +10,8 @@ import { OPEN_CART,
   INCREASE_CART_ITEM,
   DECREASE_CART_ITEM,
   ORDER,
-  INVOICE_MODAL } from '../../constants';
+  INVOICE_MODAL,
+} from '../../constants';
 
 const cartReducer = produce((state = defaultState, actions) => {
   const { type, payload } = actions;
