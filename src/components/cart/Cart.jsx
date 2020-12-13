@@ -35,11 +35,9 @@ const Cart = ({ style }) => {
     }
   }, [cart]);
 
-  useEffect(() => {
-    return () => {
-      dispatch(closeCart());
-      dispatch(startCartClosingAnimation());
-    };
+  useEffect(() => () => {
+    dispatch(closeCart());
+    dispatch(startCartClosingAnimation());
   }, [dispatch]);
 
   const onOrderItems = () => {
@@ -50,30 +48,28 @@ const Cart = ({ style }) => {
 
   return (
     <div
-      className='cartRightWrapper'
+      className="cartRightWrapper"
       style={{
         ...style,
         width: CART_WIDTH,
         transition: `${TRANSITION_TIME_MS}ms`,
       }}
     >
-      <div className='cartRight'>
-        <div className='top'>
-          <div className='totalPrice'>
+      <div className="cartRight">
+        <div className="top">
+          <div className="totalPrice">
             <h3>{totalPrice ? `Total $ ${totalPrice}` : 'Cart is Empty'}</h3>
           </div>
-          <div className='closeCart' onClick={onCartCloseClick}>
+          <div className="closeCart" onClick={onCartCloseClick}>
             <Icon type={CLASS_NAMES.close} />
           </div>
         </div>
-        <div className='cartItems'>
+        <div className="cartItems">
           {cart &&
-            cart.map(({ ruiid, ...item }) => {
-              return <CartItem key={ruiid} ruiid={ruiid} {...item} />;
-            })}
+            cart.map(({ ruiid, ...item }) => <CartItem key={ruiid} ruiid={ruiid} {...item} />)}
         </div>
         {totalPrice ? (
-          <div className='order'>
+          <div className="order">
             <div onClick={onOrderItems}>Order</div>
           </div>
         ) : null}
