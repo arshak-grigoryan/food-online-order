@@ -18,8 +18,8 @@ import Cart from '../../cart/Cart';
 import './restaurant.scss';
 
 const Restaurant = () => {
-  const [minValue, setMinValue] = useState();
-  const [maxValue, setMaxValue] = useState();
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(999999999);
   const [selectedCuisines, setSelectedCuisines] = useState();
   const [currentRestaurant, setCurrentRestaurant] = useState();
   const [menuItems, setMenuItems] = useState();
@@ -91,16 +91,16 @@ const Restaurant = () => {
                 <div className="chechkboxItemsWrapper">
                   {currentRestaurant
                     && currentRestaurant.cuisines.map((kitchen, i) => (
-                        <div className="chechkboxItem" key={i}>
-                          <input
-                            type="checkbox"
-                            id={kitchen}
-                            name={kitchen}
-                            value={kitchen}
-                            onChange={(e) => onCheckboxChoose(e)}
-                          />
-                          <label htmlFor={kitchen}>{kitchen}</label>
-                        </div>
+                      <div className="chechkboxItem" key={i}>
+                        <input
+                          type="checkbox"
+                          id={kitchen}
+                          name={kitchen}
+                          value={kitchen}
+                          onChange={(e) => onCheckboxChoose(e)}
+                        />
+                        <label htmlFor={kitchen}>{kitchen}</label>
+                      </div>
                     ))}
                 </div>
               </div>
@@ -112,7 +112,7 @@ const Restaurant = () => {
                     <input
                       id="min"
                       type="number"
-                      value={minValue}
+                      value={minValue === 0 ? '' : minValue}
                       onChange={(e) => onMinValueChange(e)}
                     />
                   </div>
@@ -121,7 +121,7 @@ const Restaurant = () => {
                     <input
                       id="max"
                       type="number"
-                      value={maxValue}
+                      value={maxValue === 999999999 ? '' : maxValue}
                       onChange={(e) => onMaxValueChange(e)}
                     />
                   </div>
@@ -142,18 +142,15 @@ const Restaurant = () => {
                   }
                   return true;
                 })
-                .filter(({ price }) => (
-                  price >= (minValue ? minValue : 0)
-                    && price <= (maxValue ? maxValue : 999999999)
-                ))
+                .filter(({ price }) => price >= minValue && price <= maxValue)
                 .map(({ id, name, ...props }) => (
-                    <MenuItem
-                      key={id}
-                      ruiid={params.id + name + id}
-                      id={id}
-                      name={name}
-                      {...props}
-                    />
+                  <MenuItem
+                    key={id}
+                    ruiid={params.id + name + id}
+                    id={id}
+                    name={name}
+                    {...props}
+                  />
                 ))}
           </div>
         </div>
