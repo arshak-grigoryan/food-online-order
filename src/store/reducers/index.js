@@ -1,5 +1,5 @@
-import cartReducer from '../reducers/cart';
-import otherReducer from '../reducers/other';
+import cartReducer from './cart';
+import otherReducer from './other';
 
 const rootReducer = { cartReducer, otherReducer };
 
