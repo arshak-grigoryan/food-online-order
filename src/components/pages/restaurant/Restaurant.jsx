@@ -74,7 +74,9 @@ const Restaurant = () => {
   const onMaxValueChange = (e) => {
     setMaxValue(e.target.value);
   };
+
   console.log(isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%');
+
   return (
     <>
       {isCart && (

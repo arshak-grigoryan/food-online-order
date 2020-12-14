@@ -45,8 +45,8 @@ const Cart = ({ style }) => {
   );
 
   const onOrderItems = () => {
-    dispatch(closeCart());
     dispatch(startCartClosingAnimation());
+    setTimeout(() => dispatch(closeCart()), TRANSITION_TIME_MS);
     dispatch(invoiceModalToggle());
   };
 
