@@ -1,10 +1,12 @@
 import produce from 'immer';
-import defaultState from './defaultState';
+
 import {
   ADD_RESTAURANTS,
   ADD_SEARCH_NAME,
   SELECT_CUISINE,
 } from '../../constants';
+
+import defaultState from './defaultState';
 
 const otherReducer = produce((state = defaultState, actions) => {
   const { type, payload } = actions;

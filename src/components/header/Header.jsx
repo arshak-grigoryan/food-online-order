@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+
 import { getIsCart } from '../../store/selectors';
 import { CLASS_NAMES } from '../../constants';
 import SelectOptions from '../selectOptions/SelectOptions';

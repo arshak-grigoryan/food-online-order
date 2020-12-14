@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+
 import { getIsInvoiceModal } from './store/selectors';
 import Router from './components/router/Router';
 import Modal from './components/modal/Modal';

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { openCart, startCartOpeningAnimation } from '../../store/actions';
 import { getCart } from '../../store/selectors';
 import { CLASS_NAMES } from '../../constants';

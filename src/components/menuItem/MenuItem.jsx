@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+
 import { CLASS_NAMES } from '../../constants';
 import { addCartItem } from '../../store/actions';
 import Icon from '../icon/Icon';

@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+
 import { TRANSITION_TIME_MS, CART_WIDTH } from '../../../constants';
 import { getIsCart, getisCartAnimating } from '../../../store/selectors';
 import Header from '../../header/Header';
