@@ -11,7 +11,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  padding: $mainPadding;
+  padding: $mainPadding * 2;
   .cartRight {
     .top {
       width: 100%;
@@ -35,7 +35,7 @@
     }
     .cartItems {
       // scss variable not working in calc
-      height: calc(100vh - 8px * 17);
+      height: calc(100vh - 8px * 19);
       overflow: auto;
       padding: 0 $mainPadding $mainPadding $mainPadding;
     }
