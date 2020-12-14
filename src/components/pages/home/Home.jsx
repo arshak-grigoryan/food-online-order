@@ -19,7 +19,7 @@ const Home = () => {
         className="home"
         style={{
           width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%',
-          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0s',
+          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0',
         }}
       >
         <Header

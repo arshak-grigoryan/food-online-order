@@ -9,15 +9,7 @@ const MenuItem = ({ id, ruiid, name, photoUrl, price }) => {
   const dispatch = useDispatch();
 
   const onaddCartItemick = () => {
-    dispatch(
-      addCartItem({
-        id,
-        name,
-        photoUrl,
-        price,
-        ruiid,
-      })
-    );
+    dispatch(addCartItem({ id, name, photoUrl, price, ruiid }));
   };
 
   return (

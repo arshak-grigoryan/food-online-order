@@ -42,7 +42,9 @@ const Restaurant = () => {
       );
       if (selectedRestaurant) {
         setCurrentRestaurant(selectedRestaurant);
-        setSelectedCuisines(selectedRestaurant.cuisines);
+        if (!selectedCuisines) {
+          setSelectedCuisines(selectedRestaurant.cuisines);
+        }
       }
     }
   }, [restaurants, params, menu]);
@@ -72,7 +74,7 @@ const Restaurant = () => {
   const onMaxValueChange = (e) => {
     setMaxValue(e.target.value);
   };
-
+  console.log(isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%');
   return (
     <>
       {isCart && (
@@ -86,7 +88,7 @@ const Restaurant = () => {
         className="restaurant"
         style={{
           width: isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%',
-          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0s',
+          transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0',
         }}
       >
         <Header placeholder="Search Menu Items" isBackExist={true} />
