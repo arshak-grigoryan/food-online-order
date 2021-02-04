@@ -8,7 +8,7 @@ import Restaurant from '../pages/restaurant/Restaurant';
 import SuspensedRoute from './SuspensedRoute';
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/restaurants_booking">
     <Switch>
       <SuspensedRoute exact path="/restaurants" component={Home} />
       <SuspensedRoute exact path="/restaurants/:id" component={Restaurant} />

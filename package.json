@@ -1,8 +1,8 @@
 {
-  "name": "resaturants_booking",
+  "name": "restaurants_booking",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arshak-grigoryan.github.io/resaturants_booking",
+  "homepage": "https://arshak-grigoryan.github.io/resaturants_booking/#/",
   "dependencies": {
     "immer": "^8.0.1",
     "react": "^17.0.1",
