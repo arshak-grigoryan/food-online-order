@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 
 import { REPO_NAME } from '../../constants';
 
-import NotFound from '../pages/notAuthorized/NotAuthorized';
+import NotFound from '../pages/notFound/NotFound';
 import Home from '../pages/home/Home';
 import Restaurant from '../pages/restaurant/Restaurant';
 

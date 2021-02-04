@@ -27,7 +27,7 @@ const useFetch = (url) => {
     (async () => {
       const result = await cachableFetch(url);
       if (result instanceof Error) {
-        history.replace('/notAuthorized');
+        history.replace('/notfound');
       } else {
         setData(result);
       }
