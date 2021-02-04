@@ -10,7 +10,7 @@ import Restaurant from '../pages/restaurant/Restaurant';
 import SuspensedRoute from './SuspensedRoute';
 
 const Router = () => (
-  <BrowserRouter basename={`/${REPO_NAME}`}>
+  <BrowserRouter basename={`/${REPO_NAME}fgjgj`}>
     <Switch>
       <SuspensedRoute exact path="/restaurants" component={Home} />
       <SuspensedRoute exact path="/restaurants/:id" component={Restaurant} />
