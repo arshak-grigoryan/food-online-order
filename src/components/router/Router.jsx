@@ -12,10 +12,14 @@ import SuspensedRoute from './SuspensedRoute';
 const Router = () => (
   <BrowserRouter basename={`/${REPO_NAME}`}>
     <Switch>
-      <SuspensedRoute exact path="/restaurants" component={Home} />
+      <SuspensedRoute
+        exact
+        path={`/${REPO_NAME}/restaurants`}
+        component={Home}
+      />
       <SuspensedRoute exact path="/restaurants/:id" component={Restaurant} />
       <Route exact path="/notfound" component={NotFound} />
-      <Redirect exact from={`/${REPO_NAME}`} to="/restaurants" />
+      <Redirect exact from={`/${REPO_NAME}`} to={`/${REPO_NAME}/restaurants`} />
       {/* <Redirect to="/notfound" /> */}
     </Switch>
   </BrowserRouter>
