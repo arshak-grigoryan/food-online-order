@@ -14,7 +14,7 @@ const Router = () => (
       <SuspensedRoute exact path="/restaurants/:id" component={Restaurant} />
       <Route exact path="/notfound" component={NotFound} />
       <Redirect exact from="/" to="/restaurants" />
-      <Redirect to="/notfound" />
+      {/* <Redirect to="/notfound" /> */}
     </Switch>
   </BrowserRouter>
 );
