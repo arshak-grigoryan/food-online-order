@@ -47,7 +47,7 @@ const Restaurant = () => {
         }
       }
     }
-  }, [restaurants, params, menu]);
+  }, [restaurants, params, menu, selectedCuisines]);
 
   useEffect(() => () => setMenuItems(menu), [menu]);
 
@@ -75,7 +75,7 @@ const Restaurant = () => {
     setMaxValue(e.target.value);
   };
 
-  console.log(isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%');
+  // console.log(isCartAnimating ? `calc(100% - ${CART_WIDTH})` : '100%');
 
   return (
     <>
