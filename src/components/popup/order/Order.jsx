@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCart } from '../../../store/selectors';
 import { order, invoiceModalToggle } from '../../../store/actions';
 import { MONTHS } from '../../../constants';
-import './invoice.scss';
+import './order.scss';
 
-const Invoice = () => {
+const Order = () => {
   const dispatch = useDispatch();
   const [totalPrice, setTotalPrice] = useState(0);
   const [el, setEl] = useState();
@@ -41,7 +41,7 @@ const Invoice = () => {
 
   return (
     <div className="modalPopup">
-      <div className="invoice">
+      <div className="order">
         <div className="top">
           <div className="w">
             <span>{new Date().getHours()}:</span>
@@ -56,7 +56,7 @@ const Invoice = () => {
             <span>{new Date().getFullYear()}</span>
           </div>
         </div>
-        <h1>Invoice</h1>
+        <h1>Order</h1>
         <div
           id="modalTable"
           className="table"
@@ -95,7 +95,7 @@ const Invoice = () => {
           </table>
         </div>
         <div className="buttons">
-          <div className="closeInvoice" onClick={onCloseInvoiceClick}>
+          <div className="closeOrder" onClick={onCloseInvoiceClick}>
             Close
           </div>
         </div>
@@ -104,4 +104,4 @@ const Invoice = () => {
   );
 };
 
-export default Invoice;
+export default Order;

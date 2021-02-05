@@ -1,5 +1,5 @@
 // URL
-export const REPO_NAME = 'restaurants_booking';
+export const REPO_NAME_URL = '/restaurants_booking';
 export const RESTAURANTS_URL = '/mock/restaurants.json';
 export const CUISINES_URL = '/mock/cuisines.json';
 

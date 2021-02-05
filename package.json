@@ -2,7 +2,6 @@
   "name": "restaurants_booking",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arshak-grigoryan.github.io/restaurants_booking/",
   "dependencies": {
     "immer": "^8.0.1",
     "react": "^17.0.1",
@@ -12,8 +11,6 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -37,7 +34,6 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "gh-pages": "^3.1.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
