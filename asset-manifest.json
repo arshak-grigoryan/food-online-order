@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/restaurants_booking/static/css/main.ad9370f9.chunk.css",
-    "main.js": "/restaurants_booking/static/js/main.4c9fdedd.chunk.js",
-    "main.js.map": "/restaurants_booking/static/js/main.4c9fdedd.chunk.js.map",
+    "main.js": "/restaurants_booking/static/js/main.f0400c4d.chunk.js",
+    "main.js.map": "/restaurants_booking/static/js/main.f0400c4d.chunk.js.map",
     "runtime-main.js": "/restaurants_booking/static/js/runtime-main.246566fa.js",
     "runtime-main.js.map": "/restaurants_booking/static/js/runtime-main.246566fa.js.map",
     "static/js/2.fa66f8ec.chunk.js": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.246566fa.js",
     "static/js/2.fa66f8ec.chunk.js",
     "static/css/main.ad9370f9.chunk.css",
-    "static/js/main.4c9fdedd.chunk.js"
+    "static/js/main.f0400c4d.chunk.js"
   ]
 }
