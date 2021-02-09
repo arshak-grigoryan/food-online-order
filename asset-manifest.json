@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/restaurants_booking/static/css/main.c817f574.chunk.css",
-    "main.js": "/restaurants_booking/static/js/main.ab33f240.chunk.js",
-    "main.js.map": "/restaurants_booking/static/js/main.ab33f240.chunk.js.map",
-    "runtime-main.js": "/restaurants_booking/static/js/runtime-main.246566fa.js",
-    "runtime-main.js.map": "/restaurants_booking/static/js/runtime-main.246566fa.js.map",
-    "static/js/2.fa66f8ec.chunk.js": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js",
-    "static/js/2.fa66f8ec.chunk.js.map": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js.map",
-    "index.html": "/restaurants_booking/index.html",
-    "static/css/main.c817f574.chunk.css.map": "/restaurants_booking/static/css/main.c817f574.chunk.css.map",
-    "static/js/2.fa66f8ec.chunk.js.LICENSE.txt": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js.LICENSE.txt"
+    "main.css": "/food-online-order/static/css/main.c817f574.chunk.css",
+    "main.js": "/food-online-order/static/js/main.08052b84.chunk.js",
+    "main.js.map": "/food-online-order/static/js/main.08052b84.chunk.js.map",
+    "runtime-main.js": "/food-online-order/static/js/runtime-main.e9bd4df4.js",
+    "runtime-main.js.map": "/food-online-order/static/js/runtime-main.e9bd4df4.js.map",
+    "static/js/2.f2e307e0.chunk.js": "/food-online-order/static/js/2.f2e307e0.chunk.js",
+    "static/js/2.f2e307e0.chunk.js.map": "/food-online-order/static/js/2.f2e307e0.chunk.js.map",
+    "index.html": "/food-online-order/index.html",
+    "static/css/main.c817f574.chunk.css.map": "/food-online-order/static/css/main.c817f574.chunk.css.map",
+    "static/js/2.f2e307e0.chunk.js.LICENSE.txt": "/food-online-order/static/js/2.f2e307e0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.246566fa.js",
-    "static/js/2.fa66f8ec.chunk.js",
+    "static/js/runtime-main.e9bd4df4.js",
+    "static/js/2.f2e307e0.chunk.js",
     "static/css/main.c817f574.chunk.css",
-    "static/js/main.ab33f240.chunk.js"
+    "static/js/main.08052b84.chunk.js"
   ]
 }
