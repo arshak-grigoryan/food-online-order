@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/restaurants_booking/static/css/main.08d21ebd.chunk.css",
+    "main.css": "/restaurants_booking/static/css/main.c817f574.chunk.css",
     "main.js": "/restaurants_booking/static/js/main.ab33f240.chunk.js",
     "main.js.map": "/restaurants_booking/static/js/main.ab33f240.chunk.js.map",
     "runtime-main.js": "/restaurants_booking/static/js/runtime-main.246566fa.js",
@@ -8,13 +8,13 @@
     "static/js/2.fa66f8ec.chunk.js": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js",
     "static/js/2.fa66f8ec.chunk.js.map": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js.map",
     "index.html": "/restaurants_booking/index.html",
-    "static/css/main.08d21ebd.chunk.css.map": "/restaurants_booking/static/css/main.08d21ebd.chunk.css.map",
+    "static/css/main.c817f574.chunk.css.map": "/restaurants_booking/static/css/main.c817f574.chunk.css.map",
     "static/js/2.fa66f8ec.chunk.js.LICENSE.txt": "/restaurants_booking/static/js/2.fa66f8ec.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.246566fa.js",
     "static/js/2.fa66f8ec.chunk.js",
-    "static/css/main.08d21ebd.chunk.css",
+    "static/css/main.c817f574.chunk.css",
     "static/js/main.ab33f240.chunk.js"
   ]
 }
