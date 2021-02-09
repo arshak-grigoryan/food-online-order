@@ -25,7 +25,9 @@ const Restaurant = () => {
   const [currentRestaurant, setCurrentRestaurant] = useState();
   const [menuItems, setMenuItems] = useState();
   const params = useParams();
-  const menu = useFetch(`/mock/menus/${params.id}.json`);
+  const menu = useFetch(
+    `${process.env.PUBLIC_URL}/mock/menus/${params.id}.json`
+  );
   const restaurants = useFetch(RESTAURANTS_URL);
 
   const { searchedName, isCart, isCartAnimating } = useSelector((state) => ({

@@ -1,7 +1,7 @@
 // URL
+export const RESTAURANTS_URL = `${process.env.PUBLIC_URL}/mock/restaurants.json`;
+export const CUISINES_URL = `${process.env.PUBLIC_URL}/mock/cuisines.json`;
 export const REPO_NAME_URL = '/restaurants_booking';
-export const RESTAURANTS_URL = '/mock/restaurants.json';
-export const CUISINES_URL = '/mock/cuisines.json';
 
 // STYLE
 export const CLASS_NAMES = {

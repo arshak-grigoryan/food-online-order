@@ -12,12 +12,14 @@ const RestaurantItem = ({ id, name, photoUrl, cuisines }) => {
   return (
     <div className="restaurantItemWrapper">
       <div className="restaurantItem" onClick={onRestaurantClick}>
-        <div
-          className="photo"
-          style={{
-            backgroundImage: `url(${photoUrl})`,
-          }}
-        ></div>
+        <div className="photoWrapper">
+          <div
+            className="photo"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+            }}
+          ></div>
+        </div>
         <h2>{name}</h2>
         <div className="cuisines">
           {cuisines.map((kitchen, i) => (
