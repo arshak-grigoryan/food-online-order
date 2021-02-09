@@ -1,8 +1,8 @@
 {
-  "name": "restaurants_booking",
+  "name": "food-online-order",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://arshak-grigoryan.github.io/restaurants_booking",
+  "homepage": "https://arshak-grigoryan.github.io/food-online-order",
   "dependencies": {
     "immer": "^8.0.1",
     "react": "^17.0.1",
