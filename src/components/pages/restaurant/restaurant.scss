@@ -10,7 +10,8 @@
     display: flex;
     padding: $mainPadding * 2;
     .menuFilterWrapper {
-      min-width: 200px;
+      // min-width: 200px;
+      min-width: min-content;
       width: 15%;
       padding: $mainPadding * 2;
       .menuFilter {
@@ -76,7 +77,8 @@
       }
     }
     .restaurantMenu {
-      min-width: 400px;
+      // min-width: 400px;
+      min-width: min-content;
       width: 85%;
       display: flex;
       flex-wrap: wrap;
