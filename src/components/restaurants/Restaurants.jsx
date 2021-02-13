@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { useFetch } from '../../hooks';
@@ -9,8 +9,11 @@ import {
   getSelectedCuisine,
 } from '../../store/selectors';
 import { addRestaurants } from '../../store/actions';
-import RestaurantItem from '../restaurantItem/RestaurantItem';
 import './restaurants.scss';
+
+const RestaurantItem = lazy(() =>
+  import('../../restaurantItem/RestaurantItem')
+);
 
 const Restaurants = () => {
   const dispatch = useDispatch();
