@@ -6,7 +6,7 @@ import { getSearchedName } from '../../store/selectors';
 import { addSearchName } from '../../store/actions';
 import './search.scss';
 
-const Search = ({ placeholder = 'search', isRestaurantsSearch = false }) => {
+const Search = ({ placeholder = 'search' }) => {
   const dispatch = useDispatch();
 
   const { searchedName } = useSelector((state) => ({
@@ -25,9 +25,7 @@ const Search = ({ placeholder = 'search', isRestaurantsSearch = false }) => {
   };
 
   return (
-    <form
-      className={isRestaurantsSearch ? 'search restaurantsSearch' : 'search'}
-    >
+    <form className="restaurantsSearch">
       <label htmlFor="rs">{placeholder}</label>
       <input
         id="rs"

@@ -14,7 +14,6 @@ const Header = ({
   isSelectOptionExist = false,
   placeholder,
   isBackExist = false,
-  isRestaurantsSearch,
 }) => {
   const history = useHistory();
 
@@ -30,22 +29,19 @@ const Header = ({
     <div className="header">
       <div className="left">
         {isBackExist && (
-          <button onClick={onGoBackClick}>
+          <div onClick={onGoBackClick} className="backButton">
             <Icon
               type={CLASS_NAMES.arrowLeft}
               style={{
                 color: '#2c3e50',
               }}
             />
-          </button>
+          </div>
         )}
       </div>
       <div className="searchFilter">
         {isSelectOptionExist && <SelectOptions />}
-        <Search
-          placeholder={placeholder}
-          isRestaurantsSearch={isRestaurantsSearch}
-        />
+        <Search placeholder={placeholder} />
       </div>
       <div className="cart">{!isCart && <ShoppingCart />}</div>
     </div>

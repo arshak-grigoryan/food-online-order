@@ -24,11 +24,7 @@ const Home = () => {
           transition: isCartAnimating ? `${TRANSITION_TIME_MS}ms` : '0',
         }}
       >
-        <Header
-          isSelectOptionExist={true}
-          placeholder="Search Restaurants"
-          isRestaurantsSearch={true}
-        />
+        <Header isSelectOptionExist={true} placeholder="Search Restaurants" />
         <Restaurants />
       </div>
       {isCart && (
