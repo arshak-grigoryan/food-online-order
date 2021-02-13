@@ -3,9 +3,9 @@
     "static/css/0.7711c6e7.chunk.css": "/food-online-order/static/css/0.7711c6e7.chunk.css",
     "static/js/0.f51c7f5f.chunk.js": "/food-online-order/static/js/0.f51c7f5f.chunk.js",
     "static/js/0.f51c7f5f.chunk.js.map": "/food-online-order/static/js/0.f51c7f5f.chunk.js.map",
-    "main.css": "/food-online-order/static/css/main.5fddfb42.chunk.css",
-    "main.js": "/food-online-order/static/js/main.0a409e79.chunk.js",
-    "main.js.map": "/food-online-order/static/js/main.0a409e79.chunk.js.map",
+    "main.css": "/food-online-order/static/css/main.ababd946.chunk.css",
+    "main.js": "/food-online-order/static/js/main.e57fdc73.chunk.js",
+    "main.js.map": "/food-online-order/static/js/main.e57fdc73.chunk.js.map",
     "runtime-main.js": "/food-online-order/static/js/runtime-main.414c46ca.js",
     "runtime-main.js.map": "/food-online-order/static/js/runtime-main.414c46ca.js.map",
     "static/js/3.db923e39.chunk.js": "/food-online-order/static/js/3.db923e39.chunk.js",
@@ -20,13 +20,13 @@
     "static/css/0.7711c6e7.chunk.css.map": "/food-online-order/static/css/0.7711c6e7.chunk.css.map",
     "static/css/4.1dc05f52.chunk.css.map": "/food-online-order/static/css/4.1dc05f52.chunk.css.map",
     "static/css/5.7a009fba.chunk.css.map": "/food-online-order/static/css/5.7a009fba.chunk.css.map",
-    "static/css/main.5fddfb42.chunk.css.map": "/food-online-order/static/css/main.5fddfb42.chunk.css.map",
+    "static/css/main.ababd946.chunk.css.map": "/food-online-order/static/css/main.ababd946.chunk.css.map",
     "static/js/3.db923e39.chunk.js.LICENSE.txt": "/food-online-order/static/js/3.db923e39.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.414c46ca.js",
     "static/js/3.db923e39.chunk.js",
-    "static/css/main.5fddfb42.chunk.css",
-    "static/js/main.0a409e79.chunk.js"
+    "static/css/main.ababd946.chunk.css",
+    "static/js/main.e57fdc73.chunk.js"
   ]
 }
