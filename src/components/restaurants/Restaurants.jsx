@@ -11,9 +11,7 @@ import {
 import { addRestaurants } from '../../store/actions';
 import './restaurants.scss';
 
-const RestaurantItem = lazy(() =>
-  import('../../restaurantItem/RestaurantItem')
-);
+const RestaurantItem = lazy(() => import('../restaurantItem/RestaurantItem'));
 
 const Restaurants = () => {
   const dispatch = useDispatch();
