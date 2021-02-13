@@ -25,15 +25,17 @@ const Search = ({ placeholder = 'search', isRestaurantsSearch = false }) => {
   };
 
   return (
-    <div
+    <form
       className={isRestaurantsSearch ? 'search restaurantsSearch' : 'search'}
     >
+      <label htmlFor="rs">{placeholder}</label>
       <input
+        id="rs"
         type="text"
         placeholder={placeholder}
         onChange={(e) => onSearchNameChange(e)}
       />
-    </div>
+    </form>
   );
 };
 

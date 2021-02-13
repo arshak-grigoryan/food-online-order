@@ -1,6 +1,16 @@
 @import '../../variables.scss';
 
 .selectOptions {
+  position: relative;
+  label {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    z-index: -1;
+    font-size: 16px;
+    color: transparent;
+  }
   select {
     width: 100%;
     padding: $mainPadding;

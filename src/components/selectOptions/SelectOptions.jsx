@@ -27,8 +27,9 @@ const SelectOptions = () => {
   });
 
   return (
-    <div className="selectOptions">
-      <select onChange={(e) => onSelectChange(e)}>
+    <form className="selectOptions">
+      <label htmlFor="sc">Cuisines</label>
+      <select id="sc" onChange={(e) => onSelectChange(e)}>
         <option value="all">All</option>
         {cuisines &&
           cuisines.map((cuisine, i) => (
@@ -37,7 +38,7 @@ const SelectOptions = () => {
             </option>
           ))}
       </select>
-    </div>
+    </form>
   );
 };
 

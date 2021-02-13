@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -13,10 +13,11 @@ import {
   getIsCart,
   getisCartAnimating,
 } from '../../../store/selectors';
-import MenuItem from '../../menuItem/MenuItem';
 import Header from '../../header/Header';
-import Cart from '../../cart/Cart';
 import './restaurant.scss';
+
+const MenuItem = lazy(() => import('../../menuItem/MenuItem'));
+const Cart = lazy(() => import('../../cart/Cart'));
 
 const Restaurant = () => {
   const [minValue, setMinValue] = useState(0);
@@ -101,7 +102,7 @@ const Restaurant = () => {
             <div className="menuFilter">
               <div className="cuisine">
                 <h2>Cuisine</h2>
-                <div className="chechkboxItemsWrapper">
+                <form className="chechkboxItemsWrapper">
                   {currentRestaurant &&
                     currentRestaurant.cuisines.map((kitchen, i) => (
                       <div className="chechkboxItem" key={i}>
@@ -115,12 +116,12 @@ const Restaurant = () => {
                         <label htmlFor={kitchen}>{kitchen}</label>
                       </div>
                     ))}
-                </div>
+                </form>
               </div>
               <div className="price">
                 <h2>Price</h2>
                 <div className="inputsWrapper">
-                  <div className="priceInput">
+                  <form className="priceInput">
                     <label htmlFor="min">Min $</label>
                     <input
                       id="min"
@@ -128,16 +129,16 @@ const Restaurant = () => {
                       value={minValue === 0 ? '' : minValue}
                       onChange={(e) => onMinValueChange(e)}
                     />
-                  </div>
-                  <div className="priceInput">
-                    <label htmlFor="min">Max $</label>
+                  </form>
+                  <form className="priceInput">
+                    <label htmlFor="max">Max $</label>
                     <input
                       id="max"
                       type="number"
                       value={maxValue === 999999999 ? '' : maxValue}
                       onChange={(e) => onMaxValueChange(e)}
                     />
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

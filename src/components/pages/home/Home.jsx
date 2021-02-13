@@ -1,11 +1,13 @@
+import { lazy } from 'react';
 import { useSelector } from 'react-redux';
 
 import { TRANSITION_TIME_MS, CART_WIDTH } from '../../../constants';
 import { getIsCart, getisCartAnimating } from '../../../store/selectors';
 import Header from '../../header/Header';
-import Restaurants from '../../restaurants/Restaurants';
-import Cart from '../../cart/Cart';
 import './home.scss';
+
+const Restaurants = lazy(() => import('../../restaurants/Restaurants'));
+const Cart = lazy(() => import('../../cart/Cart'));
 
 const Home = () => {
   const { isCart, isCartAnimating } = useSelector((state) => ({
